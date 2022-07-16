@@ -120,13 +120,13 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Book.cs" />
-    <Compile Include="Customer.cs" />
-    <Compile Include="Employee.cs" />
-    <Compile Include="ISBN.cs" />
-    <Compile Include="Jornal.cs" />
-    <Compile Include="LibraryItem.cs" />
-    <Compile Include="Person.cs" />
+    <Compile Include="LibreryItems\Book.cs" />
+    <Compile Include="Persons\Customer.cs" />
+    <Compile Include="Persons\Employee.cs" />
+    <Compile Include="LibreryItems\ISBN.cs" />
+    <Compile Include="LibreryItems\Jornal.cs" />
+    <Compile Include="LibreryItems\LibraryItem.cs" />
+    <Compile Include="Persons\Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Library.Model.rd.xml" />
   </ItemGroup>
@@ -135,6 +135,7 @@
       <Version>6.2.13</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

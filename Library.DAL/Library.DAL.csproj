@@ -123,6 +123,7 @@
     <Compile Include="DataMock.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="LbraryRepository.cs" />
+    <Compile Include="PersonRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Library.DAL.rd.xml" />
   </ItemGroup>

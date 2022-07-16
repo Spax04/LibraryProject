@@ -9,13 +9,17 @@ namespace Library.DAL
 {
     public class DataMock
     {
-       public List <LibraryItem> LibraryItems { get; private set; }
+       public List <LibraryItem> LibraryItemsList { get; private set; }
+        public List <Person> PersonList { get; private set; }
 
         public DataMock()
         {
-            LibraryItems = new List<LibraryItem>();
+            LibraryItemsList = new List<LibraryItem>();
+            PersonList = new List<Person>();
             Init();
         }
+
+
 
         public void Init()
         {
@@ -305,8 +309,14 @@ namespace Library.DAL
             Book.BookGenres.Add("Western");
             Book.BookGenres.Add("Travel");
             Book.BookGenres.Add("Young adult");
-            Book.BookGenres.Add("True crime"); 
+            Book.BookGenres.Add("True crime");
             #endregion
+
+            Book book1 = new Book("War and Piese", new DateTime(1869,4,5),123321,"Russian");
+            
+            Book book2 = new Book("Crime and punishment", new DateTime(1887, 4, 9),551231,"Russia");
+            LibraryItemsList.Add(book1);
+            LibraryItemsList.Add(book2);
         }
 
     }

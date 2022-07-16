@@ -10,30 +10,26 @@
 
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="300"/>
+            <RowDefinition Height="180"/>
+            <RowDefinition Height="140"/>
             <RowDefinition Height="200"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="300"/>
-            <ColumnDefinition Width="1300"/>
+            <ColumnDefinition Width="330"/>
+            <ColumnDefinition Width="640"/>
+            <ColumnDefinition Width="330"/>
             <ColumnDefinition Width="300"/>
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" Text="Holon City Library" VerticalAlignment="Top" Height="201" Width="1291" FontSize="100" Grid.ColumnSpan="2" TextAlignment="Center" FontWeight="Bold" FontFamily="Sitka Heading" RenderTransformOrigin="0.503,0.398"/>
-        <Button Grid.Column="1" Content="Button" Grid.Row="1" VerticalAlignment="Stretch" Width="1300" HorizontalAlignment="Center"/>
-        <Button Grid.Column="1" Content="Button" Grid.Row="2" VerticalAlignment="Stretch" Width="1300" HorizontalAlignment="Center"/>
-        <Button Grid.Column="1" Content="Button" Grid.Row="3" VerticalAlignment="Stretch" Width="1300" HorizontalAlignment="Center"/>
-        <Button Grid.Column="1" Content="Button" Grid.Row="4" VerticalAlignment="Stretch" Width="1300" HorizontalAlignment="Center"/>
-        <Button Grid.Column="1" Content="Button" Grid.Row="5" VerticalAlignment="Stretch" Width="1300" HorizontalAlignment="Center"/>
-        <Button Grid.Column="1" Content="Button" Grid.Row="6" VerticalAlignment="Stretch" Width="1300" HorizontalAlignment="Center"/>
-        <Button Grid.Column="1" Content="Button" Grid.Row="7" VerticalAlignment="Stretch" Width="1300" HorizontalAlignment="Center"/>
-        <Button Grid.Column="1" Content="Button" Grid.Row="8" VerticalAlignment="Stretch" Width="1300" HorizontalAlignment="Center"/>
+
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" Text="Book store and Library" VerticalAlignment="Top" Height="201" Width="1291" FontSize="100" Grid.ColumnSpan="4" TextAlignment="Center" FontWeight="Bold" FontFamily="Sitka Heading" RenderTransformOrigin="0.503,0.398"/>
+        <Button Content="Add Book" Margin="0,81,0,0" Grid.Row="1" VerticalAlignment="Top" Height="100" Width="338" Background="#FF1276CF" FontSize="48" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="11,232,0,0" TextWrapping="Wrap" Text="Admin Panel" VerticalAlignment="Top" Height="77" Width="314" FontSize="48" FontFamily="Sitka Display Semibold" FontWeight="Bold" Grid.RowSpan="2"/>
+        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="640,232,0,0" TextWrapping="Wrap" Text="Customer panel" VerticalAlignment="Top" Height="77" Width="356" FontSize="48" FontFamily="Sitka Display Semibold" FontWeight="Bold" Grid.RowSpan="2" Grid.ColumnSpan="3"/>
+        <Button Content="Add new customer" Margin="1,80,0,0" Grid.Row="1" VerticalAlignment="Top" Height="100" Width="338" Background="#FF1276CF" FontSize="36" Grid.Column="3" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnBookColl" Content="Book collection" Grid.Row="2" VerticalAlignment="Bottom" Height="100" Width="338" Background="#FF1276CF" FontSize="45" Grid.Column="1" Grid.ColumnSpan="2" Click="btnBookColl_Click"/>
+        <Button Content="View all customers" Margin="1,43,0,0" Grid.Row="2" VerticalAlignment="Top" Height="100" Width="338" Background="#FF1276CF" FontSize="36" Grid.Column="3" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
     </Grid>
+
 </Page>
