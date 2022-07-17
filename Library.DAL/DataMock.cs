@@ -11,7 +11,7 @@ namespace Library.DAL
     {
        public List <LibraryItem> LibraryItemsList { get; private set; }
         public List <Person> PersonList { get; private set; }
-
+        
         public DataMock()
         {
             LibraryItemsList = new List<LibraryItem>();
@@ -23,9 +23,9 @@ namespace Library.DAL
 
         public void Init()
         {
+            ISBN.Countries = new Dictionary<string, int>();
+            ISBN.Publishers = new Dictionary<string, int>();
             #region Countries ISBN
-            ISBN.Countries.Add("Israel", 965);
-
 
             ISBN.Countries.Add("English", 0);
             ISBN.Countries.Add("French", 2);
@@ -47,11 +47,11 @@ namespace Library.DAL
             ISBN.Countries.Add("Mauritius", 613);
             ISBN.Countries.Add("Lebanon", 614);
             ISBN.Countries.Add("Hungary", 615);
-            ISBN.Countries.Add("Thailand", 616);
+           
             ISBN.Countries.Add("Ukraine", 617);
             ISBN.Countries.Add("Greece", 618);
             ISBN.Countries.Add("Bulgaria", 619);
-            ISBN.Countries.Add("Mauritius", 620);
+            
             ISBN.Countries.Add("Philippines", 621);
             ISBN.Countries.Add("People's Republic of China", 7);
             ISBN.Countries.Add("Former Czechoslovakia", 80);
@@ -67,47 +67,30 @@ namespace Library.DAL
             ISBN.Countries.Add("Netherlands", 90);
             ISBN.Countries.Add("Sweden", 91);
             ISBN.Countries.Add("International Publishers", 92);
-            ISBN.Countries.Add("Netherlands", 94);
+           
             ISBN.Countries.Add("Argentina", 950);
             ISBN.Countries.Add("Finland", 951);
-            ISBN.Countries.Add("Finland", 952);
             ISBN.Countries.Add("Croatia", 953);
-            ISBN.Countries.Add("Bulgaria", 954);
             ISBN.Countries.Add("Sri Lanka", 955);
             ISBN.Countries.Add("Chile", 956);
             ISBN.Countries.Add("Taiwan", 957);
             ISBN.Countries.Add("Colombia", 958);
             ISBN.Countries.Add("Cuba", 959);
-            ISBN.Countries.Add("Greece", 960);
             ISBN.Countries.Add("Slovenia", 961);
             ISBN.Countries.Add("Hongkong", 962);
-            ISBN.Countries.Add("Hungary", 963);
-            ISBN.Countries.Add("Iran", 964);
             ISBN.Countries.Add("Israel", 965);
-            ISBN.Countries.Add("Ukraine", 966);
             ISBN.Countries.Add("Malaysia", 967);
-            ISBN.Countries.Add("Mexico", 968);
             ISBN.Countries.Add("Pakistan", 969);
-            ISBN.Countries.Add("Mexico", 970);
-            ISBN.Countries.Add("Philippines", 971);
             ISBN.Countries.Add("Portugal", 972);
-            ISBN.Countries.Add("Romania", 973);
-            ISBN.Countries.Add("Thailand", 974);
-            ISBN.Countries.Add("Turkey", 975);
             ISBN.Countries.Add("Caribbean Community", 976);
             ISBN.Countries.Add("Egypt", 977);
             ISBN.Countries.Add("Nigeria", 978);
-            ISBN.Countries.Add("Indonesia", 979);
             ISBN.Countries.Add("Venezuela", 980);
             ISBN.Countries.Add("Singapore", 981);
             ISBN.Countries.Add("South Pacific", 982);
-            ISBN.Countries.Add("Malaysia", 983);
             ISBN.Countries.Add("Bangladesh", 984);
             ISBN.Countries.Add("Belarus", 985);
-            ISBN.Countries.Add("Taiwan", 986);
-            ISBN.Countries.Add("Argentina", 987);
-            ISBN.Countries.Add("Hongkong", 988);
-            ISBN.Countries.Add("Portugal", 989);
+
             ISBN.Countries.Add("Bosnia and Herzegovina", 9926);
             ISBN.Countries.Add("Qatar", 9927);
             ISBN.Countries.Add("Albania", 9928);
@@ -126,54 +109,30 @@ namespace Library.DAL
             ISBN.Countries.Add("Georgia", 9941);
             ISBN.Countries.Add("Ecuador", 9942);
             ISBN.Countries.Add("Uzbekistan", 9943);
-            ISBN.Countries.Add("Turkey", 9944);
             ISBN.Countries.Add("Dominican Republic", 9945);
             ISBN.Countries.Add("North Korea", 9946);
-            ISBN.Countries.Add("Algeria", 9947);
-            ISBN.Countries.Add("United Arab Emirates", 9948);
             ISBN.Countries.Add("Estonia", 9949);
             ISBN.Countries.Add("Palestinian Territories", 9950);
             ISBN.Countries.Add("Kosovo", 9951);
             ISBN.Countries.Add("Azerbaijan", 9952);
-            ISBN.Countries.Add("Lebanon", 9953);
             ISBN.Countries.Add("Morocco", 9954);
-            ISBN.Countries.Add("Lithuania", 9955);
             ISBN.Countries.Add("Cameroon", 9956);
             ISBN.Countries.Add("Jordan", 9957);
-            ISBN.Countries.Add("Bosnia and Herzegovina", 9958);
             ISBN.Countries.Add("Libya", 9959);
-            ISBN.Countries.Add("Saudi Arabia", 9960);
-            ISBN.Countries.Add("Algeria", 9961);
             ISBN.Countries.Add("Panama", 9962);
             ISBN.Countries.Add("Cyprus", 9963);
             ISBN.Countries.Add("Ghana", 9964);
-            ISBN.Countries.Add("Kazakhstan", 9965);
             ISBN.Countries.Add("Kenya", 9966);
             ISBN.Countries.Add("Kyrgyzstan", 9967);
-            ISBN.Countries.Add("Costa Rica", 9968);
             ISBN.Countries.Add("Uganda", 9970);
-            ISBN.Countries.Add("Singapore", 9971);
-            ISBN.Countries.Add("Peru", 9972);
-            ISBN.Countries.Add("Tunisia", 9973);
             ISBN.Countries.Add("Uruguay", 9974);
             ISBN.Countries.Add("Republic of Moldova", 9975);
             ISBN.Countries.Add("Tanzania", 9976);
-            ISBN.Countries.Add("Costa Rica", 9977);
-            ISBN.Countries.Add("Ecuador", 9978);
-            ISBN.Countries.Add("Island", 9979);
             ISBN.Countries.Add("Papua New Guinea", 9980);
-            ISBN.Countries.Add("Morocco", 9981);
             ISBN.Countries.Add("Zambia", 9982);
             ISBN.Countries.Add("Gambia", 9983);
-            ISBN.Countries.Add("Latvia", 9984);
-            ISBN.Countries.Add("Estonia", 9985);
-            ISBN.Countries.Add("Lithuania", 9986);
-            ISBN.Countries.Add("Tanzania", 9987);
-            ISBN.Countries.Add("Ghana", 9988);
-            ISBN.Countries.Add("Macedonia", 9989);
             ISBN.Countries.Add("Bahrain", 99901);
             ISBN.Countries.Add("Gabon", 99902);
-            ISBN.Countries.Add("Mauritius", 99903);
             ISBN.Countries.Add("Netherlands Antilles(Curaçao)", 99904);
             ISBN.Countries.Add("Bolivia", 99905);
             ISBN.Countries.Add("Kuwait", 99906);
@@ -189,68 +148,36 @@ namespace Library.DAL
             ISBN.Countries.Add("Brunei", 99917);
             ISBN.Countries.Add("Faroe Islands", 99918);
             ISBN.Countries.Add("Benin", 99919);
-            ISBN.Countries.Add("Andorra", 99920);
-            ISBN.Countries.Add("Qatar", 99921);
-            ISBN.Countries.Add("Guatemala", 99922);
             ISBN.Countries.Add("El Salvador", 99923);
             ISBN.Countries.Add("Nicaragua", 99924);
             ISBN.Countries.Add("Paraguay", 99925);
             ISBN.Countries.Add("Honduras", 99926);
-            ISBN.Countries.Add("Albania", 99927);
-            ISBN.Countries.Add("Georgia", 99928);
             ISBN.Countries.Add("Mongolia", 99929);
-            ISBN.Countries.Add("Armenia", 99930);
             ISBN.Countries.Add("Seychelles", 99931);
-            ISBN.Countries.Add("Malta", 99932);
-            ISBN.Countries.Add("Nepal", 99933);
-            ISBN.Countries.Add("Dominican Republic", 99934);
             ISBN.Countries.Add("Haiti", 99935);
             ISBN.Countries.Add("Bhutan", 99936);
             ISBN.Countries.Add("Macau", 99937);
             ISBN.Countries.Add("Republika Srpska", 99938);
-            ISBN.Countries.Add("Guatemala", 99939);
-            ISBN.Countries.Add("Georgia", 99940);
-            ISBN.Countries.Add("Armenia", 99941);
             ISBN.Countries.Add("Sudan", 99942);
-            ISBN.Countries.Add("Albania", 99943);
             ISBN.Countries.Add("Ethiopia", 99944);
-            ISBN.Countries.Add("Namibia", 99945);
-            ISBN.Countries.Add("Nepal", 99946);
             ISBN.Countries.Add("Tajikistan", 99947);
             ISBN.Countries.Add("Eritrea", 99948);
-            ISBN.Countries.Add("Mauritius", 99949);
             ISBN.Countries.Add("Cambodia", 99950);
             ISBN.Countries.Add("Democratic Republic of the Congo", 99951);
             ISBN.Countries.Add("Mali", 99952);
-            ISBN.Countries.Add("Paraguay", 99953);
-            ISBN.Countries.Add("Bolivia", 99954);
-            ISBN.Countries.Add("Republika Srpska", 99955);
-            ISBN.Countries.Add("Albania", 99956);
-            ISBN.Countries.Add("Malta", 99957);
-            ISBN.Countries.Add("Bahrain", 99958);
             ISBN.Countries.Add("Luxembourg", 99959);
-            ISBN.Countries.Add("Malawi", 99960);
-            ISBN.Countries.Add("El Salvador", 99961);
-            ISBN.Countries.Add("Mongolia", 99962);
-            ISBN.Countries.Add("Cambodia", 99963);
-            ISBN.Countries.Add("Nicaragua", 99964);
-            ISBN.Countries.Add("Macau", 99965);
-            ISBN.Countries.Add("Kuwait", 99966);
-            ISBN.Countries.Add("Paraguay", 99967);
-            ISBN.Countries.Add("Botswana", 99968);
             ISBN.Countries.Add("Oman", 99969);
-            ISBN.Countries.Add("Haiti", 99970);
             ISBN.Countries.Add("Myanmar", 99971);
-            ISBN.Countries.Add("Faroe Islands", 99972);
-            ISBN.Countries.Add("Mongolia", 99973);
-            ISBN.Countries.Add("Bolivia", 99974);
-            ISBN.Countries.Add("Tajikistan", 99975);
-            ISBN.Countries.Add("Republika Srpska", 99976);
             ISBN.Countries.Add("Rwanda", 99977);
-            ISBN.Countries.Add("Mongolia", 99978);
-            ISBN.Countries.Add("Honduras", 99979);
             #endregion
 
+            ISBN.Publishers.Add("Pyramid Books", 01);
+            ISBN.Publishers.Add("Berkley Publishing", 02);
+            ISBN.Publishers.Add("Popular Library", 03);
+            ISBN.Publishers.Add("DAW Books", 04);
+            ISBN.Publishers.Add("Celestial Publications", 05);
+            ISBN.Publishers.Add("Scholastic Books", 06);
+            ISBN.Publishers.Add("Tundra Books", 07);
             ISBN.Publishers.Add("Penguin english library", 22);
 
             #region Book Genres
@@ -310,13 +237,25 @@ namespace Library.DAL
             Book.BookGenres.Add("Travel");
             Book.BookGenres.Add("Young adult");
             Book.BookGenres.Add("True crime");
+            Book.BookGenres.Add("War");
             #endregion
 
-            Book book1 = new Book("War and Piese", new DateTime(1869,4,5),123321,"Russian");
+            Book book1 = new Book("War and Piese", new DateTime(1869, 4, 5), 123321, "Ukraine");
+
+            book1.Publisher = "Tundra Books";
+            book1.Genres.Add("War");
+            book1.Authors.Add("L.N. Tolstoy");
             
-            Book book2 = new Book("Crime and punishment", new DateTime(1887, 4, 9),551231,"Russia");
+
+
             LibraryItemsList.Add(book1);
-            LibraryItemsList.Add(book2);
+
+/*
+            Book book2 = new Book("Crime and punishment", new DateTime(1887, 4, 9), 551231, "Eritrea");
+            book2.Publisher = "Pyramid Books";
+            book2.Genres.Add("Crime");
+            book2.Authors.Add("F.M. Dostoevsky");
+            LibraryItemsList.Add(book2);*/
         }
 
     }

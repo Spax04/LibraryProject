@@ -5,27 +5,29 @@
     xmlns:local="using:LibraryProject"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:data ="using:Library.DAL"
+    xmlns:data ="using:Library.Model"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid Background="#FF76B3B1">
         <Grid.RowDefinitions>
             <RowDefinition Height="235.2"/>
-            <RowDefinition Height="784.8"/>
-            <RowDefinition Height="0"/>
+            <RowDefinition Height="670"/>
+            <RowDefinition Height="115"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="228.8"/>
             <ColumnDefinition Width="1436.8"/>
             <ColumnDefinition Width="234.4"/>
         </Grid.ColumnDefinitions>
-        <GridView ItemsSource="{x:Bind Books}" x:Name="bookList" Grid.Column="1" Grid.Row="1" Background="White">
-            <GridView.ItemTemplate>
-                <DataTemplate x:DataType="data:LbraryRepository">
+        <ListView x:Name="listMenuView" Grid.Column="1" Grid.Row="1" Background="White"/>
+        <Button x:Name="btnBookViewBack" Content="Back" Margin="105,175,0,0" VerticalAlignment="Top" Height="50" Width="114" FontSize="24" Background="#FFA06BEF" Click="btnBookViewBack_Click"/>
+        <ComboBox x:Name="cbFilter" Grid.Column="2" Margin="10,10,0,0" Grid.Row="1" Width="234" Background="White" Height="40">
+            <ComboBoxItem Background="White" Content="By Title"/>
+            <ComboBoxItem Content="by Year"/>
+            <ComboBoxItem Content="by Ganer"/>
+        </ComboBox>
 
-                </DataTemplate>
-            </GridView.ItemTemplate>
-        </GridView>
+
     </Grid>
 </Page>

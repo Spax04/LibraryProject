@@ -27,14 +27,12 @@ namespace LibraryProject
         {
             this.InitializeComponent();
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(AdminPage), null, new DrillInNavigationTransitionInfo());
-        }
+       
+        
 
         private void btnBookColl_Click(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(BookCollectionPage), null, new SuppressNavigationTransitionInfo());
         }
     }
 }

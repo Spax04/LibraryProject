@@ -31,6 +31,7 @@ namespace Library.Model
         {
             get
             {
+                
                 return _country;
             }
             set
@@ -64,10 +65,10 @@ namespace Library.Model
 
         public override string ToString()
         {
-            return $"{_prefix}-{Countries[Country].ToString("D3")}-{Publishers[Publisher].ToString("D3")}-{SerialNumber.ToString("D3")}-{Control}";
+            return $"{_prefix}-{Countries[Country].ToString("D3")}-}";
         }
     }
-
+    //-{Publishers[Publisher].ToString("D3")}-{SerialNumber.ToString("D3")}-{Control}
     public class IsbnException : Exception
     {
         public IsbnException(string message)

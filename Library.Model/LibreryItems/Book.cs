@@ -63,7 +63,28 @@ namespace Library.Model
         /// <summary>
         /// get or set book's synopsis (short summary of book)
         /// </summary>
+        /// 
+        public StringBuilder authorsPrint()
+        {
+            StringBuilder authors = new StringBuilder();
+            for(int i = 0; i < Authors.Count; i++)
+            {
+                authors.Append($"{Authors[i]} ");
+            }
+            return authors;
+        }
+        public StringBuilder genersPrint()
+        {
+            StringBuilder geners = new StringBuilder();
+            for (int i = 0; i < Genres.Count; i++)
+            {
+                geners.Append($"{Genres[i]} ");
+            }
+            return geners;
+
+        }
         public string Synopsis { get; set; }
+        public string Discription { get; set; }
 
         /// <summary>
         /// create an instance of book
@@ -72,9 +93,7 @@ namespace Library.Model
         /// <param name="publishDate">the date the new book was published</param>
         /// <param name="serialNumber">optional parameter, the book's serial number for the <see cref="Model.ISBN"/>. 
         /// Every title from the same publisher should have a unique serial number</param>
-        /// <param name="languige">optional parameter, the languige for the <see cref="Model.ISBN"/>. 
-        /// Default value is "Hebrew"</param>
-        /// <param name="state">optional parameter, the state form the <see cref="Model.ISBN"/>.
+        /// <param name="country">optional parameter, the state form the <see cref="Model.ISBN"/>.
         /// Default value is "Israel"</param>
         public Book(string title, DateTime publishDate, int serialNumber = 0,
             string country = _defaultState) : base(title, publishDate)
@@ -83,8 +102,14 @@ namespace Library.Model
             this.ISBN.Country = country ;
             Authors = new List<string>();
             Genres = new List<string>();
+            Discription = ToString();
         }
 
-        
+        public override string ToString()
+        {
+            return $"'{Title}' | {PublishDate:d} | {ISBN.ToString()} | {authorsPrint()}| {genersPrint()} | {this.ISBN.Country} | {this.ISBN.Publisher}";
+        }
+
+
     }
 }

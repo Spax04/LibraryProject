@@ -9,7 +9,7 @@ namespace Library.DAL
 {
     public class LbraryRepository : IRepository<LibraryItem>
     {
-        private readonly DataMock _context = new DataMock();
+        private  DataMock _context = new DataMock();
         public LibraryItem Add(LibraryItem item)
         {
             _context.LibraryItemsList.Add(item);
