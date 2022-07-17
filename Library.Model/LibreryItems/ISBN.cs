@@ -65,7 +65,7 @@ namespace Library.Model
 
         public override string ToString()
         {
-            return $"{_prefix}-{Countries[Country].ToString("D3")}-}";
+            return $"{_prefix}-{Countries[Country].ToString("D3")}-{Publishers[Publisher].ToString("D3")}-{SerialNumber.ToString("D3")}-{Control}";
         }
     }
     //-{Publishers[Publisher].ToString("D3")}-{SerialNumber.ToString("D3")}-{Control}

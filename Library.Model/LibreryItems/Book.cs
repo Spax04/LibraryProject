@@ -95,11 +95,12 @@ namespace Library.Model
         /// Every title from the same publisher should have a unique serial number</param>
         /// <param name="country">optional parameter, the state form the <see cref="Model.ISBN"/>.
         /// Default value is "Israel"</param>
-        public Book(string title, DateTime publishDate, int serialNumber = 0,
+        public Book(string title, DateTime publishDate, string publisher, int serialNumber = 0,
             string country = _defaultState) : base(title, publishDate)
         {
             this.ISBN = new ISBN() { SerialNumber = serialNumber };
-            this.ISBN.Country = country ;
+            this.ISBN.Country = country;
+            this.ISBN.Publisher = publisher;
             Authors = new List<string>();
             Genres = new List<string>();
             Discription = ToString();
@@ -107,7 +108,7 @@ namespace Library.Model
 
         public override string ToString()
         {
-            return $"'{Title}' | {PublishDate:d} | {ISBN.ToString()} | {authorsPrint()}| {genersPrint()} | {this.ISBN.Country} | {this.ISBN.Publisher}";
+            return $"'{Title}' | {PublishDate:yyyy} | {ISBN.ToString()} | {authorsPrint()}| {genersPrint()} | {this.ISBN.Country} | {this.ISBN.Publisher}";
         }
 
 

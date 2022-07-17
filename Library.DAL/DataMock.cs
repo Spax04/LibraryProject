@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Library.DAL
 {
-    public class DataMock
+    public class DataMock : IComparable
     {
        public List <LibraryItem> LibraryItemsList { get; private set; }
         public List <Person> PersonList { get; private set; }
@@ -240,9 +240,9 @@ namespace Library.DAL
             Book.BookGenres.Add("War");
             #endregion
 
-            Book book1 = new Book("War and Piese", new DateTime(1869, 4, 5), 123321, "Ukraine");
+            Book book1 = new Book("War and Piese", new DateTime(1846,1,1), "Tundra Books", 123321, "Ukraine");
 
-            book1.Publisher = "Tundra Books";
+           // book1.Publisher = "Tundra Books";
             book1.Genres.Add("War");
             book1.Authors.Add("L.N. Tolstoy");
             
@@ -258,5 +258,9 @@ namespace Library.DAL
             LibraryItemsList.Add(book2);*/
         }
 
+        public int CompareTo(object obj)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

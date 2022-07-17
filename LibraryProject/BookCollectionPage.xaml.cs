@@ -38,5 +38,10 @@ namespace LibraryProject
         {
             Frame.Navigate(typeof(MainPage), null, new EntranceNavigationTransitionInfo());
         }
+
+        private void btnAddBook_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(AddNewBookPage), null, new EntranceNavigationTransitionInfo());
+        }
     }
 }

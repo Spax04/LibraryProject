@@ -45,5 +45,12 @@ namespace Library.DAL
             }
             return item;
         }
+
+        public IQueryable<LibraryItem> GetSortBy(IComparable<LibraryItem> comp)
+        {
+            _context.LibraryItemsList.Sort((IComparer<LibraryItem>)comp);
+            return Get();
+
+        }
     }
 }

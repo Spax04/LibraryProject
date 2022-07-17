@@ -21,12 +21,13 @@
             <ColumnDefinition Width="234.4"/>
         </Grid.ColumnDefinitions>
         <ListView x:Name="listMenuView" Grid.Column="1" Grid.Row="1" Background="White"/>
-        <Button x:Name="btnBookViewBack" Content="Back" Margin="105,175,0,0" VerticalAlignment="Top" Height="50" Width="114" FontSize="24" Background="#FFA06BEF" Click="btnBookViewBack_Click"/>
+        <Button x:Name="btnBookViewBack" Content="Back" Margin="0,118,0,0" VerticalAlignment="Top" Height="107" Width="209" FontSize="72" Background="#FFA06BEF" Click="btnBookViewBack_Click" HorizontalAlignment="Center" BorderBrush="Black"/>
         <ComboBox x:Name="cbFilter" Grid.Column="2" Margin="10,10,0,0" Grid.Row="1" Width="234" Background="White" Height="40">
             <ComboBoxItem Background="White" Content="By Title"/>
             <ComboBoxItem Content="by Year"/>
             <ComboBoxItem Content="by Ganer"/>
         </ComboBox>
+        <Button x:Name="btnAddBook" Content="Add " Margin="97,118,0,0" VerticalAlignment="Top" Height="107" Width="209" FontSize="72" Background="#FFA06BEF" Grid.Column="1" BorderBrush="Black" Click="btnAddBook_Click"/>
 
 
     </Grid>

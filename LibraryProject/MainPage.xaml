@@ -24,7 +24,7 @@
         </Grid.ColumnDefinitions>
 
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" Text="Book store and Library" VerticalAlignment="Top" Height="201" Width="1291" FontSize="100" Grid.ColumnSpan="4" TextAlignment="Center" FontWeight="Bold" FontFamily="Sitka Heading" RenderTransformOrigin="0.503,0.398"/>
-        <Button Content="Add Book" Margin="0,81,0,0" Grid.Row="1" VerticalAlignment="Top" Height="100" Width="338" Background="#FF1276CF" FontSize="48" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Button Content="Jornal collection" Margin="0,81,0,0" Grid.Row="1" VerticalAlignment="Top" Height="100" Width="338" Background="#FF1276CF" FontSize="36" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="11,232,0,0" TextWrapping="Wrap" Text="Admin Panel" VerticalAlignment="Top" Height="77" Width="314" FontSize="48" FontFamily="Sitka Display Semibold" FontWeight="Bold" Grid.RowSpan="2"/>
         <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="640,232,0,0" TextWrapping="Wrap" Text="Customer panel" VerticalAlignment="Top" Height="77" Width="356" FontSize="48" FontFamily="Sitka Display Semibold" FontWeight="Bold" Grid.RowSpan="2" Grid.ColumnSpan="3"/>
         <Button Content="Add new customer" Margin="1,80,0,0" Grid.Row="1" VerticalAlignment="Top" Height="100" Width="338" Background="#FF1276CF" FontSize="36" Grid.Column="3" Grid.ColumnSpan="2"/>
