@@ -29,9 +29,9 @@
         </ComboBox>
         <Button x:Name="btnAddBook" Content="Add " Margin="0,172,0,0" VerticalAlignment="Top" Height="53" Width="109" FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Click="btnAddBook_Click" Grid.Column="1"/>
         <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="10,203,0,0" TextWrapping="Wrap" Text="Sorting :" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
-        <Button x:Name="btnRemoveBook" Content="Remove" Margin="147,172,0,0" VerticalAlignment="Top" Height="53" Width="109" FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Grid.Column="1"/>
-        <Button x:Name="btnFindBy" Content="Search" Margin="1318,168,0,0" VerticalAlignment="Top" Height="53" Width="109" FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Grid.Column="1"/>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="1066,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Height="53" FontSize="24" Background="White"/>
+        <Button x:Name="btnRemoveBook" Content="Remove" Margin="147,172,0,0" VerticalAlignment="Top" Height="53" Width="109" FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Grid.Column="1" Click="btnRemoveBook_Click"/>
+        <Button x:Name="btnFindBy" Content="Search" Margin="1328,168,0,0" VerticalAlignment="Top" Height="53" Width="109" FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Grid.Column="1"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="1098,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Height="53" FontSize="24" Background="White"/>
 
 
     </Grid>

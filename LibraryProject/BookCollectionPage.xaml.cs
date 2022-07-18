@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.UI.Xaml.Media.Animation;
+using Windows.UI.Popups;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -26,13 +27,14 @@ namespace LibraryProject
     public sealed partial class BookCollectionPage : Page
     {
         public LbraryRepository lb;
-        SortLibraryItemsByName sortLibraryItemsByName;
+        
         public BookCollectionPage()
         {
             this.InitializeComponent();
            lb = new LbraryRepository();
             
             listMenuView.ItemsSource = lb.Get();
+
             
         }
 
@@ -63,6 +65,26 @@ namespace LibraryProject
           
         }
 
-       
+        private async void btnRemoveBook_Click(object sender, RoutedEventArgs e)
+        {
+            int itemIndex = listMenuView.SelectedIndex;
+            Book b1 = listMenuView.SelectedItem as Book;
+            
+
+            MessageDialog messageDialog = new MessageDialog("Are you sure you want to delete the book?");
+            messageDialog.Commands.Clear();
+            messageDialog.Commands.Add(new UICommand { Label = "Yes, delete", Id = 0 });
+            messageDialog.Commands.Add(new UICommand { Label = "Cancel", Id = 1 });
+            
+            var res = await messageDialog.ShowAsync();
+
+            if((int)res.Id == 0)
+            {
+                lb.Delete(b1.Id);
+            }
+            
+            listMenuView.ItemsSource = lb.Get();
+        }
+
     }
 }
