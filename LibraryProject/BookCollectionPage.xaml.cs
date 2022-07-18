@@ -25,10 +25,12 @@ namespace LibraryProject
     /// </summary>
     public sealed partial class BookCollectionPage : Page
     {
+        public LbraryRepository lb;
+        SortLibraryItemsByName sortLibraryItemsByName;
         public BookCollectionPage()
         {
             this.InitializeComponent();
-            LbraryRepository lb = new LbraryRepository();
+           lb = new LbraryRepository();
             
             listMenuView.ItemsSource = lb.Get();
             
@@ -43,5 +45,24 @@ namespace LibraryProject
         {
             Frame.Navigate(typeof(AddNewBookPage), null, new EntranceNavigationTransitionInfo());
         }
+
+        private void cbFilter_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            switch (cbFilter.SelectedIndex)
+            {
+                case 0:
+                    listMenuView.ItemsSource = lb.GetSortBy(new SortLibraryItemsByName());
+                    break;
+                case 1:
+                    listMenuView.ItemsSource = lb.GetSortBy(new SortLibraryItemsByYear());
+                    break;
+                case 2:
+                    listMenuView.ItemsSource = lb.GetSortBy(new SortLIbraryItemsByCountry());
+                    break;
+            }
+          
+        }
+
+       
     }
 }

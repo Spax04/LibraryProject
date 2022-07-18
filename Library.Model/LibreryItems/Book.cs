@@ -9,10 +9,10 @@ namespace Library.Model
     /// <summary>
     /// class representing book handled by the library
     /// </summary>
-    public class Book : LibraryItem
+    public class Book : LibraryItem , IComparable
     {
         private const string _defaultState = "Israel";
-        
+        private const string _defaultPublisher = "Pyramid Books";
 
         /// <summary>
         /// list of known genres for books
@@ -43,10 +43,6 @@ namespace Library.Model
             get
             {
                 return this.ISBN.Publisher;
-            }
-            set
-            {
-                this.ISBN.Publisher = value; 
             }
         }
 
@@ -84,8 +80,8 @@ namespace Library.Model
 
         }
         public string Synopsis { get; set; }
-        public string Discription { get; set; }
-
+        public string Discription {get; private set; }
+       
         /// <summary>
         /// create an instance of book
         /// </summary>
@@ -95,7 +91,7 @@ namespace Library.Model
         /// Every title from the same publisher should have a unique serial number</param>
         /// <param name="country">optional parameter, the state form the <see cref="Model.ISBN"/>.
         /// Default value is "Israel"</param>
-        public Book(string title, DateTime publishDate, string publisher, int serialNumber = 0,
+        public Book(string title, DateTime publishDate, string publisher = _defaultPublisher, int serialNumber = 0,
             string country = _defaultState) : base(title, publishDate)
         {
             this.ISBN = new ISBN() { SerialNumber = serialNumber };
@@ -111,6 +107,6 @@ namespace Library.Model
             return $"'{Title}' | {PublishDate:yyyy} | {ISBN.ToString()} | {authorsPrint()}| {genersPrint()} | {this.ISBN.Country} | {this.ISBN.Publisher}";
         }
 
-
+        
     }
 }

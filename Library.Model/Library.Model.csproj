@@ -120,6 +120,10 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AddingNewBookClass.cs" />
+    <Compile Include="Sorting\SortLIbraryItemsByCountry.cs" />
+    <Compile Include="Sorting\SortLibraryItemsByYear.cs" />
+    <Compile Include="Sorting\SortLibraryItemsByName.cs" />
     <Compile Include="LibreryItems\Book.cs" />
     <Compile Include="Persons\Customer.cs" />
     <Compile Include="Persons\Employee.cs" />

@@ -37,5 +37,15 @@ namespace Library.Model
             Title = title;
             PublishDate = publishDate;
         }
+        public int CompareTo(object obj)
+        {
+            LibraryItem li = obj as LibraryItem;
+            if (li == null)
+            {
+                throw new InvalidCastException();
+            }
+            return this.Title.CompareTo(li.Title);
+
+        }
     }
 }

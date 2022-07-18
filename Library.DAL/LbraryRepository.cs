@@ -9,12 +9,13 @@ namespace Library.DAL
 {
     public class LbraryRepository : IRepository<LibraryItem>
     {
-        private  DataMock _context = new DataMock();
-        public LibraryItem Add(LibraryItem item)
+        private static  DataMock _context = new DataMock();
+        public  LibraryItem Add(LibraryItem item)
         {
             _context.LibraryItemsList.Add(item);
             return item;
         }
+        
 
         public LibraryItem Delete(Guid id)
         {
@@ -46,11 +47,12 @@ namespace Library.DAL
             return item;
         }
 
-        public IQueryable<LibraryItem> GetSortBy(IComparable<LibraryItem> comp)
+        public IQueryable<LibraryItem> GetSortBy(IComparer<LibraryItem> comp)
         {
-            _context.LibraryItemsList.Sort((IComparer<LibraryItem>)comp);
+            _context.LibraryItemsList.Sort(comp);
             return Get();
-
         }
+
+       
     }
 }

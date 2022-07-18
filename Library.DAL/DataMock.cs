@@ -7,19 +7,36 @@ using System.Threading.Tasks;
 
 namespace Library.DAL
 {
-    public class DataMock : IComparable
+    public class DataMock 
     {
        public List <LibraryItem> LibraryItemsList { get; private set; }
         public List <Person> PersonList { get; private set; }
-        
+       
         public DataMock()
         {
             LibraryItemsList = new List<LibraryItem>();
+          
+
             PersonList = new List<Person>();
             Init();
         }
 
-
+        public List<LibraryItem> searhingBookInList(string word)
+        {
+            List<LibraryItem> list = new List<LibraryItem>();
+            for(int i = 0; i < LibraryItemsList.Count; i++)
+            {
+                Book b1 = LibraryItemsList[i] as Book;
+                if(b1 != null)
+                {
+                    if (b1.Discription.Contains(word))
+                    {
+                        list.Add(LibraryItemsList[i]);
+                    }
+                }
+            }
+            return list;
+        }
 
         public void Init()
         {
@@ -47,11 +64,9 @@ namespace Library.DAL
             ISBN.Countries.Add("Mauritius", 613);
             ISBN.Countries.Add("Lebanon", 614);
             ISBN.Countries.Add("Hungary", 615);
-           
             ISBN.Countries.Add("Ukraine", 617);
             ISBN.Countries.Add("Greece", 618);
             ISBN.Countries.Add("Bulgaria", 619);
-            
             ISBN.Countries.Add("Philippines", 621);
             ISBN.Countries.Add("People's Republic of China", 7);
             ISBN.Countries.Add("Former Czechoslovakia", 80);
@@ -67,7 +82,6 @@ namespace Library.DAL
             ISBN.Countries.Add("Netherlands", 90);
             ISBN.Countries.Add("Sweden", 91);
             ISBN.Countries.Add("International Publishers", 92);
-           
             ISBN.Countries.Add("Argentina", 950);
             ISBN.Countries.Add("Finland", 951);
             ISBN.Countries.Add("Croatia", 953);
@@ -90,7 +104,6 @@ namespace Library.DAL
             ISBN.Countries.Add("South Pacific", 982);
             ISBN.Countries.Add("Bangladesh", 984);
             ISBN.Countries.Add("Belarus", 985);
-
             ISBN.Countries.Add("Bosnia and Herzegovina", 9926);
             ISBN.Countries.Add("Qatar", 9927);
             ISBN.Countries.Add("Albania", 9928);
@@ -240,9 +253,8 @@ namespace Library.DAL
             Book.BookGenres.Add("War");
             #endregion
 
-            Book book1 = new Book("War and Piese", new DateTime(1846,1,1), "Tundra Books", 123321, "Ukraine");
+            Book book1 = new Book("War and Piese", new DateTime(1864,1,1), "Tundra Books", 123321, "Ukraine");
 
-           // book1.Publisher = "Tundra Books";
             book1.Genres.Add("War");
             book1.Authors.Add("L.N. Tolstoy");
             
@@ -250,17 +262,14 @@ namespace Library.DAL
 
             LibraryItemsList.Add(book1);
 
-/*
-            Book book2 = new Book("Crime and punishment", new DateTime(1887, 4, 9), 551231, "Eritrea");
-            book2.Publisher = "Pyramid Books";
+
+            Book book2 = new Book("Crime and punishment", new DateTime(1887, 4, 9), "DAW Books", 551231, "Eritrea");
+            
             book2.Genres.Add("Crime");
             book2.Authors.Add("F.M. Dostoevsky");
-            LibraryItemsList.Add(book2);*/
+            LibraryItemsList.Add(book2);
         }
 
-        public int CompareTo(object obj)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }
