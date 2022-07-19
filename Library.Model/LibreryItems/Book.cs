@@ -56,10 +56,8 @@ namespace Library.Model
         /// </summary>
         public int Revision { get; set; }
 
-        /// <summary>
-        /// get or set book's synopsis (short summary of book)
-        /// </summary>
-        /// 
+       
+        
         public StringBuilder authorsPrint()
         {
             StringBuilder authors = new StringBuilder();
@@ -79,6 +77,9 @@ namespace Library.Model
             return geners;
 
         }
+        /// <summary>
+        /// get or set book's synopsis (short summary of book)
+        /// </summary>
         public string Synopsis { get; set; }
         public string Discription {get; private set; }
        

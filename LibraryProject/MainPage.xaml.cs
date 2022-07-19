@@ -38,5 +38,10 @@ namespace LibraryProject
         {
             Frame.Navigate(typeof(BookCollectionPage), null, new SuppressNavigationTransitionInfo());
         }
+
+        private void btnJornalCol_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(JornalCollectionPage), null, new SuppressNavigationTransitionInfo());
+        }
     }
 }

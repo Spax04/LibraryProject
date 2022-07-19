@@ -24,67 +24,41 @@ namespace LibraryProject
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class BookCollectionPage : Page
+    public sealed partial class JornalCollectionPage : Page
     {
-        public LbraryRepository lb;
-        public BookCollectionPage()
+        LbraryRepository lb;
+        public JornalCollectionPage()
         {
-
             this.InitializeComponent();
-           lb = new LbraryRepository();
-            // for(int i = 0; i < books.Count; i++)
-            listMenuView.ItemsSource = lb.GetBook();
-
-            
+            lb = new LbraryRepository();
+            listMenuView.ItemsSource = lb.GetJornal();
         }
+
+       
 
         private void btnBookViewBack_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MainPage), null, new EntranceNavigationTransitionInfo());
         }
 
-        private void btnAddBook_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(AddNewBookPage), null, new EntranceNavigationTransitionInfo());
-        }
-
-        private void cbFilter_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            switch (cbFilter.SelectedIndex)
-            {
-                case 0:
-                    listMenuView.ItemsSource = lb.GetSortBy(new SortLibraryItemsByName());
-                    break;
-                case 1:
-                    listMenuView.ItemsSource = lb.GetSortBy(new SortLibraryItemsByYear());
-                    break;
-                case 2:
-                    listMenuView.ItemsSource = lb.GetSortBy(new SortLIbraryItemsByCountry());
-                    break;
-            }
-          
-        }
-
-        private async void btnRemoveBook_Click(object sender, RoutedEventArgs e)
+        private async void btnRemoveJornal_Click(object sender, RoutedEventArgs e)
         {
             int itemIndex = listMenuView.SelectedIndex;
-            Book b1 = listMenuView.SelectedItem as Book;
-            
+            Jornal b1 = listMenuView.SelectedItem as Jornal;
 
             MessageDialog messageDialog = new MessageDialog("Are you sure you want to delete the book?");
             messageDialog.Commands.Clear();
             messageDialog.Commands.Add(new UICommand { Label = "Yes, delete", Id = 0 });
             messageDialog.Commands.Add(new UICommand { Label = "Cancel", Id = 1 });
-            
+
             var res = await messageDialog.ShowAsync();
 
-            if((int)res.Id == 0)
+            if ((int)res.Id == 0)
             {
-                lb.DeleteBook(b1.Id);
+                lb.DeleteJornal(b1.Id);
             }
-            
-            listMenuView.ItemsSource = lb.GetBook();
-        }
 
+            listMenuView.ItemsSource = lb.GetJornal();
+        }
     }
 }

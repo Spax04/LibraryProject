@@ -29,44 +29,64 @@ namespace LibraryProject
     public sealed partial class AddNewBookPage : Page
     {
         LbraryRepository lb = new LbraryRepository();
-        AddingNewBookClass adding;
+        AddingNewLibraryItem adding;
+        ComboBoxItem ci;
         public AddNewBookPage()
         {
             this.InitializeComponent();
 
-
-           
-            // LbraryRepository.Add(new Book());
-
-
+            creatingCmbBookPage();
         }
 
         private void btnCheckFields_Click(object sender, RoutedEventArgs e)
         {
-            
-
-            adding = new AddingNewBookClass(titleTxt.Text, publishDateTxt.Text, publisherTxt.Text, serialNumberTxt.Text, countryTxt.Text);
-            issuesTxt.Text = adding.checkingFields(publishDateTxt.Text, serialNumberTxt.Text);
+            adding = new AddingNewLibraryItem(titleTxt.Text, calendarPicker.Date.DateTime, AddingNewLibraryItem.returnContent(publisherCmb), serialNumberTxt.Text, AddingNewLibraryItem.returnContent(countrCmb), AddingNewLibraryItem.returnContent(generCmb), authorTxt.Text);
+            issuesTxt.Text = adding.checkingFields( serialNumberTxt.Text);
            if(issuesTxt.Text == "")
-            {
                 btnAddNewBook.IsEnabled = true;
-            }
             else
-            {
                 btnAddNewBook.IsEnabled = false;
-            }
            
         }
 
         private void btnAddNewBook_Click(object sender, RoutedEventArgs e)
         {
-            adding = new AddingNewBookClass(titleTxt.Text, publishDateTxt.Text, publisherTxt.Text, serialNumberTxt.Text, countryTxt.Text);
-            lb.Add(adding.addingBookMethod());
+            lb.AddBook(adding.addingBookMethod());
+            Frame.Navigate(typeof(BookCollectionPage), null, new EntranceNavigationTransitionInfo());
         }
 
         private void btnBookViewBack_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(BookCollectionPage), null, new EntranceNavigationTransitionInfo());
         }
+
+        private void creatingCmbBookPage()
+        {
+            for (int i = 0; i < Book.BookGenres.Count; i++)
+            {
+                ci = new ComboBoxItem();
+                ci.Content = Book.BookGenres[i];
+                generCmb.Items.Add(ci);
+            }
+
+            Dictionary<string, int>.KeyCollection countryKeys = ISBN.Countries.Keys;
+            foreach (var item in countryKeys)
+            {
+                ComboBoxItem ci = new ComboBoxItem();
+                ci.Content = item;
+                
+                countrCmb.Items.Add(ci);
+            }
+
+            Dictionary<string, int>.KeyCollection publisherKeys = ISBN.Publishers.Keys;
+            foreach (var item in publisherKeys)
+            {
+                ComboBoxItem ci = new ComboBoxItem();
+                ci.Content = item;
+                publisherCmb.Items.Add(ci);
+            }
+        }
+
+       
     }
 }

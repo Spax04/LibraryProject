@@ -11,6 +11,23 @@ namespace Library.Model
     /// </summary>
     public class Jornal : LibraryItem
     {
+        public int Discount { get; set; }
+        private double _price;
+        public double Price 
+        { 
+            get
+            {
+                return _price; 
+            } 
+            set 
+            { 
+                if(value > 0)
+                {
+                    _price = value;
+                }else
+                _price = 0;
+            } 
+        }
         /// <summary>
         /// list of jornal ganers
         /// </summary>
@@ -19,12 +36,12 @@ namespace Library.Model
         /// <summary>
         /// list of  Contibuters for spicific jornal
         /// </summary>
-        public List<string> Contributers { get; private set; }
+        public string Contributers { get; private set; }
 
         /// <summary>
         /// list of  editors for spicific jornal
         /// </summary>
-        public List<string> Editors { get; set; }
+        public string Editors { get; set; }
 
         /// <summary>
         /// enum that meins how offen jornal coming out
@@ -35,14 +52,36 @@ namespace Library.Model
         /// list of  ganers for spicific jornal
         /// </summary>
         public List<string> Ganers { get; private set; }
-
-
-        public Jornal(string title, DateTime publishDate) : base(title, publishDate)
+        public double gettingDiscountPrice()
         {
-            Contributers = new List<string>();
-            Editors = new List<string>();
-            Ganers = new List<string>();
+            double newPrice = 0;
+            if(Discount > 0)
+            {
+                newPrice = Price * (Discount / 100);
+            }
+            return newPrice;
         }
+
+
+        public Jornal(string title, DateTime publishDate,double price,int discount = 0) : base(title, publishDate)
+        {
+            _price = price;
+            Discount = discount;
+        }
+
+        public override string ToString()
+        {
+            if(Discount > 0)
+            {
+                return $"'{Title}' | {PublishDate:D} | {Ganers} | {Editors} | {Contributers} | {gettingDiscountPrice():C} | {Discount}% ";
+            }
+            else
+            {
+                return $"'{Title}' | {PublishDate:D} | {Ganers} | {Editors} | {Contributers} | {Price:C}";
+            }
+        }
+            
+        
 
         /// <summary>
         /// frequency of jornal publishing
