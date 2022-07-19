@@ -1,0 +1,86 @@
+﻿<Page
+    x:Class="LibraryProject.AddNewJornalPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LibraryProject"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="#FF76B3B1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="235.2"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="228.8"/>
+            <ColumnDefinition Width="731"/>
+            <ColumnDefinition Width="706"/>
+            <ColumnDefinition Width="234.4"/>
+        </Grid.ColumnDefinitions>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Height="85" Width="551" FontSize="48" TextAlignment="Left" Background="#FFFFF5F5" BorderBrush="Black" BorderThickness="5,5,5,5"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Grid.Row="7" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="80" Width="541" FontSize="48" TextAlignment="Left" Background="White" BorderBrush="Black" BorderThickness="5,5,5,5"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Grid.Row="5" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Height="80" Width="531" FontSize="48" TextAlignment="Left" Margin="10,0,0,0" Background="White" BorderBrush="Black" BorderThickness="5,5,5,5"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Height="80" Width="541" FontSize="48" TextAlignment="Left" BorderBrush="#FF080303" Background="White" BorderThickness="5,5,5,5"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="10,177,0,0" TextWrapping="Wrap" Text="Title" VerticalAlignment="Top" Height="59" Width="176" FontSize="36" Grid.RowSpan="2" FontWeight="Bold"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="10,27,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Publish date" VerticalAlignment="Top" Height="59" Width="279" FontSize="36" Grid.RowSpan="2" FontWeight="Bold"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="10,32,0,0" Grid.Row="4" TextWrapping="Wrap" Text="Publisher" VerticalAlignment="Top" Height="59" Width="176" FontSize="36" Grid.RowSpan="2" FontWeight="Bold"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="0,32,0,0" Grid.Row="6" TextWrapping="Wrap" Text="Serial number" VerticalAlignment="Top" Height="59" Width="262" FontSize="36" Grid.RowSpan="2" FontWeight="Bold"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="324,49,0,0" Grid.Row="2" TextWrapping="Wrap" Text="input example: year,month,day" VerticalAlignment="Top" Height="25" Width="225" FontSize="16" FontWeight="Normal" Foreground="#FFB50887"/>
+        <TextBox HorizontalAlignment="Left" Grid.Row="9" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Height="80" Width="541" FontSize="48" TextAlignment="Left" Background="White" BorderBrush="Black" BorderThickness="5,5,5,5" Grid.ColumnSpan="2" Margin="225,0,0,0"/>
+        <TextBlock HorizontalAlignment="Left" Margin="225,32,0,0" Grid.Row="8" TextWrapping="Wrap" Text="Country" VerticalAlignment="Top" Height="59" Width="262" FontSize="36" Grid.RowSpan="2" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <Grid Background="#FF76B3B1" Grid.ColumnSpan="4" Margin="0,0,-20,-45" Grid.RowSpan="11">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="235.2"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="228.8"/>
+                <ColumnDefinition Width="731"/>
+                <ColumnDefinition Width="706"/>
+                <ColumnDefinition Width="234.4"/>
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="titleTxt" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Height="85" Width="551" FontSize="48" TextAlignment="Left" Background="#FFFFF5F5" BorderBrush="Black" BorderThickness="5,5,5,5"/>
+            <TextBox x:Name="serialNumberTxt" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="7" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Height="80" Width="541" FontSize="48" TextAlignment="Left" Background="White" BorderBrush="Black" BorderThickness="5,5,5,5"/>
+            <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="10,177,0,0" TextWrapping="Wrap" Text="Title" VerticalAlignment="Top" Height="59" Width="176" FontSize="36" Grid.RowSpan="2" FontWeight="Bold"/>
+            <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="10,27,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Publish date" VerticalAlignment="Top" Height="59" Width="279" FontSize="36" Grid.RowSpan="2" FontWeight="Bold"/>
+            <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="10,32,0,0" Grid.Row="4" TextWrapping="Wrap" Text="Price" VerticalAlignment="Top" Height="59" Width="176" FontSize="36" Grid.RowSpan="2" FontWeight="Bold"/>
+            <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="0,32,0,0" Grid.Row="6" TextWrapping="Wrap" Text="Serial number" VerticalAlignment="Top" Height="59" Width="262" FontSize="36" Grid.RowSpan="2" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Margin="225,32,0,0" Grid.Row="8" TextWrapping="Wrap" Text="Editor" VerticalAlignment="Top" Height="59" Width="262" FontSize="36" Grid.RowSpan="2" FontWeight="Bold" Grid.ColumnSpan="2"/>
+            <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="10,22,0,0" TextWrapping="Wrap" Text="Frequency" VerticalAlignment="Top" Height="59" Width="262" FontSize="36" FontWeight="Bold" Grid.Row="4" Grid.RowSpan="2"/>
+            <Button x:Name="btnAddNewBook" Content="Add new book" Height="80" Width="205" FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Grid.Column="2" Grid.Row="7" Margin="501,0,0,0" IsEnabled="False" Click="btnAddNewBook_Click"/>
+            <Button x:Name="btnCheckFields" Content="Check fileds" Height="80" Width="205" FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Grid.Column="2" Grid.Row="7" Click="btnCheckFields_Click" Margin="2,0,0,0"/>
+            <TextBlock x:Name="issuesTxt" Grid.Column="2" HorizontalAlignment="Left" Margin="2,5,0,0" Grid.Row="8" TextWrapping="Wrap" VerticalAlignment="Top" Width="283" Height="96" Grid.RowSpan="2" Foreground="Red" FontSize="9"/>
+            <Button x:Name="btnJornalViewBack" Content="Back" Margin="0,172,0,0" VerticalAlignment="Top" Height="53" Width="111" FontSize="22" Background="#FFA06BEF" HorizontalAlignment="Center" BorderBrush="Black" Click="btnJornalViewBack_Click"/>
+            <TextBox x:Name="contributerTxt" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Height="80" Width="541" FontSize="48" TextAlignment="Left" BorderBrush="#FF080303" Background="White" BorderThickness="5,5,5,5"/>
+            <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="10,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="59" Width="176" FontSize="36" Grid.RowSpan="2" FontWeight="Bold"><Run FlowDirection="RightToLeft" Text="G"/><Run Text="ener"/></TextBlock>
+            <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="10,27,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Contributer" VerticalAlignment="Top" Height="59" Width="279" FontSize="36" Grid.RowSpan="2" FontWeight="Bold"/>
+            <ComboBox x:Name="generCmb" Grid.Row="1" Width="545" Background="White" Height="80" BorderThickness="5,5,5,5" BorderBrush="Black" Grid.Column="2" VerticalAlignment="Center" FontSize="48"/>
+            <DatePicker x:Name="calendarPicker" Margin="225,0,0,0" Grid.ColumnSpan="2" Grid.Row="3" Height="80" Width="460" FontSize="48" Background="White" FontFamily="Yu Gothic UI Semibold" FontWeight="Bold" FontStyle="Normal"/>
+            <TextBox x:Name="priceTxt" HorizontalAlignment="Left" Grid.Row="5" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Height="80" Width="541" FontSize="48" TextAlignment="Left" BorderBrush="#FF080303" Background="White" BorderThickness="5,5,5,5" Grid.ColumnSpan="2" Margin="225,0,0,0"/>
+            <TextBox x:Name="editorTxt" HorizontalAlignment="Left" Grid.Row="9" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Height="80" Width="541" FontSize="48" TextAlignment="Left" BorderBrush="#FF080303" Background="White" BorderThickness="5,5,5,5" Margin="225,0,0,0" Grid.ColumnSpan="2"/>
+            <ComboBox x:Name="frequencyCmb" Grid.Row="5" Width="545" Background="White" Height="80" BorderThickness="5,5,5,5" BorderBrush="Black" Grid.Column="2" VerticalAlignment="Center" FontSize="48"/>
+        </Grid>
+    </Grid>
+</Page>

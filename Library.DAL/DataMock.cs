@@ -283,7 +283,7 @@ namespace Library.DAL
             BookItemsList.Add(book2);
 
 
-            Jornal jornal1 = new Jornal("Hacker",new DateTime(2022,2,2),1.30);
+            Jornal jornal1 = new Jornal("Hacker",new DateTime(2022,2,2),1.30,12312500);
            JornalItemsList.Add(jornal1);
 
         }

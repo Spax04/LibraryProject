@@ -86,7 +86,17 @@ namespace Library.DAL
             _context.LibraryItemsList.Sort(comp);
             return Get();
         }
+        public IQueryable<Book> GetSortBookBy(IComparer<Book> comp)
+        {
+            _context.BookItemsList.Sort(comp);
+            return GetBook();
+        }
+        public IQueryable<Jornal> GetSortJornalBy(IComparer<Jornal> comp)
+        {
+            _context.JornalItemsList.Sort(comp);
+            return GetJornal();
+        }
 
-       
+
     }
 }

@@ -60,5 +60,24 @@ namespace LibraryProject
 
             listMenuView.ItemsSource = lb.GetJornal();
         }
+
+        private void btnAddJornal_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(AddNewJornalPage), null, new EntranceNavigationTransitionInfo());
+        }
+
+        private void cbFilter_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            switch (cbFilter.SelectedIndex)
+            {
+                case 0:
+                    listMenuView.ItemsSource = lb.GetSortJornalBy(new SortLibraryItemsByName());
+                    break;
+                case 1:
+                    listMenuView.ItemsSource = lb.GetSortJornalBy(new SortLibraryItemsByYear());
+                    break;
+            }
+
+        }
     }
 }

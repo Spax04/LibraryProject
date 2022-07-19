@@ -53,13 +53,13 @@ namespace LibraryProject
             switch (cbFilter.SelectedIndex)
             {
                 case 0:
-                    listMenuView.ItemsSource = lb.GetSortBy(new SortLibraryItemsByName());
-                    break;
-                case 1:
-                    listMenuView.ItemsSource = lb.GetSortBy(new SortLibraryItemsByYear());
-                    break;
-                case 2:
-                    listMenuView.ItemsSource = lb.GetSortBy(new SortLIbraryItemsByCountry());
+                    listMenuView.ItemsSource = lb.GetSortBookBy(new SortLibraryItemsByName());
+                    break;                               
+                case 1:                                  
+                    listMenuView.ItemsSource = lb.GetSortBookBy(new SortLibraryItemsByYear());
+                    break;                               
+                case 2:                                  
+                    listMenuView.ItemsSource = lb.GetSortBookBy(new SortLIbraryItemsByCountry());
                     break;
             }
           

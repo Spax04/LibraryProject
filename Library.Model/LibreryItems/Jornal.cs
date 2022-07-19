@@ -36,7 +36,7 @@ namespace Library.Model
         /// <summary>
         /// list of  Contibuters for spicific jornal
         /// </summary>
-        public string Contributers { get; private set; }
+        public string Contributers { get;  set; }
 
         /// <summary>
         /// list of  editors for spicific jornal
@@ -47,11 +47,13 @@ namespace Library.Model
         /// enum that meins how offen jornal coming out
         /// </summary>
         public JornalFrequency Frequency { get; set; }
+        public int SerialNumber { get; set; }
 
         /// <summary>
         /// list of  ganers for spicific jornal
         /// </summary>
-        public List<string> Ganers { get; private set; }
+        public string Ganers { get;  set; }
+
         public double gettingDiscountPrice()
         {
             double newPrice = 0;
@@ -63,10 +65,12 @@ namespace Library.Model
         }
 
 
-        public Jornal(string title, DateTime publishDate,double price,int discount = 0) : base(title, publishDate)
+        public Jornal(string title, DateTime publishDate, double price,  int serialnumber ,JornalFrequency jf = JornalFrequency.Other) : base(title, publishDate)
         {
             _price = price;
-            Discount = discount;
+            Discount = 0;   
+            Frequency = jf;
+            SerialNumber = serialnumber;
         }
 
         public override string ToString()

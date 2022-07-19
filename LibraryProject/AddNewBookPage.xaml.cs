@@ -41,7 +41,7 @@ namespace LibraryProject
         private void btnCheckFields_Click(object sender, RoutedEventArgs e)
         {
             adding = new AddingNewLibraryItem(titleTxt.Text, calendarPicker.Date.DateTime, AddingNewLibraryItem.returnContent(publisherCmb), serialNumberTxt.Text, AddingNewLibraryItem.returnContent(countrCmb), AddingNewLibraryItem.returnContent(generCmb), authorTxt.Text);
-            issuesTxt.Text = adding.checkingFields( serialNumberTxt.Text);
+            issuesTxt.Text = adding.checkingFieldsBook( serialNumberTxt.Text);
            if(issuesTxt.Text == "")
                 btnAddNewBook.IsEnabled = true;
             else

@@ -21,12 +21,11 @@
         </Grid.ColumnDefinitions>
         <ListView x:Name="listMenuView" Grid.Column="1" Grid.Row="1" Background="White"/>
         <Button x:Name="btnBookViewBack" Content="Back" Margin="0,172,0,0" VerticalAlignment="Top" Height="53" Width="111" FontSize="22" Background="#FFA06BEF" Click="btnBookViewBack_Click" HorizontalAlignment="Center" BorderBrush="Black"/>
-        <ComboBox x:Name="cbFilter" Grid.Column="2" Margin="5,0,0,0" Grid.Row="1" Width="234" Background="White" Height="40">
+        <ComboBox x:Name="cbFilter" Grid.Column="2" Margin="5,0,0,0" Grid.Row="1" Width="234" Background="White" Height="40" SelectionChanged="cbFilter_SelectionChanged">
             <ComboBoxItem Background="White" Content="By Title"/>
             <ComboBoxItem Content="by Year"/>
-            <ComboBoxItem Content="by Country"/>
         </ComboBox>
-        <Button x:Name="btnAddJornal" Content="Add " Margin="0,172,0,10" VerticalAlignment="Stretch" Width="109" FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Grid.Column="1"/>
+        <Button x:Name="btnAddJornal" Content="Add " Margin="0,172,0,10" VerticalAlignment="Stretch" Width="109" FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Grid.Column="1" Click="btnAddJornal_Click"/>
         <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="10,203,0,0" TextWrapping="Wrap" Text="Sorting :" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
         <Button x:Name="btnRemoveJornal" Content="Remove" Margin="147,172,0,0" VerticalAlignment="Top" Height="53" Width="109" FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Grid.Column="1" Click="btnRemoveJornal_Click"/>
         <Button x:Name="btnFindBy" Content="Search" Margin="1328,168,0,0" VerticalAlignment="Top" Height="53" Width="109" FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Grid.Column="1"/>

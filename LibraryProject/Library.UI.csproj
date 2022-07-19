@@ -119,6 +119,9 @@
     <Compile Include="AddNewBookPage.xaml.cs">
       <DependentUpon>AddNewBookPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AddNewJornalPage.xaml.cs">
+      <DependentUpon>AddNewJornalPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
@@ -154,6 +157,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="AddNewBookPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddNewJornalPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
