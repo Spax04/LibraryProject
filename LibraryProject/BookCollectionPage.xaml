@@ -11,28 +11,46 @@
 
     <Grid Background="#FF76B3B1">
         <Grid.RowDefinitions>
-            <RowDefinition Height="235.2"/>
-            <RowDefinition Height="670"/>
-            <RowDefinition Height="115"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition  />
+            <RowDefinition Height="8*"/>
+            <RowDefinition />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="228.8"/>
-            <ColumnDefinition Width="1436.8"/>
-            <ColumnDefinition Width="234.4"/>
+            <ColumnDefinition />
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <ListView x:Name="listMenuView" Grid.Column="1" Grid.Row="1" Background="White"/>
-        <Button x:Name="btnBookViewBack" Content="Back" Margin="0,172,0,0" VerticalAlignment="Top" Height="53" Width="111" FontSize="22" Background="#FFA06BEF" Click="btnBookViewBack_Click" HorizontalAlignment="Center" BorderBrush="Black"/>
-        <ComboBox x:Name="cbFilter" Grid.Column="2" Margin="5,0,0,0" Grid.Row="1" Width="234" Background="White" Height="40" SelectionChanged="cbFilter_SelectionChanged">
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnAddBook" Content="Add"  VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Click="btnAddBook_Click" Grid.Column="0" />
+            <Button x:Name="btnRemoveBook" Content="Remove" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Grid.Column="2" Click="btnRemoveBook_Click"/>
+            <Button x:Name="btnFindBy" Content="Search"  VerticalAlignment="Center" HorizontalAlignment="Stretch"  FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Grid.Column="10"/>
+            <TextBox Grid.Column="8" Grid.ColumnSpan="2" HorizontalAlignment="Stretch"  TextWrapping="Wrap" VerticalAlignment="Center"  FontSize="24" Background="White"/>
+
+        </Grid>
+        <Button x:Name="btnBookViewBack" Grid.Row="1" Content="Back"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="22" Background="#FFA06BEF" Click="btnBookViewBack_Click"  BorderBrush="Black"/>
+
+        <ListView x:Name="listMenuView" Grid.Column="1" Grid.Row="2" Background="White"/>
+        <ComboBox x:Name="cbFilter" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Stretch" Background="White" Height="40" SelectionChanged="cbFilter_SelectionChanged">
             <ComboBoxItem Background="White" Content="By Title"/>
             <ComboBoxItem Content="by Year"/>
             <ComboBoxItem Content="by Country"/>
         </ComboBox>
-        <Button x:Name="btnAddBook" Content="Add " Margin="0,172,0,0" VerticalAlignment="Top" Height="53" Width="109" FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Click="btnAddBook_Click" Grid.Column="1"/>
-        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="10,203,0,0" TextWrapping="Wrap" Text="Sorting :" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
-        <Button x:Name="btnRemoveBook" Content="Remove" Margin="147,172,0,0" VerticalAlignment="Top" Height="53" Width="109" FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Grid.Column="1" Click="btnRemoveBook_Click"/>
-        <Button x:Name="btnFindBy" Content="Search" Margin="1328,168,0,0" VerticalAlignment="Top" Height="53" Width="109" FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Grid.Column="1"/>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="1098,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Height="53" FontSize="24" Background="White"/>
-
+        <TextBlock Grid.Column="2" Grid.Row="0" HorizontalAlignment="Left"   Text="Sorting :" VerticalAlignment="Bottom" FontSize="24" FontWeight="Bold"/>
+       
 
     </Grid>
 </Page>

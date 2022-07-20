@@ -31,7 +31,7 @@ namespace LibraryProject
         {
             this.InitializeComponent();
             lb = new LbraryRepository();
-            listMenuView.ItemsSource = lb.Get(); 
+            listMenuView.ItemsSource = lb.Get().Where(Item => Item is Book).ToList(); 
         }
 
         private void btnBookViewBack_Click(object sender, RoutedEventArgs e)
@@ -79,7 +79,7 @@ namespace LibraryProject
                 lb.Delete(b1.Id);
             }
             
-            listMenuView.ItemsSource = lb.Get();
+            listMenuView.ItemsSource = lb.Get().Where(Item => Item is Book).ToList();
         }
 
     }

@@ -9,21 +9,25 @@ namespace Library.DAL
 {
     public class DataMock 
     {
+        private static DataMock _instens;
+        public static DataMock Instens
+        {
+            get
+            {
+                if( _instens == null)
+                {
+                   _instens = new DataMock();
+                }
+                return _instens;
+            }
+        }
         public List <LibraryItem> LibraryItemsList { get; private set; }
-        public List <Book> BookItemsList { get; private set; }
-        public List<Jornal> JornalItemsList { get; private set; }
+       
         public List <Person> PersonList { get; private set; }
        
-        public DataMock()
+        private DataMock()
         {
-            BookItemsList = new List<Book>();
-            JornalItemsList = new List<Jornal>();
-
             LibraryItemsList = new List<LibraryItem>();
-            LibraryItemsList.AddRange(BookItemsList);
-            LibraryItemsList.AddRange(JornalItemsList);
-            
-
             PersonList = new List<Person>();
             Init();
         }
@@ -276,15 +280,15 @@ namespace Library.DAL
             Book book1 = new Book("War and Piese", new DateTime(1864,1,1), "Tundra Books", 123321, "Ukraine");
             book1.Genres.Add("War");
             book1.Authors.Add("L.N. Tolstoy");
-            BookItemsList.Add(book1);
+            LibraryItemsList.Add(book1);
             Book book2 = new Book("Crime and punishment", new DateTime(1887, 4, 9), "DAW Books", 551231, "Eritrea");
             book2.Genres.Add("Crime");
             book2.Authors.Add("F.M. Dostoevsky");
-            BookItemsList.Add(book2);
+            LibraryItemsList.Add(book2);
 
 
             Jornal jornal1 = new Jornal("Hacker",new DateTime(2022,2,2),1.30,12312500);
-           JornalItemsList.Add(jornal1);
+            LibraryItemsList.Add(jornal1);
 
         }
 

@@ -27,6 +27,7 @@ namespace LibraryProject
     /// </summary>
     public sealed partial class AddNewJornalPage : Page
     {
+        
         LbraryRepository lb = new LbraryRepository();
         AddingNewLibraryItem adding;
         ComboBoxItem ci;

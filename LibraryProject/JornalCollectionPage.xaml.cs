@@ -31,7 +31,7 @@ namespace LibraryProject
         {
             this.InitializeComponent();
             lb = new LbraryRepository();
-            listMenuView.ItemsSource = lb.Get();
+            listMenuView.ItemsSource = lb.Get().Where(Item => Item is Jornal).ToList();
         }
 
        
@@ -58,7 +58,7 @@ namespace LibraryProject
                 lb.Delete(b1.Id);
             }
 
-            listMenuView.ItemsSource = lb.Get();
+            listMenuView.ItemsSource = lb.Get().Where(Item => Item is Jornal).ToList();
         }
 
         private void btnAddJornal_Click(object sender, RoutedEventArgs e)
