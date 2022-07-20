@@ -30,8 +30,8 @@ namespace LibraryUnitTest
         [TestMethod]
         public void AddLibraryItemsToList()
         {
-            
-            Assert.IsNotNull(lb.Add(b1));
+
+            Assert.IsNotNull(lb.Add((LibraryItem)b1));
         }
 
         [TestMethod]

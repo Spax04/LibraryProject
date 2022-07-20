@@ -71,7 +71,7 @@ namespace LibraryProject
 
         private void btnAddNewBook_Click(object sender, RoutedEventArgs e)
         {
-            lb.AddJornal(adding.addingJornalMethod());
+            lb.Add(adding.addingJornalMethod());
             Frame.Navigate(typeof(JornalCollectionPage), null, new EntranceNavigationTransitionInfo());
         }
     }

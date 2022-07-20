@@ -51,7 +51,7 @@ namespace LibraryProject
 
         private void btnAddNewBook_Click(object sender, RoutedEventArgs e)
         {
-            lb.AddBook(adding.addingBookMethod());
+            lb.Add(adding.addingBookMethod());
             Frame.Navigate(typeof(BookCollectionPage), null, new EntranceNavigationTransitionInfo());
         }
 
