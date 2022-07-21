@@ -9,21 +9,21 @@ namespace Library.Model
 {
     public class AddingNewLibraryItem
     {
-        private string _title, _publisher, _serialnumber, _country,_gener,_author,_price;
+        private string _title, _publisher, _serialnumber, _country,_gener,_author,_price , _synopsis;
         private DateTime _datePublisher;
        Jornal.JornalFrequency _frequency;
 
         private ISBN isbn = new ISBN();
-        public AddingNewLibraryItem(string title, DateTime date ,string publisher,string serialnumber,string country,string gener,string author) //Book constractor
+        public AddingNewLibraryItem(string title, DateTime date ,string publisher,string serialnumber,string country,string gener,string author, string synopsis) //Book constractor
         {
             _title = title;
-            
             _publisher = publisher;
             _serialnumber = serialnumber;
             _country = country;
             _gener = gener; 
             _author = author;
             _datePublisher = date;
+            _synopsis = synopsis;
         }
 
         public AddingNewLibraryItem(string title, DateTime date, string price,Jornal.JornalFrequency jf,string gener,string contributer,string editor,string serialnumber) // Jornal Constractor
@@ -52,7 +52,7 @@ namespace Library.Model
         {
             try
             {
-                return Convert.ToInt32(price);
+                return Convert.ToDouble(price);
             }
             catch
             {
@@ -107,6 +107,7 @@ namespace Library.Model
             Book b1 = new Book(_title, _datePublisher, _publisher, convertToSerialNumber(_serialnumber), _country);
             b1.Genres.Add(_gener);
             b1.Authors.Add(_author);
+            b1.Synopsis = _synopsis;
             return b1;
         }
 

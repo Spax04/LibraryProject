@@ -70,7 +70,7 @@ namespace LibraryProject
             Frame.Navigate(typeof(JornalCollectionPage), null, new EntranceNavigationTransitionInfo());
         }
 
-        private void btnAddNewBook_Click(object sender, RoutedEventArgs e)
+        private void btnAddNewJornal_Click(object sender, RoutedEventArgs e)
         {
             lb.Add(adding.addingJornalMethod());
             Frame.Navigate(typeof(JornalCollectionPage), null, new EntranceNavigationTransitionInfo());

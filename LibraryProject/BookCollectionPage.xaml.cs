@@ -27,6 +27,7 @@ namespace LibraryProject
     public sealed partial class BookCollectionPage : Page
     {
         public LbraryRepository lb;
+        public List<LibraryItem> temp;
         public BookCollectionPage()
         {
             this.InitializeComponent();
@@ -36,29 +37,40 @@ namespace LibraryProject
 
         private void btnBookViewBack_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MainPage), null, new EntranceNavigationTransitionInfo());
+            Frame.Navigate(typeof(MainsPage), null, new EntranceNavigationTransitionInfo());
         }
 
-        private void btnAddBook_Click(object sender, RoutedEventArgs e)
+        private void btnAddBook_Click(object sender, RoutedEventArgs e) 
         {
+           
             Frame.Navigate(typeof(AddNewBookPage), null, new EntranceNavigationTransitionInfo());
         }
 
         private void cbFilter_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+           
             switch (cbFilter.SelectedIndex)
             {
                 case 0:
-                    listMenuView.ItemsSource = lb.GetSortBy((IComparer<LibraryItem>)new SortLibraryItemsByName());
+                    listMenuView.ItemsSource = lb.GetSortBy(new SortLibraryItemsByName()).Where(Item => Item is Book).ToList();
                     break;                               
                 case 1:
-                    listMenuView.ItemsSource = lb.GetSortBy((IComparer<LibraryItem>)new SortLibraryItemsByYear());
+                    listMenuView.ItemsSource = lb.GetSortBy(new SortLibraryItemsByYear()).Where(Item => Item is Book).ToList();
                     break;                               
                 case 2:
-                    listMenuView.ItemsSource = lb.GetSortBy((IComparer<LibraryItem>)new SortLIbraryItemsByCountry());
+                    listMenuView.ItemsSource = lb.GetSortBy(new SortBookByCountry()).Where(Item => Item is Book).ToList();
+                    break;
+                case 3:
+                    listMenuView.ItemsSource = lb.GetSortBy(new SortBookByPublisher()).Where(Item => Item is Book).ToList();
+                    break;
+                case 4:
+                    listMenuView.ItemsSource = lb.GetSortBy(new SortBookByGener()).Where(Item => Item is Book).ToList();
+                    break;
+                case 5:
+                    listMenuView.ItemsSource = lb.GetSortBy(new SortBookByAuthor()).Where(Item => Item is Book).ToList();
                     break;
             }
-          
+            
         }
 
         private async void btnRemoveBook_Click(object sender, RoutedEventArgs e)
@@ -66,7 +78,6 @@ namespace LibraryProject
             int itemIndex = listMenuView.SelectedIndex;
             Book b1 = listMenuView.SelectedItem as Book;
             
-
             MessageDialog messageDialog = new MessageDialog("Are you sure you want to delete the book?");
             messageDialog.Commands.Clear();
             messageDialog.Commands.Add(new UICommand { Label = "Yes, delete", Id = 0 });

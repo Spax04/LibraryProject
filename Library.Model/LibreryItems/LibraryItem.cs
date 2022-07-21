@@ -24,6 +24,8 @@ namespace Library.Model
         /// <summary>
         /// print or publish date of item
         /// </summary>
+
+        public bool InStoke { get; set; }
         public DateTime PublishDate { get; set; }
 
         /// <summary>
@@ -36,6 +38,7 @@ namespace Library.Model
             Id = Guid.NewGuid();
             Title = title;
             PublishDate = publishDate;
+            InStoke = true;
         }
         public int CompareTo(object obj)
         {

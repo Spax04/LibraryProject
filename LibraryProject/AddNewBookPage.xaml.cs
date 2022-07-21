@@ -31,16 +31,17 @@ namespace LibraryProject
         LbraryRepository lb = new LbraryRepository();
         AddingNewLibraryItem adding;
         ComboBoxItem ci;
+        
+
         public AddNewBookPage()
         {
             this.InitializeComponent();
-
             creatingCmbBookPage();
         }
 
         private void btnCheckFields_Click(object sender, RoutedEventArgs e)
         {
-            adding = new AddingNewLibraryItem(titleTxt.Text, calendarPicker.Date.DateTime, AddingNewLibraryItem.returnContent(publisherCmb), serialNumberTxt.Text, AddingNewLibraryItem.returnContent(countrCmb), AddingNewLibraryItem.returnContent(generCmb), authorTxt.Text);
+            adding = new AddingNewLibraryItem(titleTxt.Text, calendarPicker.Date.DateTime, AddingNewLibraryItem.returnContent(publisherCmb), serialNumberTxt.Text, AddingNewLibraryItem.returnContent(countrCmb), AddingNewLibraryItem.returnContent(generCmb), authorTxt.Text,synopsisTxt.Text);
             issuesTxt.Text = adding.checkingFieldsBook( serialNumberTxt.Text);
            if(issuesTxt.Text == "")
                 btnAddNewBook.IsEnabled = true;
@@ -87,6 +88,16 @@ namespace LibraryProject
             }
         }
 
-       
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+
+            if (e.Parameter != null)
+            {
+                PageInfo pi = (PageInfo)e.Parameter;
+                textBlock1.Text = pi.Name;
+            }
+        }
+
+
     }
 }

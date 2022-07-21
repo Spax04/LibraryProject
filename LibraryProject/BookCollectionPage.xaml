@@ -45,12 +45,15 @@
 
         <ListView x:Name="listMenuView" Grid.Column="1" Grid.Row="2" Background="White"/>
         <ComboBox x:Name="cbFilter" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Stretch" Background="White" Height="40" SelectionChanged="cbFilter_SelectionChanged">
-            <ComboBoxItem Background="White" Content="By Title"/>
-            <ComboBoxItem Content="by Year"/>
-            <ComboBoxItem Content="by Country"/>
+            <ComboBoxItem Background="White" Content="Titels"/>
+            <ComboBoxItem Background="White" Content="Years"/>
+            <ComboBoxItem Background="White" Content="Countrys"/>
+            <ComboBoxItem Background="White" Content="Publishers"/>
+            <ComboBoxItem Background="White" Content="Geners"/>
+            <ComboBoxItem Background="White" Content="Authors"/>
         </ComboBox>
         <TextBlock Grid.Column="2" Grid.Row="0" HorizontalAlignment="Left"   Text="Sorting :" VerticalAlignment="Bottom" FontSize="24" FontWeight="Bold"/>
-       
+
 
     </Grid>
 </Page>

@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Library.Model
 {
-    public class SortLIbraryItemsByCountry : IComparer<LibraryItem>
+    public class SortBookByCountry : IComparer<LibraryItem>
     {
         public int Compare(LibraryItem li1, LibraryItem li2)
         {
             Book b1 = li1 as Book;
             Book b2 = li2 as Book;
-            if (li1 == null || li2 == null)
-                throw new InvalidCastException();
+            if (b1 == null || b2 == null)
+                return -1;  // -1 explain
             return b1.ISBN.Country.CompareTo(b2.ISBN.Country);
         }
     }

@@ -121,7 +121,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="AddingNewLibraryItem.cs" />
-    <Compile Include="Sorting\SortLIbraryItemsByCountry.cs" />
+    <Compile Include="Sorting\BookSorting\SortBookByAuthor.cs" />
+    <Compile Include="Sorting\BookSorting\SortBookByGener.cs" />
+    <Compile Include="Sorting\BookSorting\SortBookByPublisher.cs" />
+    <Compile Include="Sorting\BookSorting\SortBookByCountry.cs" />
     <Compile Include="Sorting\SortLibraryItemsByYear.cs" />
     <Compile Include="Sorting\SortLibraryItemsByName.cs" />
     <Compile Include="LibreryItems\Book.cs" />
@@ -139,7 +142,9 @@
       <Version>6.2.13</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Sorting\JornalSorting\" />
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

@@ -36,9 +36,6 @@ namespace Library.DAL
             return _context.LibraryItemsList.AsQueryable();
         }
        
-       
-
-
         public LibraryItem Get(Guid id)
         {
             return _context.LibraryItemsList.FirstOrDefault(i => i.Id == id);

@@ -1,0 +1,55 @@
+﻿<Page
+    x:Class="LibraryProject.MenengerPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LibraryProject"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="#FF76B3B1">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="2*"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="1" Grid.Column="1" >
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="0" Grid.ColumnSpan="5" Background="Aqua"/>
+            <TextBlock Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Admin Panel" FontSize="20" FontFamily="Aharoni" FontWeight="Bold" TextDecorations="Underline"/>
+            <Button x:Name="btnJornalCol" Content="Jornal collection"  Grid.Row="1" Grid.Column="0"  Background="#FF1276CF" FontSize="20" Click="btnJornalCol_Click" BorderThickness="5,5,5,5" BorderBrush="Black" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+            <Button x:Name="btnBookColl" Content="Book collection" VerticalAlignment="Stretch" Background="#FF1276CF" FontSize="20" Click="btnBookColl_Click" BorderBrush="Black" BorderThickness="5,2,5,5"  Grid.Column="0" Grid.Row="2" HorizontalAlignment="Stretch"/>
+
+            <TextBlock Grid.Row="0" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Customers panel" FontSize="30" FontFamily="Aharoni" FontWeight="Bold" TextDecorations="Underline"/>
+            <Button Content="Add new customer"  Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#FF1276CF" FontSize="20"  Grid.Column="4" BorderBrush="Black" BorderThickness="5,5,5,2"/>
+            <Button Content="View all customers" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#FF1276CF" FontSize="20" Grid.Column="4" BorderThickness="5,5,5,5" BorderBrush="Black"/>
+
+            <TextBlock Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Employee panel" FontSize="20" FontFamily="Aharoni" FontWeight="Bold" TextDecorations="Underline"/>
+            <Button x:Name="btnNewEmployee" Content="New employee"  Grid.Row="1" Background="#FF1276CF" FontSize="20" Click="btnJornalCol_Click" BorderThickness="5,5,5,5" BorderBrush="Black" Grid.Column ="2"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+        </Grid>
+        <Button x:Name="btnLogOut" Grid.Row="0" Content="Log Out"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Click="btnLogOut_Click"/>
+
+        <TextBlock Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="201"  FontSize="100" TextAlignment="Center" FontWeight="Bold" FontFamily="Sitka Heading"  TextDecorations="Underline"><Run Text="Book  Library "/><Run Text="and Store "/></TextBlock>
+    </Grid>
+
+</Page>

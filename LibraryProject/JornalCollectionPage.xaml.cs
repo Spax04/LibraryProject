@@ -36,9 +36,9 @@ namespace LibraryProject
 
        
 
-        private void btnBookViewBack_Click(object sender, RoutedEventArgs e)
+        private void btnJornalViewBack_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MainPage), null, new EntranceNavigationTransitionInfo());
+            Frame.Navigate(typeof(MainsPage), null, new EntranceNavigationTransitionInfo());
         }
 
         private async void btnRemoveJornal_Click(object sender, RoutedEventArgs e)

@@ -24,15 +24,16 @@ namespace Library.DAL
         public List <LibraryItem> LibraryItemsList { get; private set; }
        
         public List <Person> PersonList { get; private set; }
-       
+        public Dictionary <string, Employee> EmployLogins { get; private set; }
         private DataMock()
         {
             LibraryItemsList = new List<LibraryItem>();
             PersonList = new List<Person>();
+            EmployLogins = new Dictionary<string, Employee>();
             Init();
         }
 
-        public List<LibraryItem> searhingBookInList(string word)
+        /*public List<LibraryItem> searhingBookInList(string word)
         {
             List<LibraryItem> list = new List<LibraryItem>();
             for(int i = 0; i < LibraryItemsList.Count; i++)
@@ -47,7 +48,7 @@ namespace Library.DAL
                 }
             }
             return list;
-        }
+        }*/
 
         public void Init()
         {
@@ -276,8 +277,8 @@ namespace Library.DAL
             Jornal.JornalGaners.Add("Popular science");
 
 
-
-            Book book1 = new Book("War and Piese", new DateTime(1864,1,1), "Tundra Books", 123321, "Ukraine");
+            // Books
+            Book book1 = new Book("War and Piese", new DateTime(1864,1,1), "Scholastic Books", 123321, "Ukraine");
             book1.Genres.Add("War");
             book1.Authors.Add("L.N. Tolstoy");
             LibraryItemsList.Add(book1);
@@ -285,11 +286,18 @@ namespace Library.DAL
             book2.Genres.Add("Crime");
             book2.Authors.Add("F.M. Dostoevsky");
             LibraryItemsList.Add(book2);
-
-
+            //Jornals
             Jornal jornal1 = new Jornal("Hacker",new DateTime(2022,2,2),1.30,12312500);
+            
             LibraryItemsList.Add(jornal1);
-
+            Jornal jornal2 = new Jornal("Universe", new DateTime(2020, 4, 12), 2.30, 122300500);
+            LibraryItemsList.Add(jornal2);
+            //Employee
+            Employee em1 = new Employee("Alex", "Gotlib", 00222002, "admin", "password", true);
+            Employee m2 = new Employee("Sara", "Simon",0450512, "sara", "sara", false);
+            EmployLogins.Add(em1.Login,em1);
+            EmployLogins.Add(m2.Login,m2);
+            PersonList.Add(em1);
         }
 
         

@@ -1,0 +1,57 @@
+﻿<Page
+    x:Class="LibraryProject.EmployeePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LibraryProject"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="#FF76B3B1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition  />
+            <RowDefinition Height="8*"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnInfo" Grid.Column="8" Content="Item review"  VerticalAlignment="Center" HorizontalAlignment="Stretch" Background="#FFA06BEF" FontSize="18" Click="btnInfo_Click"/>
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+
+                <RowDefinition Height="15*"/>
+            </Grid.RowDefinitions>
+            <RadioButton Tag="viewAll"  Content="View All"  Grid.Row="0"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Foreground="White" FontWeight="Bold" FontSize="18" Checked="RadioButton_Checked"/>
+            <RadioButton Tag="viewBook"  Content="View only Books"  Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Stretch" FontWeight="Bold" Foreground="White" FontSize="18" Checked="RadioButton_Checked"/>
+            <RadioButton Tag="viewJornal"  Content="View only Jornal"  Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="18" Foreground="White" Checked="RadioButton_Checked" FontWeight="Bold"/>
+
+        </Grid>
+        <ListView x:Name="ListViewEmployee" Grid.Column="1" Grid.Row="2" Background="White"/>
+        <Button x:Name="btnLogOut" Grid.Row="0" Content="Log Out"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Click="btnLogOut_Click"/>
+
+
+    </Grid>
+</Page>

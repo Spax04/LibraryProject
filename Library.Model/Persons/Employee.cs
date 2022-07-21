@@ -8,8 +8,39 @@ namespace Library.Model
 {
     public class Employee : Person
     {
-        public Employee(string name, string phonenumber) : base(name, phonenumber)
+        private string _login;
+        public string Login
         {
+            get
+            {
+                return _login;
+            } 
+
+            set
+            {
+                if (!(EmployeeLogins.ContainsKey(value)))
+                {
+                    EmployeeLogins.Add(value, Password);
+                    _login = value;
+                }
+                else
+                {
+                    throw new InvalidOperationException();
+                }
+            }
         }
+        public string Password { get; private set; }
+        public bool IsMananger { get; private set; }
+        public static Dictionary<string, string> EmployeeLogins = new Dictionary<string, string>();
+
+        public Employee(string Fname,string Lname, int phonenumber,string login,string password, bool isMananger) : base(Fname,Lname, phonenumber)
+        {
+            _login = login;
+            Password = password;
+            IsMananger = isMananger;
+        }
+
+       
     }
+    
 }

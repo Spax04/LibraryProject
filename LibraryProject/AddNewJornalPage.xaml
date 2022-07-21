@@ -30,7 +30,7 @@
             <ColumnDefinition Width="4*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="btnJornalViewBack" Content="Back" VerticalAlignment="Bottom"  FontSize="22" Background="#FFA06BEF" Click="btnBookViewBack_Click" HorizontalAlignment="Center" BorderBrush="Black"/>
+        <Button x:Name="btnJornalViewBack" Content="Back" VerticalAlignment="Bottom"  FontSize="22" Background="#FFA06BEF" Click="btnJornalViewBack_Click" HorizontalAlignment="Center" BorderBrush="Black"/>
 
         <TextBlock Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Text="Title: " VerticalAlignment="Bottom" FontSize="36"  FontWeight="Bold"/>
         <TextBox x:Name="titleTxt" Grid.Column="1" Grid.Row="1" Text="" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" TextAlignment="Left" Background="#FFFFF5F5" BorderBrush="Black" BorderThickness="5,5,5,5"/>
@@ -47,15 +47,25 @@
         <TextBlock HorizontalAlignment="Left" Grid.Row="8" Grid.Column="1" Text="Editor" VerticalAlignment="Bottom" FontSize="36" FontWeight="Bold"/>
         <TextBox x:Name="editorTxt" HorizontalAlignment="Stretch" Grid.Row="9" Grid.Column="1" Text="" VerticalAlignment="Stretch" FontSize="48" TextAlignment="Left" BorderBrush="#FF080303" Background="White" BorderThickness="5,5,5,5"/>
 
-        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="10,22,0,0" TextWrapping="Wrap" Text="Frequency" VerticalAlignment="Top" Height="59" Width="262" FontSize="36" FontWeight="Bold" Grid.Row="4" Grid.RowSpan="2"/>
-        <Button x:Name="btnAddNewBook" Content="Add new book" Height="80" Width="205" FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Grid.Column="2" Grid.Row="7" Margin="501,0,0,0" IsEnabled="False" Click="btnAddNewBook_Click"/>
-        <Button x:Name="btnCheckFields" Content="Check fileds" Height="80" Width="205" FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Grid.Column="2" Grid.Row="7" Click="btnCheckFields_Click" Margin="2,0,0,0"/>
-        <TextBlock x:Name="issuesTxt" Grid.Column="2" HorizontalAlignment="Left" Margin="2,5,0,0" Grid.Row="8" TextWrapping="Wrap" VerticalAlignment="Top" Width="283" Height="96" Grid.RowSpan="2" Foreground="Red" FontSize="9"/>
-        <TextBox x:Name="contributerTxt" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Height="80" Width="541" FontSize="48" TextAlignment="Left" BorderBrush="#FF080303" Background="White" BorderThickness="5,5,5,5"/>
-        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="10,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="59" Width="176" FontSize="36" Grid.RowSpan="2" FontWeight="Bold"><Run FlowDirection="RightToLeft" Text="G"/><Run Text="ener"/></TextBlock>
-        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="10,27,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Contributer" VerticalAlignment="Top" Height="59" Width="279" FontSize="36" Grid.RowSpan="2" FontWeight="Bold"/>
-        <ComboBox x:Name="generCmb" Grid.Row="1" Width="545" Background="White" Height="80" BorderThickness="5,5,5,5" BorderBrush="Black" Grid.Column="2" VerticalAlignment="Center" FontSize="48"/>
-        <ComboBox x:Name="frequencyCmb" Grid.Row="5" Width="545" Background="White" Height="80" BorderThickness="5,5,5,5" BorderBrush="Black" Grid.Column="2" VerticalAlignment="Center" FontSize="48"/>
+        <TextBlock Grid.Column="3" Grid.Row="0" HorizontalAlignment="Left"  VerticalAlignment="Bottom" FontSize="36"  FontWeight="Bold" Text="Gener"/>
+        <ComboBox x:Name="generCmb" Grid.Row="1" Background="White"  BorderThickness="5,5,5,5" BorderBrush="Black" Grid.Column="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="48"/>
+        
+        <TextBlock Grid.Column="3" HorizontalAlignment="Left"  Grid.Row="2"  Text="Contributer" VerticalAlignment="Bottom" FontSize="36"  FontWeight="Bold"/>
+        <TextBox x:Name="contributerTxt" Grid.Column="3" HorizontalAlignment="Stretch" Grid.Row="3"  Text="" VerticalAlignment="Stretch"  FontSize="48" TextAlignment="Left" BorderBrush="#FF080303" Background="White" BorderThickness="5,5,5,5"/>
 
+        <TextBlock Grid.Column="3" HorizontalAlignment="Left" Text="Frequency" VerticalAlignment="Bottom" FontSize="36" FontWeight="Bold" Grid.Row="4"/>
+        <ComboBox x:Name="frequencyCmb" Grid.Row="5"  Background="White"  BorderThickness="5,5,5,5" BorderBrush="Black" Grid.Column="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="48"/>
+        <Grid Grid.Row="8" Grid.Column="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnAddNewBook" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Content="Add new book"  FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Grid.Column="2"  IsEnabled="False" Click="btnAddNewJornal_Click"/>
+            <Button x:Name="btnCheckFields" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Content="Check fileds" FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Grid.Column="0" Grid.Row="7" Click="btnCheckFields_Click"/>
+            <TextBlock x:Name="issuesTxt" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Foreground="Red" FontSize="9"/>
+
+        </Grid>
+        
     </Grid>
 </Page>

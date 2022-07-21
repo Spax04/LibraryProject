@@ -9,10 +9,15 @@ namespace Library.Model
     public class Customer : Person
     {
         public List<LibraryItem> customerItems;
-        public Customer(string name, string phonenumber) : base(name, phonenumber)
+        public Customer(string Fname,string Lname, int phonenumber) : base(Fname,Lname, phonenumber)
         {
             customerItems = new List<LibraryItem>();
 
+        }
+
+        public override string ToString()
+        {
+            return $"First name: {FName}. Last name: {LName}. Phone number: {PhoneNumber}";
         }
     }
 }

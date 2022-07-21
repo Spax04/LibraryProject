@@ -81,7 +81,7 @@ namespace Library.Model
         /// get or set book's synopsis (short summary of book)
         /// </summary>
         public string Synopsis { get; set; }
-        public string Discription {get; private set; }
+       
        
         /// <summary>
         /// create an instance of book
@@ -100,7 +100,7 @@ namespace Library.Model
             this.ISBN.Publisher = publisher;
             Authors = new List<string>();
             Genres = new List<string>();
-            Discription = ToString();
+            
         }
 
         public override string ToString()

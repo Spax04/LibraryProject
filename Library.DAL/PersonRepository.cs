@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Library.DAL
 {
-     class PersonRepository : IRepository<Person>
+     public class PersonRepository : IRepository<Person>
     {
        private readonly DataMock _context = DataMock.Instens;
         public Person Add(Person item)
@@ -25,12 +25,20 @@ namespace Library.DAL
 
         public IQueryable<Person> Get()
         {
-            throw new NotImplementedException();
+            return _context.PersonList.AsQueryable();
         }
 
         public Person Get(Guid id)
         {
-            throw new NotImplementedException();
+            return _context.PersonList.FirstOrDefault(i => i.Id == id);
+        }
+        public Employee GetbyLoginAndPassword(string login)
+        {
+            if(_context.EmployLogins.ContainsKey(login))
+            {
+                return _context.EmployLogins[login];
+            }
+            return null;
         }
 
         public Person Update(Person item)
