@@ -33,28 +33,28 @@
         <Button x:Name="btnJornalViewBack" Content="Back" VerticalAlignment="Bottom"  FontSize="22" Background="#FFA06BEF" Click="btnJornalViewBack_Click" HorizontalAlignment="Center" BorderBrush="Black"/>
 
         <TextBlock Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Text="Title: " VerticalAlignment="Bottom" FontSize="36"  FontWeight="Bold"/>
-        <TextBox x:Name="titleTxt" Grid.Column="1" Grid.Row="1" Text="" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" TextAlignment="Left" Background="#FFFFF5F5" BorderBrush="Black" BorderThickness="5,5,5,5"/>
+        <TextBox x:Name="titleTxt" Grid.Column="1" Grid.Row="1" Text="" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" TextAlignment="Left" Background="#FFFFF5F5" BorderBrush="Black" BorderThickness="3,5,3,3"/>
 
         <TextBlock Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Text="Publish date" VerticalAlignment="Bottom" FontSize="36" FontWeight="Bold"/>
         <DatePicker x:Name="calendarPicker"  Grid.Row="3" Grid.Column="1" FontSize="48" Background="White" FontFamily="Yu Gothic UI Semibold" FontWeight="Bold" HorizontalAlignment="Stretch" VerticalAlignment="Top" FontStyle="Normal"/>
 
         <TextBlock Grid.Column="1" HorizontalAlignment="Left"  Grid.Row="4" Text="Price" VerticalAlignment="Bottom" FontSize="36" FontWeight="Bold"/>
-        <TextBox x:Name="priceTxt" HorizontalAlignment="Stretch" Grid.Column="1" Grid.Row="5" Text="" VerticalAlignment="Stretch" FontSize="35" TextAlignment="Left" BorderBrush="#FF080303" Background="White" BorderThickness="5,5,5,5"/>
+        <TextBox x:Name="priceTxt" HorizontalAlignment="Stretch" Grid.Column="1" Grid.Row="5" Text="" VerticalAlignment="Stretch" FontSize="35" TextAlignment="Left" BorderBrush="#FF080303" Background="White" BorderThickness="3,5,3,3"/>
 
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Grid.Row="6"  Text="Serial number" VerticalAlignment="Bottom" FontSize="36"  FontWeight="Bold"/>
-        <TextBox x:Name="serialNumberTxt" Grid.Column="1" HorizontalAlignment="Stretch" Grid.Row="7" Text="" VerticalAlignment="Stretch"  FontSize="48" TextAlignment="Left" Background="White" BorderBrush="Black" BorderThickness="5,5,5,5"/>
+        <TextBox x:Name="serialNumberTxt" Grid.Column="1" HorizontalAlignment="Stretch" Grid.Row="7" Text="" VerticalAlignment="Stretch"  FontSize="48" TextAlignment="Left" Background="White" BorderBrush="Black" BorderThickness="3,5,3,3"/>
 
         <TextBlock HorizontalAlignment="Left" Grid.Row="8" Grid.Column="1" Text="Editor" VerticalAlignment="Bottom" FontSize="36" FontWeight="Bold"/>
-        <TextBox x:Name="editorTxt" HorizontalAlignment="Stretch" Grid.Row="9" Grid.Column="1" Text="" VerticalAlignment="Stretch" FontSize="48" TextAlignment="Left" BorderBrush="#FF080303" Background="White" BorderThickness="5,5,5,5"/>
+        <TextBox x:Name="editorTxt" HorizontalAlignment="Stretch" Grid.Row="9" Grid.Column="1" Text="" VerticalAlignment="Stretch" FontSize="48" TextAlignment="Left" BorderBrush="#FF080303" Background="White" BorderThickness="3,5,3,3"/>
 
         <TextBlock Grid.Column="3" Grid.Row="0" HorizontalAlignment="Left"  VerticalAlignment="Bottom" FontSize="36"  FontWeight="Bold" Text="Gener"/>
-        <ComboBox x:Name="generCmb" Grid.Row="1" Background="White"  BorderThickness="5,5,5,5" BorderBrush="Black" Grid.Column="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="48"/>
+        <ComboBox x:Name="generCmb" Grid.Row="1" Background="White"  BorderThickness="3,5,3,3" BorderBrush="Black" Grid.Column="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="48"/>
         
         <TextBlock Grid.Column="3" HorizontalAlignment="Left"  Grid.Row="2"  Text="Contributer" VerticalAlignment="Bottom" FontSize="36"  FontWeight="Bold"/>
-        <TextBox x:Name="contributerTxt" Grid.Column="3" HorizontalAlignment="Stretch" Grid.Row="3"  Text="" VerticalAlignment="Stretch"  FontSize="48" TextAlignment="Left" BorderBrush="#FF080303" Background="White" BorderThickness="5,5,5,5"/>
+        <TextBox x:Name="contributerTxt" Grid.Column="3" HorizontalAlignment="Stretch" Grid.Row="3"  Text="" VerticalAlignment="Stretch"  FontSize="48" TextAlignment="Left" BorderBrush="#FF080303" Background="White" BorderThickness="3,5,3,3"/>
 
         <TextBlock Grid.Column="3" HorizontalAlignment="Left" Text="Frequency" VerticalAlignment="Bottom" FontSize="36" FontWeight="Bold" Grid.Row="4"/>
-        <ComboBox x:Name="frequencyCmb" Grid.Row="5"  Background="White"  BorderThickness="5,5,5,5" BorderBrush="Black" Grid.Column="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="48"/>
+        <ComboBox x:Name="frequencyCmb" Grid.Row="5"  Background="White"  BorderThickness="3,5,3,3" BorderBrush="Black" Grid.Column="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="48"/>
         <Grid Grid.Row="8" Grid.Column="3">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>

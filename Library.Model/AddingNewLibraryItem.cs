@@ -64,8 +64,19 @@ namespace Library.Model
         public string checkingFieldsBook(string number)
         {
             StringBuilder listIssues = new StringBuilder();
-
-            if(convertToSerialNumber(number) == -1)
+            if (_title == "")
+            {
+                listIssues.AppendLine("*You forote to set a tittle.");
+            }
+            if (_author == "")
+            {
+                listIssues.AppendLine("*You forote to set an Author.");
+            }
+            if (_title == "")
+            {
+                listIssues.AppendLine("*You forote to set a tittle.");
+            }
+            if (convertToSerialNumber(number) == -1)
             {
                 listIssues.AppendLine("*Serial number contains characters.");
             }
@@ -75,7 +86,18 @@ namespace Library.Model
         public string checkingFieldsJornal(string number,string price)
         {
             StringBuilder listIssues = new StringBuilder();
-
+            if (_title == "")
+            {
+                listIssues.AppendLine("*You forote to set a tittle.");
+            }
+            if(_publisher == "")
+            {
+                listIssues.AppendLine("*You forote to set a Editor.");
+            }
+            if (_author == "")
+            {
+                listIssues.AppendLine("*You forote to set a Contributer.");
+            }
             if (convertToSerialNumber(number) == -1)
             {
                 listIssues.AppendLine("*Serial number contains characters.");

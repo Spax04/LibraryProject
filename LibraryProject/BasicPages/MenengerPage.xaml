@@ -45,7 +45,7 @@
             <Button Content="View all customers" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#FF1276CF" FontSize="20" Grid.Column="4" BorderThickness="3,5,3,3" BorderBrush="Black"/>
 
             <TextBlock Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Employee panel" FontSize="20" FontFamily="Aharoni" FontWeight="Bold" TextDecorations="Underline"/>
-            <Button x:Name="btnNewEmployee" Content="New employee"  Grid.Row="1" Background="#FF1276CF" FontSize="20" Click="btnJornalCol_Click" BorderThickness="3,3,3,3" BorderBrush="Black" Grid.Column ="2"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+            <Button x:Name="btnNewEmployee" Content="New employee"  Grid.Row="1" Background="#FF1276CF" FontSize="20" BorderThickness="3,3,3,3" BorderBrush="Black" Grid.Column ="2"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="btnNewEmployee_Click"/>
 
             <Button x:Name="btnHistory" Content="History"  Grid.Row="4" Background="#FF1276CF" FontSize="30" Click="btnHistory_Click" BorderThickness="3,3,3,3" BorderBrush="Black" Grid.Column ="2"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
 

@@ -47,9 +47,11 @@ namespace LibraryProject
 
         }
 
-        private void btnEmpSet_Click(object sender, RoutedEventArgs e)
-        {
+       
 
+        private void btnNewEmployee_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(AddNewEmployee), null);
         }
     }
 }

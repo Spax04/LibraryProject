@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Library.DAL;
+using Library.Model;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -22,9 +24,45 @@ namespace LibraryProject
     /// </summary>
     public sealed partial class AddNewEmployee : Page
     {
+        PersonRepository pr = new PersonRepository();
+        AddingNewPerson adding;
         public AddNewEmployee()
         {
             this.InitializeComponent();
+        }
+
+        private void btnCheckFields_Click(object sender, RoutedEventArgs e)
+        {
+            if(cmDuty.SelectedIndex == 0)
+            {
+                adding = new AddingNewPerson(fNameTxt.Text, lNameTxt.Text, Phone.Text, Login.Text, Password.Text,false);
+            }
+            else
+            {
+                adding = new AddingNewPerson(fNameTxt.Text, lNameTxt.Text, Phone.Text, Login.Text, Password.Text, true);
+            }
+            issuesTxt.Text = adding.checkingFieldsEmployee();
+            if(issuesTxt.Text == "")
+            {
+                btnAddEmpl.IsEnabled = true;
+            }
+            else
+            {
+                btnAddEmpl.IsEnabled = false;
+            }
+        }
+
+        private void btnAddEmpl_Click(object sender, RoutedEventArgs e)
+        {
+            Employee e1 = adding.registrEmployee();
+            pr.Add(e1);
+            pr.SetNewLogin(Login.Text, e1);
+            Frame.Navigate(typeof(MenengerPage));
+        }
+
+        private void btnMenengerBack_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MenengerPage));
         }
     }
 }

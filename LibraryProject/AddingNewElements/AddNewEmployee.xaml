@@ -32,27 +32,35 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
+
+        <Button x:Name="btnMenengerBack" Content="Back" VerticalAlignment="Bottom"  FontSize="22" Background="#FFA06BEF"  HorizontalAlignment="Center" BorderBrush="Black" Click="btnMenengerBack_Click"/>
+
+
         <TextBlock Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Text="First Name: " VerticalAlignment="Bottom" FontSize="36"  FontWeight="Bold"/>
-        <TextBox x:Name="fNameTxt" Grid.Column="1" Grid.Row="1" Text="" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" TextAlignment="Left" Background="#FFFFF5F5" BorderBrush="Black" BorderThickness="3,3,3,3"/>
+        <TextBox x:Name="fNameTxt" Grid.Column="1" Grid.Row="1" Text="" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" TextAlignment="Left" Background="#FFFFF5F5" BorderBrush="Black" BorderThickness="3,3,3,3" FontSize="24"/>
 
         <TextBlock Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Text="Last Name: " VerticalAlignment="Bottom" FontSize="36"  FontWeight="Bold"/>
-        <TextBox x:Name="lNameTxt" Grid.Column="1" Grid.Row="3" Text="" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" TextAlignment="Left" Background="#FFFFF5F5" BorderBrush="Black" BorderThickness="3,3,3,3"/>
+        <TextBox x:Name="lNameTxt" Grid.Column="1" Grid.Row="3" Text="" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" TextAlignment="Left" Background="#FFFFF5F5" BorderBrush="Black" BorderThickness="3,3,3,3" FontSize="24"/>
 
         <TextBlock Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" Text="Phone number: " VerticalAlignment="Bottom" FontSize="36"  FontWeight="Bold"/>
-        <TextBox x:Name="Phone" Grid.Column="1" Grid.Row="5" Text="" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" TextAlignment="Left" Background="#FFFFF5F5" BorderBrush="Black" BorderThickness="3,3,3,3"/>
+        <TextBox x:Name="Phone" Grid.Column="1" Grid.Row="5" Text="" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" TextAlignment="Left" Background="#FFFFF5F5" BorderBrush="Black" BorderThickness="3,3,3,3" FontSize="24"/>
 
         <TextBlock Grid.Column="1" Grid.Row="6" HorizontalAlignment="Left" Text="Login: " VerticalAlignment="Bottom" FontSize="36"  FontWeight="Bold"/>
-        <TextBox x:Name="Login" Grid.Column="1" Grid.Row="7" Text="" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" TextAlignment="Left" Background="#FFFFF5F5" BorderBrush="Black" BorderThickness="3,3,3,3"/>
+        <TextBox x:Name="Login" Grid.Column="1" Grid.Row="7" Text="" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" TextAlignment="Left" Background="#FFFFF5F5" BorderBrush="Black" BorderThickness="3,3,3,3" FontSize="24"/>
 
         <TextBlock Grid.Column="1" Grid.Row="8" HorizontalAlignment="Left" Text="Password: " VerticalAlignment="Bottom" FontSize="36"  FontWeight="Bold"/>
-        <TextBox x:Name="Password" Grid.Column="1" Grid.Row="9" Text="" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" TextAlignment="Left" Background="#FFFFF5F5" BorderBrush="Black" BorderThickness="3,3,3,3"/>
+        <TextBox x:Name="Password" Grid.Column="1" Grid.Row="9" Text="" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" TextAlignment="Left" Background="#FFFFF5F5" BorderBrush="Black" BorderThickness="3,3,3,3" FontSize="24"/>
 
         <TextBlock Grid.Column="1" Grid.Row="10" HorizontalAlignment="Left" Text="Duty: " VerticalAlignment="Bottom" FontSize="36"  FontWeight="Bold"/>
-        <ComboBox x:Name="cmDuty" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="11" Background="White" />
+        <ComboBox x:Name="cmDuty" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="11" Background="White" FontSize="24" SelectedIndex="0" >
+            <ComboBoxItem Background="White" BorderBrush="White" Content="Regular Employee"/>
+            <ComboBoxItem Content="Menenger"/>
+        </ComboBox>
 
 
-        <Button x:Name="btnAddEmpl"  Grid.Column="1" Grid.Row="13" VerticalAlignment="Stretch" Content="Add new employee" FontSize="22" Background="#FFA06BEF" BorderBrush="Black"  HorizontalAlignment="Right" IsEnabled="False"/>
-        <Button x:Name="btnCheckFields" Grid.Column="1" Grid.Row="13" Content="Check fileds" FontSize="22" Background="#FFA06BEF" BorderBrush="Black"   VerticalAlignment="Stretch" HorizontalAlignment="Left"/>
+        <Button x:Name="btnAddEmpl"  Grid.Column="1" Grid.Row="13" VerticalAlignment="Stretch" Content="Add new employee" FontSize="22" Background="#FFA06BEF" BorderBrush="Black"  HorizontalAlignment="Right" IsEnabled="False" Click="btnAddEmpl_Click"/>
+        <Button x:Name="btnCheckFields" Grid.Column="1" Grid.Row="13" Content="Check fileds" FontSize="22" Background="#FFA06BEF" BorderBrush="Black"   VerticalAlignment="Stretch" HorizontalAlignment="Left" Click="btnCheckFields_Click"/>
+        <TextBlock x:Name="issuesTxt" Grid.Column="2" HorizontalAlignment="Stretch"  Grid.Row="11" Grid.RowSpan="4" Text="" VerticalAlignment="Stretch" FontSize="24" Foreground="Red"/>
 
     </Grid>
 </Page>
