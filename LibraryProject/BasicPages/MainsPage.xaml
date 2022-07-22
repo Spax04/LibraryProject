@@ -49,9 +49,8 @@
                 <Button x:Name="btnLogIn" Grid.Column="1" Content="Log In" Foreground="Black" Background="#FFA06BEF" BorderBrush="Black" FontSize="24"  VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Height="72" Click="btnLogIn_Click"/>
 
             </Grid>
-            <TextBlock x:Name="issuesTxt" Grid.Column="1" HorizontalAlignment="Stretch"  Grid.Row="5" TextWrapping="Wrap" Text="" VerticalAlignment="Center" FontSize="30" Foreground="Red"/>
+            <TextBlock x:Name="issuesTxt" Grid.Column="1" HorizontalAlignment="Stretch"  Grid.Row="5" TextWrapping="Wrap" Text="" VerticalAlignment="Center" TextAlignment="Center" FontSize="30" Foreground="Red"/>
         </Grid>
         <TextBlock Grid.Column="1" HorizontalAlignment="Center" Text="Welcome to Alex's Book Library and store" VerticalAlignment="Center" FontSize="60" FontFamily="Elephant"/>
-        <Button x:Name="btnNewEmployee" Grid.Column="2" Content="New Employee?"  VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" Background="#FFA06BEF" BorderBrush="Black"/>
     </Grid>
 </Page>

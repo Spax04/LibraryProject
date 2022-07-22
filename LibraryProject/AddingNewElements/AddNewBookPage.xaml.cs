@@ -88,16 +88,9 @@ namespace LibraryProject
             }
         }
 
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-
-            if (e.Parameter != null)
-            {
-                PageInfo pi = (PageInfo)e.Parameter;
-                textBlock1.Text = pi.Name;
-            }
-        }
-
-
+       
     }
+
+
 }
+

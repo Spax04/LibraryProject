@@ -37,6 +37,10 @@
             <Button x:Name="btnInfo" Grid.Column="8" Content="Item review"  VerticalAlignment="Center" HorizontalAlignment="Stretch" Background="#FFA06BEF" FontSize="18" Click="btnInfo_Click"/>
         </Grid>
         <Grid Grid.Row="2" Grid.Column="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
@@ -44,14 +48,18 @@
 
                 <RowDefinition Height="15*"/>
             </Grid.RowDefinitions>
-            <RadioButton Tag="viewAll"  Content="View All"  Grid.Row="0"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Foreground="White" FontWeight="Bold" FontSize="18" Checked="RadioButton_Checked"/>
-            <RadioButton Tag="viewBook"  Content="View only Books"  Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Stretch" FontWeight="Bold" Foreground="White" FontSize="18" Checked="RadioButton_Checked"/>
-            <RadioButton Tag="viewJornal"  Content="View only Jornal"  Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="18" Foreground="White" Checked="RadioButton_Checked" FontWeight="Bold"/>
+            <RadioButton Tag="viewAll"  Content="View All"  Grid.Row="0"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Foreground="White" FontWeight="Bold" FontSize="18" Checked="RadioButton_Checked" Grid.ColumnSpan="2"/>
+            <RadioButton Tag="viewBook"  Content="View only Books"  Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Stretch" FontWeight="Bold" Foreground="White" FontSize="18" Checked="RadioButton_Checked" Grid.ColumnSpan="2"/>
+            <RadioButton Tag="viewJornal"  Content="View only Jornal"  Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="18" Foreground="White" Checked="RadioButton_Checked" FontWeight="Bold" Grid.ColumnSpan="2"/>
 
         </Grid>
         <ListView x:Name="ListViewEmployee" Grid.Column="1" Grid.Row="2" Background="White"/>
         <Button x:Name="btnLogOut" Grid.Row="0" Content="Log Out"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Click="btnLogOut_Click"/>
-
+        <ComboBox x:Name="sorting" Grid.Column="2" Grid.Row="1"  PlaceholderText="Sort by :" BorderBrush="#66000000" Background="White" FontSize="24" HorizontalAlignment="Stretch" VerticalAlignment="Center" SelectionChanged="sorting_SelectionChanged">
+            <ComboBoxItem Background="White" Content="by Name"/>
+            <ComboBoxItem Background="White" Content="by Date"/>
+        </ComboBox>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Stretch" TextAlignment="Center"  Text="Emploee Page" VerticalAlignment="Stretch" FontSize="72" FontWeight="Bold"/>
 
     </Grid>
 </Page>

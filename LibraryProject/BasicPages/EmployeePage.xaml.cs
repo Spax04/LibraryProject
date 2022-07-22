@@ -24,8 +24,8 @@ namespace LibraryProject
     /// </summary>
     public sealed partial class EmployeePage : Page
     {
-        LbraryRepository lbRep = new LbraryRepository();
-        PersonRepository prRep = new PersonRepository();
+        LbraryRepository lb = new LbraryRepository();
+        PersonRepository pr = new PersonRepository();
 
         public EmployeePage()
         {
@@ -33,7 +33,7 @@ namespace LibraryProject
 
 
 
-            ListViewEmployee.ItemsSource = lbRep.Get();
+            ListViewEmployee.ItemsSource = lb.Get();
         }
 
         private void btnLogOut_Click(object sender, RoutedEventArgs e)
@@ -50,16 +50,16 @@ namespace LibraryProject
                 switch (radio)
                 {
                     case "viewAll":
-                        ListViewEmployee.ItemsSource = lbRep.Get().ToList();
+                        ListViewEmployee.ItemsSource = lb.Get().ToList();
                         break;
                     case "viewBook":
-                        ListViewEmployee.ItemsSource = lbRep.Get().Where(Item => Item is Book);
+                        ListViewEmployee.ItemsSource = lb.Get().Where(Item => Item is Book);
                         break ;
                     case "viewJornal":
-                        ListViewEmployee.ItemsSource = lbRep.Get().Where(Item => Item is Jornal);
+                        ListViewEmployee.ItemsSource = lb.Get().Where(Item => Item is Jornal);
                         break;
                         default:
-                        ListViewEmployee.ItemsSource = lbRep.Get().ToList();
+                        ListViewEmployee.ItemsSource = lb.Get().ToList();
                         break;
 
                 }
@@ -69,9 +69,31 @@ namespace LibraryProject
 
         private void btnInfo_Click(object sender, RoutedEventArgs e)
         {
-            int itemIndex = ListViewEmployee.SelectedIndex;
-            LibraryItem b1 = ListViewEmployee.SelectedItem as LibraryItem;
-            Frame.Navigate (typeof(LibraryItemDitalesPage),b1);
+
+            Book b1 = ListViewEmployee.SelectedItem as Book;
+            Jornal b2 = ListViewEmployee.SelectedItem as Jornal;
+            if (b1 != null)
+            {
+                Frame.Navigate(typeof(LibraryItemDitalesPage), b1);
+            }
+            else if(b2 != null)
+            {
+                Frame.Navigate(typeof(LibraryItemDitalesPage), b2);
+            }
+        }
+
+        private void sorting_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            switch (sorting.SelectedIndex)
+            {
+                case 0:
+                    ListViewEmployee.ItemsSource = lb.GetSortBy(new SortLibraryItemsByName());
+                    break;
+                case 1:
+                    ListViewEmployee.ItemsSource = lb.GetSortBy(new SortLibraryItemsByYear());
+                    break;
+                
+            }
         }
     }
 }

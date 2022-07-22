@@ -41,9 +41,20 @@ namespace Library.DAL
             return null;
         }
 
+        public void SetNewLogin(string login,Employee em)
+        {
+            _context.EmployLogins.Add(login, em);
+        }
+
         public Person Update(Person item)
         {
-            throw new NotImplementedException();
+            var old = _context.PersonList.FirstOrDefault(i => i.Id == item.Id);
+            if (old != null)
+            {
+                _context.PersonList.Remove(old);
+                _context.PersonList.Add(item);
+            }
+            return item;
         }
     }
 }

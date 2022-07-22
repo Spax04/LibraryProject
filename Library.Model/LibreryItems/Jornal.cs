@@ -64,6 +64,8 @@ namespace Library.Model
             return newPrice;
         }
 
+       
+
 
         public Jornal(string title, DateTime publishDate, double price,  int serialnumber ,JornalFrequency jf = JornalFrequency.Other) : base(title, publishDate)
         {
@@ -84,8 +86,30 @@ namespace Library.Model
                 return $"'{Title}' | {PublishDate:D} | {Ganers} | {Editors} | {Contributers} | {Price:C}";
             }
         }
-            
-        
+
+        public override string Ditales()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"Jornal information:");
+            sb.AppendLine($"Jornal title: {Title}");
+            sb.AppendLine($"Publish date: {PublishDate}");
+            sb.AppendLine($"Jornal Gener: {Ganers}");
+            sb.AppendLine($"Editor: {Editors}");
+            sb.AppendLine($"Contributer: {Contributers}");
+            if(Discount > 0)
+            {
+                sb.AppendLine($"Sele price {gettingDiscountPrice():C}. Discont {Discount}% ");
+                sb.AppendLine($"Price before sele{Price:C}");
+            }
+            else
+            {
+                sb.AppendLine($"Price: {Price:C}");
+            }
+            sb.AppendLine($"Jornal in stock.");
+            return sb.ToString();
+        }
+
+
 
         /// <summary>
         /// frequency of jornal publishing

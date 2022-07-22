@@ -81,7 +81,7 @@ namespace Library.Model
         /// get or set book's synopsis (short summary of book)
         /// </summary>
         public string Synopsis { get; set; }
-       
+        
        
         /// <summary>
         /// create an instance of book
@@ -105,9 +105,41 @@ namespace Library.Model
 
         public override string ToString()
         {
-            return $"'{Title}' | {PublishDate:yyyy} | {ISBN.ToString()} | {authorsPrint()}| {genersPrint()} | {this.ISBN.Country} | {this.ISBN.Publisher}";
+            if(InStock == true)
+            {
+                return $"'{Title}' | {PublishDate:yyyy} | {ISBN.ToString()} | {authorsPrint()}| {genersPrint()} | {this.ISBN.Country} | {this.ISBN.Publisher}";
+            }
+            else
+            {
+                return $" OUT OF STOCK | '{Title}' | {PublishDate:yyyy} | {ISBN.ToString()} | {authorsPrint()}| {genersPrint()} | {this.ISBN.Country} | {this.ISBN.Publisher}";
+
+            }
         }
 
         
+        public override string Ditales()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"Book information");
+            sb.AppendLine($"Book title: {Title}");
+            sb.AppendLine($"Publish year: {PublishDate:yyyy}");
+            sb.AppendLine($"Publisher: {this.ISBN.Publisher}");
+            sb.AppendLine($"Book Gener: {genersPrint()}");
+            sb.AppendLine($"Author: {authorsPrint()}");
+            sb.AppendLine($"Country: {this.ISBN.Country}");
+            sb.AppendLine($"ISBN: {ISBN.ToString()}");
+            sb.AppendLine($"Synopsis: \n {Synopsis}");
+            if(InStock == true)
+            {
+                sb.AppendLine($"Book is in stock");
+            }
+            else
+            {
+                sb.AppendLine($"Book is out of stock.\nDate:{outOfStock:g}");
+            }
+
+            return sb.ToString();
+        }
+    
     }
 }

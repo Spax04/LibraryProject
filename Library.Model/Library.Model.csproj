@@ -121,6 +121,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="AddingNewLibraryItem.cs" />
+    <Compile Include="AddingNewPerson.cs" />
     <Compile Include="Sorting\BookSorting\SortBookByAuthor.cs" />
     <Compile Include="Sorting\BookSorting\SortBookByGener.cs" />
     <Compile Include="Sorting\BookSorting\SortBookByPublisher.cs" />

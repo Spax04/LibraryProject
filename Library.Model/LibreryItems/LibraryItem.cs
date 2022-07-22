@@ -25,8 +25,31 @@ namespace Library.Model
         /// print or publish date of item
         /// </summary>
 
-        public bool InStoke { get; set; }
+        public abstract string Ditales();
+
+        public void sellItem()
+        {
+            InStock = false;
+            outOfStock = DateTime.Now;
+        }
+        public void outOfStockLI(Customer p1)
+        {
+            outOfStock = DateTime.Now;
+            InStock = false;
+            Owner = p1;
+        }
+
+        public Customer backInStockLI()
+        {
+            outOfStock = new DateTime();
+            InStock = true;
+            return Owner ;
+        }
+
+        public bool InStock { get; set; }
+        public DateTime outOfStock { get; set; }
         public DateTime PublishDate { get; set; }
+        public Customer Owner { get; set; }
 
         /// <summary>
         /// create a instance of library item
@@ -38,7 +61,7 @@ namespace Library.Model
             Id = Guid.NewGuid();
             Title = title;
             PublishDate = publishDate;
-            InStoke = true;
+            InStock = true;
         }
         public int CompareTo(object obj)
         {

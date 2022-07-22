@@ -20,26 +20,11 @@ namespace LibraryProject
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MenengerPage : Page
+    public sealed partial class AddNewEmployee : Page
     {
-        public MenengerPage()
+        public AddNewEmployee()
         {
             this.InitializeComponent();
-        }
-
-        private void btnJornalCol_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(JornalCollectionPage), null);
-        }
-
-        private void btnBookColl_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(BookCollectionPage), null);
-        }
-
-        private void btnLogOut_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(MainsPage),null);
         }
     }
 }

@@ -12,7 +12,7 @@ namespace LibraryUnitTest
     {
         #region Library Repositor Unit Test
         readonly LbraryRepository lb = new LbraryRepository();
-        readonly DataMock dm = new DataMock();
+        
         Book b1 = new Book("", DateTime.Now, "adwq");
 
         [TestMethod]
@@ -21,11 +21,11 @@ namespace LibraryUnitTest
             Assert.IsTrue(lb.Get(Guid.Empty) == null);
         }
 
-        [TestMethod]
-        public void GetLibraryItemsList()
+       /* [TestMethod]
+       *//* public void GetLibraryItemsList()
         {
             Assert.IsTrue(lb.Get() == dm.LibraryItemsList);
-        }
+        }*/
 
         [TestMethod]
         public void AddLibraryItemsToList()

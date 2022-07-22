@@ -298,6 +298,12 @@ namespace Library.DAL
             EmployLogins.Add(em1.Login,em1);
             EmployLogins.Add(m2.Login,m2);
             PersonList.Add(em1);
+
+            //Customer
+            Customer c1 = new Customer("Michael","Hadat",000111222);
+            Customer c2 = new Customer("David", "Koko", 215451);
+            PersonList.Add(c1);
+            PersonList.Add(c2);
         }
 
         
