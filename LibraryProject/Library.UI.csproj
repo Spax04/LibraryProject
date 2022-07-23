@@ -125,11 +125,17 @@
     <Compile Include="AddingNewElements\AddNewEmployee.xaml.cs">
       <DependentUpon>AddNewEmployee.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AddingNewElements\AddNewCustomer.xaml.cs">
+      <DependentUpon>AddNewCustomer.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="BasicPages\EmployeePage.xaml.cs">
       <DependentUpon>EmployeePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Collections\CustomerCollectionPage.xaml.cs">
+      <DependentUpon>CustomerCollectionPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="LibraryItemDitalesPage.xaml.cs">
       <DependentUpon>LibraryItemDitalesPage.xaml</DependentUpon>
@@ -180,7 +186,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="AddingNewElements\AddNewCustomer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="BasicPages\EmployeePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Collections\CustomerCollectionPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

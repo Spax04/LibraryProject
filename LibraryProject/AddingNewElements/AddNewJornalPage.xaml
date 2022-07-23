@@ -48,24 +48,26 @@
         <TextBox x:Name="editorTxt" HorizontalAlignment="Stretch" Grid.Row="9" Grid.Column="1" Text="" VerticalAlignment="Stretch" FontSize="48" TextAlignment="Left" BorderBrush="#FF080303" Background="White" BorderThickness="3,5,3,3"/>
 
         <TextBlock Grid.Column="3" Grid.Row="0" HorizontalAlignment="Left"  VerticalAlignment="Bottom" FontSize="36"  FontWeight="Bold" Text="Gener"/>
-        <ComboBox x:Name="generCmb" Grid.Row="1" Background="White"  BorderThickness="3,5,3,3" BorderBrush="Black" Grid.Column="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="48"/>
-        
+        <ComboBox x:Name="generCmb" Grid.Row="1" Background="White"  BorderThickness="3,3,3,3" BorderBrush="Black" Grid.Column="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="48" SelectedIndex="0"/>
+
         <TextBlock Grid.Column="3" HorizontalAlignment="Left"  Grid.Row="2"  Text="Contributer" VerticalAlignment="Bottom" FontSize="36"  FontWeight="Bold"/>
         <TextBox x:Name="contributerTxt" Grid.Column="3" HorizontalAlignment="Stretch" Grid.Row="3"  Text="" VerticalAlignment="Stretch"  FontSize="48" TextAlignment="Left" BorderBrush="#FF080303" Background="White" BorderThickness="3,5,3,3"/>
 
         <TextBlock Grid.Column="3" HorizontalAlignment="Left" Text="Frequency" VerticalAlignment="Bottom" FontSize="36" FontWeight="Bold" Grid.Row="4"/>
-        <ComboBox x:Name="frequencyCmb" Grid.Row="5"  Background="White"  BorderThickness="3,5,3,3" BorderBrush="Black" Grid.Column="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="48"/>
-        <Grid Grid.Row="8" Grid.Column="3">
+        <ComboBox x:Name="frequencyCmb" Grid.Row="5"  Background="White"  BorderThickness="3,5,3,3" BorderBrush="Black" Grid.Column="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="48" SelectedIndex="0"/>
+        <Grid Grid.Row="9" Grid.Column="3">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Button x:Name="btnAddNewBook" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Content="Add new book"  FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Grid.Column="2"  IsEnabled="False" Click="btnAddNewJornal_Click"/>
-            <Button x:Name="btnCheckFields" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Content="Check fileds" FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Grid.Column="0" Grid.Row="7" Click="btnCheckFields_Click"/>
+            <Button x:Name="btnCheckFields" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Content="Check fileds" FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Grid.Column="0" Click="btnCheckFields_Click"/>
             <TextBlock x:Name="issuesTxt" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Foreground="Red" FontSize="9"/>
 
         </Grid>
-        
+        <TextBlock Grid.Column="3" Grid.Row="6" HorizontalAlignment="Left"  VerticalAlignment="Bottom" FontSize="36"  FontWeight="Bold" Text="Dicount"/>
+        <TextBox x:Name="discountTxt" Grid.Column="3" Grid.Row="7"  Text=""  FontSize="48" TextAlignment="Left" BorderBrush="#FF080303" Background="White" BorderThickness="3,5,3,3"/>
+
     </Grid>
 </Page>

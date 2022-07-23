@@ -11,7 +11,8 @@ namespace Library.Model
     /// </summary>
     public class Jornal : LibraryItem
     {
-        public int Discount { get; set; }
+        private int _dicount;
+        public int Discount { get { return _dicount; } set {if(value > 99 || value < 0) { value = 0; }  } }
         private double _price;
         public double Price 
         { 

@@ -35,6 +35,7 @@ namespace Library.Model
         public void outOfStockLI(Customer p1)
         {
             outOfStock = DateTime.Now;
+            returnUntil = outOfStock.AddDays(14);
             InStock = false;
             Owner = p1;
         }
@@ -48,6 +49,7 @@ namespace Library.Model
 
         public bool InStock { get; set; }
         public DateTime outOfStock { get; set; }
+        public DateTime returnUntil { get; set; }
         public DateTime PublishDate { get; set; }
         public Customer Owner { get; set; }
 

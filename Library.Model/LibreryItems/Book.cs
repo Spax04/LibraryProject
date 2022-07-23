@@ -135,9 +135,13 @@ namespace Library.Model
             }
             else
             {
-                sb.AppendLine($"Book is out of stock.\nDate:{outOfStock:g}");
+                sb.AppendLine($"Book is out of stock.\nDate:{outOfStock:d}");
+                sb.AppendLine($"Return until: {returnUntil:d}");
+                if(returnUntil < DateTime.Now)
+                {
+                    sb.AppendLine("OVERDUE!!!"); 
+                }
             }
-
             return sb.ToString();
         }
     

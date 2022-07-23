@@ -46,12 +46,19 @@ namespace LibraryProject
         {
 
         }
-
-       
-
         private void btnNewEmployee_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(AddNewEmployee), null);
+        }
+
+        private void btnAddCustomer_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(AddNewCustomer), null);
+        }
+
+        private void btnViewCustomers_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(CustomerCollectionPage), null);
         }
     }
 }
