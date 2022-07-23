@@ -40,7 +40,18 @@ namespace Library.Model
             IsMananger = isMananger;
         }
 
-       
+        public override string ToString()
+        {
+            if(IsMananger == false)
+            {
+                return $"Firs name: {FName}. \nLast name: {LName}.\nPhone number:{PhoneNumber}.\nRole: Regular Employee.";
+            }
+            else
+            {
+                return $"Firs name: {FName}. \nLast name: {LName}.\nPhone number:{PhoneNumber}.\nRole: Menenger.";
+            }
+
+        }
     }
     
 }

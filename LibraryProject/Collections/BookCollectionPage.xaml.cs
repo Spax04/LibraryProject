@@ -75,7 +75,7 @@ namespace LibraryProject
 
         private async void btnRemoveBook_Click(object sender, RoutedEventArgs e)
         {
-            int itemIndex = listMenuView.SelectedIndex;
+            
             Book b1 = listMenuView.SelectedItem as Book;
             
             MessageDialog messageDialog = new MessageDialog("Are you sure you want to delete the book?");

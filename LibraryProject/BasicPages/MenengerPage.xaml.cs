@@ -60,5 +60,10 @@ namespace LibraryProject
         {
             Frame.Navigate(typeof(CustomerCollectionPage), null);
         }
+
+        private void btnEmployeeView_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(EmployeeCollectionPage), null);
+        }
     }
 }

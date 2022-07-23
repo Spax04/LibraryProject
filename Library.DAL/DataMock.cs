@@ -268,8 +268,8 @@ namespace Library.DAL
             Jornal.JornalGaners.Add("Informational");
             Jornal.JornalGaners.Add("Analitical");
             Jornal.JornalGaners.Add("artistic and journalistic");
-            Jornal.JornalGaners.Add("Internet ");
-            Jornal.JornalGaners.Add("Men's ");
+            Jornal.JornalGaners.Add("Internet");
+            Jornal.JornalGaners.Add("Men's");
             Jornal.JornalGaners.Add("Science");
             Jornal.JornalGaners.Add("Literary");
             Jornal.JornalGaners.Add("Industrial and practical");
@@ -288,17 +288,27 @@ namespace Library.DAL
             LibraryItemsList.Add(book2);
             //Jornals
             Jornal jornal1 = new Jornal("Hacker",new DateTime(2022,2,2),1.30,12312500);
-            
+            jornal1.Editors = "MegaMind";
+            jornal1.Contributers = "Stepan Corkin";
+            jornal1.Ganers = "Informational";
             LibraryItemsList.Add(jornal1);
             Jornal jornal2 = new Jornal("Universe", new DateTime(2020, 4, 12), 2.30, 122300500);
+            jornal2.Editors = "Aladin";
+            jornal2.Contributers = "Anton Mehecko";
+            jornal1.Ganers = "Science";
             LibraryItemsList.Add(jornal2);
+            Jornal jornal3 = new Jornal("Maxim", new DateTime(2020, 8, 30), 1.60, 12277050);
+            jornal3.Editors = "Roxan";
+            jornal3.Contributers = "Sara Manchon";
+            jornal3.Ganers = "Men's";
+            LibraryItemsList.Add(jornal3);
             //Employee
             Employee em1 = new Employee("Alex", "Gotlib", 00222002, "admin", "password", true);
             Employee m2 = new Employee("Sara", "Simon",0450512, "sara", "sara", false);
             EmployLogins.Add(em1.Login,em1);
             EmployLogins.Add(m2.Login,m2);
             PersonList.Add(em1);
-
+            PersonList.Add(m2);
             //Customer
             Customer c1 = new Customer("Michael","Hadat",000111222);
             Customer c2 = new Customer("David", "Koko", 215451);

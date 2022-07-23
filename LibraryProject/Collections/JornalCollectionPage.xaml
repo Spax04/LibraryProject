@@ -46,7 +46,10 @@
         <ComboBox x:Name="cbFilter" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Background="White" Height="40" SelectionChanged="cbFilter_SelectionChanged">
             <ComboBoxItem Background="White" Content="By Title"/>
             <ComboBoxItem Content="by Year"/>
-            <ComboBoxItem Content="by Country"/>
+            <ComboBoxItem Content="by Contributer"/>
+            <ComboBoxItem Content="by Editor"/>
+            <ComboBoxItem Content="by Price"/>
+            <ComboBoxItem Content="by Gener"/>
         </ComboBox>
         <TextBlock Grid.Column="2" Grid.Row="0" HorizontalAlignment="Left"   Text="Sorting :" VerticalAlignment="Bottom" FontSize="24" FontWeight="Bold"/>
 

@@ -38,7 +38,7 @@ namespace LibraryProject
 
         private void btnJornalViewBack_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MainsPage), null, new EntranceNavigationTransitionInfo());
+            Frame.Navigate(typeof(MenengerPage), null, new EntranceNavigationTransitionInfo());
         }
 
         private async void btnRemoveJornal_Click(object sender, RoutedEventArgs e)
@@ -71,10 +71,22 @@ namespace LibraryProject
             switch (cbFilter.SelectedIndex)
             {
                 case 0:
-                    listMenuView.ItemsSource = lb.GetSortBy(new SortLibraryItemsByName());
+                    listMenuView.ItemsSource = lb.GetSortBy(new SortLibraryItemsByName()).Where(Item => Item is Jornal).ToList();
                     break;
                 case 1:
-                    listMenuView.ItemsSource = lb.GetSortBy(new SortLibraryItemsByYear());
+                    listMenuView.ItemsSource = lb.GetSortBy(new SortLibraryItemsByYear()).Where(Item => Item is Jornal).ToList();
+                    break;
+                case 2:
+                    listMenuView.ItemsSource = lb.GetSortBy(new SortJornalByContributers()).Where(Item => Item is Jornal).ToList();
+                    break;
+                case 3:
+                    listMenuView.ItemsSource = lb.GetSortBy(new SortJornalByEditor()).Where(Item => Item is Jornal).ToList();
+                    break;
+                case 4:
+                    listMenuView.ItemsSource = lb.GetSortBy(new SortJornalByPrice()).Where(Item => Item is Jornal).ToList();
+                    break;
+                case 5:
+                    listMenuView.ItemsSource = lb.GetSortBy(new SortJornalsByGener()).Where(Item => Item is Jornal).ToList();
                     break;
             }
 

@@ -48,6 +48,7 @@
             <Button x:Name="btnNewEmployee" Content="New employee"  Grid.Row="1" Background="#FF1276CF" FontSize="20" BorderThickness="3,3,3,3" BorderBrush="Black" Grid.Column ="2"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="btnNewEmployee_Click"/>
 
             <Button x:Name="btnHistory" Content="History"  Grid.Row="4" Background="#FF1276CF" FontSize="30" Click="btnHistory_Click" BorderThickness="3,3,3,3" BorderBrush="Black" Grid.Column ="2"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+            <Button x:Name="btnEmployeeView" Content="View all employee"  Grid.Row="2" Background="#FF1276CF" FontSize="20" BorderThickness="3,3,3,3" BorderBrush="Black" Grid.Column ="2"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="btnEmployeeView_Click"/>
 
         </Grid>
         <Button x:Name="btnLogOut" Grid.Row="0" Content="Log Out"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Click="btnLogOut_Click"/>

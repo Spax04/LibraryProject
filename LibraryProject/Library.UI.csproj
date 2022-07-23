@@ -137,6 +137,9 @@
     <Compile Include="Collections\CustomerCollectionPage.xaml.cs">
       <DependentUpon>CustomerCollectionPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Collections\EmployeeCollectionPage.xaml.cs">
+      <DependentUpon>EmployeeCollectionPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LibraryItemDitalesPage.xaml.cs">
       <DependentUpon>LibraryItemDitalesPage.xaml</DependentUpon>
     </Compile>
@@ -195,6 +198,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Collections\CustomerCollectionPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Collections\EmployeeCollectionPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

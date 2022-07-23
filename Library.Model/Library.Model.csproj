@@ -136,6 +136,10 @@
     <Compile Include="LibreryItems\LibraryItem.cs" />
     <Compile Include="Persons\Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sorting\JornalSorting\SortJornalByEditor.cs" />
+    <Compile Include="Sorting\JornalSorting\SortJornalByContributers.cs" />
+    <Compile Include="Sorting\JornalSorting\SortJornalByPrice.cs" />
+    <Compile Include="Sorting\JornalSorting\SortJornalsByGener.cs" />
     <EmbeddedResource Include="Properties\Library.Model.rd.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -143,9 +147,7 @@
       <Version>6.2.13</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Sorting\JornalSorting\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
