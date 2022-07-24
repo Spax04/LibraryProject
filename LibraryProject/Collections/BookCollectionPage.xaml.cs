@@ -37,7 +37,7 @@ namespace LibraryProject
 
         private void btnBookViewBack_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MainsPage), null, new EntranceNavigationTransitionInfo());
+            Frame.Navigate(typeof(MenengerPage), null, new EntranceNavigationTransitionInfo());
         }
 
         private void btnAddBook_Click(object sender, RoutedEventArgs e) 

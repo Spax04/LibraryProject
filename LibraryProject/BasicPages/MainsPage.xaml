@@ -36,21 +36,21 @@
                 <RowDefinition />
                 <RowDefinition  Height="2*"/>
             </Grid.RowDefinitions>
-            <TextBlock Grid.Column="1" HorizontalAlignment="Stretch"  Grid.Row="1"  Text="Login" TextAlignment="Center" VerticalAlignment="Stretch" FontSize="50"/>
-            <TextBlock Grid.Column="1" HorizontalAlignment="Stretch"  Grid.Row="3" Text="Password" TextAlignment="Center" VerticalAlignment="Stretch" FontSize="50"/>
-            <TextBox x:Name="logintTxt" Grid.Column="1" HorizontalAlignment="Stretch"  Grid.Row="2"  Text="" TextAlignment="Center" VerticalAlignment="Stretch" FontSize="45"/>
-            <PasswordBox x:Name="passwordTxt" Grid.Column="1" HorizontalAlignment="Stretch" Grid.Row="4" VerticalAlignment="Stretch" FontSize="45" Password=""/>
+            <TextBlock Grid.Column="1" HorizontalAlignment="Stretch"  Grid.Row="1"  Text="Login" TextAlignment="Center" VerticalAlignment="Stretch" FontSize="40"/>
+            <TextBlock Grid.Column="1" HorizontalAlignment="Stretch"  Grid.Row="3" Text="Password" TextAlignment="Center" VerticalAlignment="Stretch" FontSize="40"/>
+            <TextBox x:Name="logintTxt" Grid.Column="1" HorizontalAlignment="Stretch"  Grid.Row="2"  Text="" TextAlignment="Center" VerticalAlignment="Stretch" FontSize="36"/>
+            <PasswordBox x:Name="passwordTxt" Grid.Column="1" HorizontalAlignment="Stretch" Grid.Row="4" VerticalAlignment="Stretch" FontSize="36" Password=""/>
             <Grid Grid.Row="6" Grid.Column="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="btnLogIn" Grid.Column="1" Content="Log In" Foreground="Black" Background="#FFA06BEF" BorderBrush="Black" FontSize="24"  VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Height="72" Click="btnLogIn_Click"/>
+                <Button x:Name="btnLogIn" Grid.Column="1" Content="Log In" Foreground="Black" Background="#FFA06BEF" BorderBrush="Black" FontSize="24"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Height="72" Click="btnLogIn_Click"/>
 
             </Grid>
             <TextBlock x:Name="issuesTxt" Grid.Column="1" HorizontalAlignment="Stretch"  Grid.Row="5" TextWrapping="Wrap" Text="" VerticalAlignment="Center" TextAlignment="Center" FontSize="30" Foreground="Red"/>
         </Grid>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Center" Text="Welcome to Alex's Book Library and store" VerticalAlignment="Center" FontSize="60" FontFamily="Elephant"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Center" Text="Welcome to Alex's Book Library and store" VerticalAlignment="Center" FontSize="50" FontFamily="Elephant"/>
     </Grid>
 </Page>
