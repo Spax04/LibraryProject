@@ -279,11 +279,11 @@ namespace Library.DAL
 
             // Books
             Book book1 = new Book("War and Piese", new DateTime(1864,1,1), "Scholastic Books", 123321, "Ukraine");
-            book1.Genres.Add("War");
+            book1.Genres = "War";
             book1.Authors.Add("L.N. Tolstoy");
             LibraryItemsList.Add(book1);
             Book book2 = new Book("Crime and punishment", new DateTime(1887, 4, 9), "DAW Books", 551231, "Eritrea");
-            book2.Genres.Add("Crime");
+            book2.Genres = "Crime";
             book2.Authors.Add("F.M. Dostoevsky");
             LibraryItemsList.Add(book2);
             //Jornals
@@ -291,16 +291,19 @@ namespace Library.DAL
             jornal1.Editors = "MegaMind";
             jornal1.Contributers = "Stepan Corkin";
             jornal1.Ganers = "Informational";
+            jornal1.Frequency = Jornal.JornalFrequency.BiWeekly;
             LibraryItemsList.Add(jornal1);
             Jornal jornal2 = new Jornal("Universe", new DateTime(2020, 4, 12), 2.30, 122300500);
             jornal2.Editors = "Aladin";
             jornal2.Contributers = "Anton Mehecko";
-            jornal1.Ganers = "Science";
+            jornal2.Ganers = "Science";
+            jornal2.Frequency = Jornal.JornalFrequency.Weekly;
             LibraryItemsList.Add(jornal2);
             Jornal jornal3 = new Jornal("Maxim", new DateTime(2020, 8, 30), 1.60, 12277050);
             jornal3.Editors = "Roxan";
             jornal3.Contributers = "Sara Manchon";
             jornal3.Ganers = "Men's";
+            jornal3.Frequency = Jornal.JornalFrequency.Annualy;
             LibraryItemsList.Add(jornal3);
             //Employee
             Employee em1 = new Employee("Alex", "Gotlib", 00222002, "admin", "password", true);

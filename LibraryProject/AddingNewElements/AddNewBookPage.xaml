@@ -46,7 +46,7 @@
             <TextBox x:Name="serialNumberTxt" Grid.Column="1" HorizontalAlignment="Stretch" Grid.Row="7" Text="" VerticalAlignment="Stretch"  FontSize="48" TextAlignment="Left" Background="White" BorderBrush="Black" BorderThickness="3,3,3,3"/>
 
             <TextBlock HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Row="8" Grid.Column="1" Text="Country" FontSize="36" FontWeight="Bold"/>
-            <ComboBox x:Name="countrCmb" Grid.Row="9" Grid.Column="1" Background="White" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderThickness="3,3,3,3" BorderBrush="Black" FontSize="48"/>
+            <ComboBox x:Name="countrCmb" Grid.Row="9" Grid.Column="1" Background="White" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderThickness="3,3,3,3" BorderBrush="Black" FontSize="48" SelectedIndex="0"/>
             
             <TextBlock Grid.Column="3" Grid.Row="0" HorizontalAlignment="Left"  VerticalAlignment="Bottom" FontSize="36" FontWeight="Bold" Text="Gener"/>
             <ComboBox x:Name="generCmb" Grid.Row ="1" Grid.Column="3" Background="White"  BorderThickness="3,3,3,3" BorderBrush="Black" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="48" SelectedIndex="0"/>
@@ -55,7 +55,7 @@
             <TextBox x:Name="authorTxt" Grid.Column="3" HorizontalAlignment="Stretch" Grid.Row="3" Text="" VerticalAlignment="Stretch" FontSize="48" TextAlignment="Left" BorderBrush="#FF080303" Background="White" BorderThickness="3,3,3,3"/>
 
             <TextBlock Grid.Column="3" Grid.Row="4"  HorizontalAlignment="Left" Text="Synopsis" VerticalAlignment="Bottom" FontSize="36" FontWeight="Bold"/>
-            <TextBox x:Name="synopsisTxt" Grid.Column="3" HorizontalAlignment="Stretch" Text="" VerticalAlignment="Stretch" FontSize="48" TextAlignment="Left" Background="White" BorderBrush="Black" BorderThickness="3,3,3,3" Grid.RowSpan="3" Grid.Row="5"/>
+            <TextBox x:Name="synopsisTxt" Grid.Column="3" HorizontalAlignment="Stretch" Text="" VerticalAlignment="Stretch" FontSize="10" TextAlignment="Left" Background="White" BorderBrush="Black" BorderThickness="3,3,3,3" Grid.RowSpan="3" Grid.Row="5"/>
 
             <Grid Grid.Row="9" Grid.Column="3">
             <Grid.ColumnDefinitions>

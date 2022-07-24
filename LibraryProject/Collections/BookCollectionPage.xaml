@@ -39,6 +39,7 @@
             <Button x:Name="btnRemoveBook" Content="Remove" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Grid.Column="2" Click="btnRemoveBook_Click"/>
             <Button x:Name="btnFindBy" Content="Search"  VerticalAlignment="Center" HorizontalAlignment="Stretch"  FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Grid.Column="10"/>
             <TextBox Grid.Column="8" Grid.ColumnSpan="2" HorizontalAlignment="Stretch"  TextWrapping="Wrap" VerticalAlignment="Center"  FontSize="24" Background="White"/>
+            <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Stretch" FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Grid.Column="4" Click="btnUpdate_Click"/>
 
         </Grid>
         <Button x:Name="btnBookViewBack" Grid.Row="1" Content="Back"  VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="22" Background="#FFA06BEF" Click="btnBookViewBack_Click"  BorderBrush="Black" Margin="0,0,0,23"/>

@@ -93,5 +93,13 @@ namespace LibraryProject
             listMenuView.ItemsSource = lb.Get().Where(Item => Item is Book).ToList();
         }
 
+        private void btnUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            Book b1 = (Book)listMenuView.SelectedItem;
+            if(b1 != null)
+            {
+                Frame.Navigate(typeof(AddNewBookPage), b1);
+            }
+        }
     }
 }

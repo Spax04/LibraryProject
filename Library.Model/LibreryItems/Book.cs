@@ -49,7 +49,7 @@ namespace Library.Model
         /// <summary>
         /// get collection of book's genres
         /// </summary>
-        public List<string> Genres { get; private set; }
+        public string Genres { get; set; }
 
         /// <summary>
         /// get or set book's revision
@@ -67,16 +67,7 @@ namespace Library.Model
             }
             return authors;
         }
-        public StringBuilder genersPrint()
-        {
-            StringBuilder geners = new StringBuilder();
-            for (int i = 0; i < Genres.Count; i++)
-            {
-                geners.Append($"{Genres[i]} ");
-            }
-            return geners;
-
-        }
+       
         /// <summary>
         /// get or set book's synopsis (short summary of book)
         /// </summary>
@@ -99,7 +90,7 @@ namespace Library.Model
             this.ISBN.Country = country;
             this.ISBN.Publisher = publisher;
             Authors = new List<string>();
-            Genres = new List<string>();
+            
             
         }
 
@@ -107,11 +98,11 @@ namespace Library.Model
         {
             if(InStock == true)
             {
-                return $"'{Title}' | {PublishDate:yyyy} | {ISBN.ToString()} | {authorsPrint()}| {genersPrint()} | {this.ISBN.Country} | {this.ISBN.Publisher}";
+                return $"'{Title}' | {PublishDate:yyyy} | {ISBN.ToString()} | {authorsPrint()}| {Genres} | {this.ISBN.Country} | {this.ISBN.Publisher}";
             }
             else
             {
-                return $" OUT OF STOCK | '{Title}' | {PublishDate:yyyy} | {ISBN.ToString()} | {authorsPrint()}| {genersPrint()} | {this.ISBN.Country} | {this.ISBN.Publisher}";
+                return $" OUT OF STOCK | '{Title}' | {PublishDate:yyyy} | {ISBN.ToString()} | {authorsPrint()}| {Genres} | {this.ISBN.Country} | {this.ISBN.Publisher}";
 
             }
         }
@@ -124,7 +115,7 @@ namespace Library.Model
             sb.AppendLine($"Book title: {Title}");
             sb.AppendLine($"Publish year: {PublishDate:yyyy}");
             sb.AppendLine($"Publisher: {this.ISBN.Publisher}");
-            sb.AppendLine($"Book Gener: {genersPrint()}");
+            sb.AppendLine($"Book Gener: {Genres}");
             sb.AppendLine($"Author: {authorsPrint()}");
             sb.AppendLine($"Country: {this.ISBN.Country}");
             sb.AppendLine($"ISBN: {ISBN.ToString()}");

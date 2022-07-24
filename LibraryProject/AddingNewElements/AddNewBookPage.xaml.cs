@@ -31,7 +31,8 @@ namespace LibraryProject
         LbraryRepository lb = new LbraryRepository();
         AddingNewLibraryItem adding;
         ComboBoxItem ci;
-        
+
+        Book b1;
 
         public AddNewBookPage()
         {
@@ -49,10 +50,47 @@ namespace LibraryProject
                 btnAddNewBook.IsEnabled = false;
            
         }
+        public void updateBook()
+        {
+            b1.Title = titleTxt.Text;
+            b1.PublishDate = calendarPicker.Date.DateTime;
+            b1.ISBN.Publisher = AddingNewLibraryItem.returnContent(publisherCmb);
+            b1.ISBN.SerialNumber = Convert.ToInt32(serialNumberTxt.Text);
+            b1.ISBN.Country = AddingNewLibraryItem.returnContent(countrCmb);
+            b1.Genres = AddingNewLibraryItem.returnContent(generCmb);
+            b1.Authors[0] = authorTxt.Text;
+            b1.Synopsis = synopsisTxt.Text;
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            if (e.Parameter != null)
+            {
+                btnAddNewBook.Content = "Update";
+                b1 = e.Parameter as Book;
+                
+                titleTxt.Text = b1.Title;
+                calendarPicker.Date = b1.PublishDate;
+                publisherCmb.SelectedIndex = AddingNewLibraryItem.returnIndex(publisherCmb,b1.ISBN.Publisher.ToString());
+                serialNumberTxt.Text = b1.ISBN.SerialNumber.ToString();
+                countrCmb.SelectedIndex = AddingNewLibraryItem.returnIndex(countrCmb, b1.ISBN.Country.ToString());
+                generCmb.SelectedIndex = AddingNewLibraryItem.returnIndex(generCmb, b1.Genres.ToString());
+                authorTxt.Text = b1.Authors[0];
+                synopsisTxt.Text = b1.Synopsis;
+            }
+        }
 
         private void btnAddNewBook_Click(object sender, RoutedEventArgs e)
         {
-            lb.Add(adding.addingBookMethod());
+            if(b1 != null)
+            {
+                updateBook();
+                lb.Update(b1);
+            }
+            else
+            {
+                lb.Add(adding.addingBookMethod());
+            }
             Frame.Navigate(typeof(BookCollectionPage), null, new EntranceNavigationTransitionInfo());
         }
 

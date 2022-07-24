@@ -91,5 +91,15 @@ namespace LibraryProject
             }
 
         }
+
+        private void btnUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            Jornal j1 = (Jornal)listMenuView.SelectedItem;
+
+            if(j1 != null)
+            {
+                Frame.Navigate(typeof(AddNewJornalPage),j1);
+            }
+        }
     }
 }

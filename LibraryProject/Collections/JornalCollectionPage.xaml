@@ -38,6 +38,7 @@
             <Button x:Name="btnRemoveJornal" Content="Remove" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Grid.Column="2" Click="btnRemoveJornal_Click"/>
             <Button x:Name="btnFindBy" Content="Search"  VerticalAlignment="Center" HorizontalAlignment="Stretch"  FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Grid.Column="10"/>
             <TextBox Grid.Column="8" Grid.ColumnSpan="2" HorizontalAlignment="Stretch"  TextWrapping="Wrap" VerticalAlignment="Center"  FontSize="24" Background="White"/>
+            <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Stretch" FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Grid.Column="4" Click="btnUpdate_Click"/>
 
         </Grid>
         <Button x:Name="btnJornalViewBack" Grid.Row="1" Content="Back"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="22" Background="#FFA06BEF" Click="btnJornalViewBack_Click"  BorderBrush="Black"/>

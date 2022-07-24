@@ -66,8 +66,8 @@
             <TextBlock x:Name="issuesTxt" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Foreground="Red" FontSize="9"/>
 
         </Grid>
-        <TextBlock Grid.Column="3" Grid.Row="6" HorizontalAlignment="Left"  VerticalAlignment="Bottom" FontSize="36"  FontWeight="Bold" Text="Dicount"/>
-        <TextBox x:Name="discountTxt" Grid.Column="3" Grid.Row="7"  Text=""  FontSize="48" TextAlignment="Left" BorderBrush="#FF080303" Background="White" BorderThickness="3,5,3,3"/>
+        <TextBlock Grid.Column="3" Grid.Row="6" HorizontalAlignment="Left"  VerticalAlignment="Bottom" FontSize="36"  FontWeight="Bold" Text="Discount"/>
+        <TextBox x:Name="discountTxt" Grid.Column="3" Grid.Row="7"  Text="0"  FontSize="48" TextAlignment="Left" BorderBrush="#FF080303" Background="White" BorderThickness="3,5,3,3"/>
 
     </Grid>
 </Page>

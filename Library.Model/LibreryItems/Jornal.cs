@@ -11,8 +11,24 @@ namespace Library.Model
     /// </summary>
     public class Jornal : LibraryItem
     {
-        private int _dicount;
-        public int Discount { get { return _dicount; } set {if(value > 99 || value < 0) { value = 0; }  } }
+        private double _dicount;
+        public double Discount {
+            get 
+            {
+                return _dicount; 
+            }
+            set 
+            {
+                if(value < 99 || value > 0) 
+                { 
+                    _dicount = value;
+                }
+                else
+                {
+                    _dicount = 0;
+                }
+            }
+        }
         private double _price;
         public double Price 
         { 
@@ -54,15 +70,12 @@ namespace Library.Model
         /// list of  ganers for spicific jornal
         /// </summary>
         public string Ganers { get;  set; }
+       
 
         public double gettingDiscountPrice()
         {
-            double newPrice = 0;
-            if(Discount > 0)
-            {
-                newPrice = Price * (Discount / 100);
-            }
-            return newPrice;
+            Price = Price * (Discount / 100);
+            return Price;
         }
 
        
@@ -71,7 +84,6 @@ namespace Library.Model
         public Jornal(string title, DateTime publishDate, double price,  int serialnumber ,JornalFrequency jf = JornalFrequency.Other) : base(title, publishDate)
         {
             _price = price;
-            Discount = 0;   
             Frequency = jf;
             SerialNumber = serialnumber;
         }
@@ -80,11 +92,11 @@ namespace Library.Model
         {
             if(Discount > 0)
             {
-                return $"'{Title}' | {PublishDate:D} | {Ganers} | {Editors} | {Contributers} | {gettingDiscountPrice():C} | {Discount}% ";
+                return $"'{Title}' | {PublishDate:D} | {Ganers} | {Editors} | {Frequency} | {Contributers} | {gettingDiscountPrice():C} | {Discount}% ";
             }
             else
             {
-                return $"'{Title}' | {PublishDate:D} | {Ganers} | {Editors} | {Contributers} | {Price:C}";
+                return $"'{Title}' | {PublishDate:D} | {Ganers} | {Editors} | {Frequency} | {Contributers} | {Price:C}";
             }
         }
 

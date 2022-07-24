@@ -9,7 +9,7 @@ namespace Library.Model
 {
     public class AddingNewLibraryItem
     {
-        private string _title, _publisher, _serialnumber, _country,_gener,_author,_price , _synopsis;
+        private string _title, _publisher, _serialnumber, _country,_gener,_author,_price , _synopsis,_discount;
         private DateTime _datePublisher;
        Jornal.JornalFrequency _frequency;
 
@@ -26,7 +26,7 @@ namespace Library.Model
             _synopsis = synopsis;
         }
 
-        public AddingNewLibraryItem(string title, DateTime date, string price,Jornal.JornalFrequency jf,string gener,string contributer,string editor,string serialnumber) // Jornal Constractor
+        public AddingNewLibraryItem(string title, DateTime date, string price,Jornal.JornalFrequency jf,string gener,string contributer,string editor,string serialnumber,string discount) // Jornal Constractor
         {
             _title=title;
             _price = price;
@@ -36,6 +36,7 @@ namespace Library.Model
             _author=contributer;
             _publisher=editor;
             _serialnumber=serialnumber;
+            _discount = discount;
         }
 
         public int convertToSerialNumber(string _serialnumber)
@@ -121,13 +122,25 @@ namespace Library.Model
             return selectedcmb;
         }
 
-        
-
+        public static int returnIndex(ComboBox Choice,string word)
+        {
+           
+            ComboBoxItem comboBoxItem; 
+            for (int i = 0; i < Choice.Items.Count; i++)
+            {
+                comboBoxItem = (ComboBoxItem)Choice.Items[i];
+                if(comboBoxItem.Content == word)
+                {
+                    return i;
+                }
+            }
+            return 0;
+        }
 
         public Book addingBookMethod()
         {
             Book b1 = new Book(_title, _datePublisher, _publisher, convertToSerialNumber(_serialnumber), _country);
-            b1.Genres.Add(_gener);
+            b1.Genres= _gener;
             b1.Authors.Add(_author);
             b1.Synopsis = _synopsis;
             return b1;
@@ -139,6 +152,7 @@ namespace Library.Model
             j1.Ganers = _gener;
             j1.Editors = _publisher;
             j1.Contributers = _author;
+            j1.Discount = Convert.ToInt32(_discount);
             return j1;
         }
 
