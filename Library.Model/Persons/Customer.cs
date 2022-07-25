@@ -8,6 +8,9 @@ namespace Library.Model
 {
     public class Customer : Person
     {
+        /// <summary>
+        /// Class overidse form <see cref="Person"/> and represents a Customer
+        /// </summary>
         public List<LibraryItem> customerItems;
         public Customer(string Fname,string Lname, int phonenumber) : base(Fname,Lname, phonenumber)
         {
@@ -15,6 +18,9 @@ namespace Library.Model
 
         }
 
+        /// <summary>
+        /// prints ditales about customer and itmes it contains
+        /// </summary>
         public string bookCustomerDitales()
         {
             StringBuilder sb = new StringBuilder();

@@ -39,7 +39,7 @@ namespace LibraryProject
             this.InitializeComponent();
             creatingCmbBookPage();
         }
-
+        #region Buttons
         private void btnCheckFields_Click(object sender, RoutedEventArgs e)
         {
             adding = new AddingNewLibraryItem(titleTxt.Text, calendarPicker.Date.DateTime, AddingNewLibraryItem.returnContent(publisherCmb), serialNumberTxt.Text, AddingNewLibraryItem.returnContent(countrCmb), AddingNewLibraryItem.returnContent(generCmb), authorTxt.Text,synopsisTxt.Text);
@@ -50,6 +50,27 @@ namespace LibraryProject
                 btnAddNewBook.IsEnabled = false;
            
         }
+        private void btnBookViewBack_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(BookCollectionPage), null, new EntranceNavigationTransitionInfo());
+        }
+        private void btnAddNewBook_Click(object sender, RoutedEventArgs e)
+        {
+            if (b1 != null)
+            {
+                updateBook();
+                lb.Update(b1);
+            }
+            else
+            {
+                lb.Add(adding.addingBookMethod());
+            }
+            Frame.Navigate(typeof(BookCollectionPage), null, new EntranceNavigationTransitionInfo());
+        }
+        #endregion
+
+
+        // updeing ditales of the book that was overridet
         public void updateBook()
         {
             b1.Title = titleTxt.Text;
@@ -79,26 +100,7 @@ namespace LibraryProject
                 synopsisTxt.Text = b1.Synopsis;
             }
         }
-
-        private void btnAddNewBook_Click(object sender, RoutedEventArgs e)
-        {
-            if(b1 != null)
-            {
-                updateBook();
-                lb.Update(b1);
-            }
-            else
-            {
-                lb.Add(adding.addingBookMethod());
-            }
-            Frame.Navigate(typeof(BookCollectionPage), null, new EntranceNavigationTransitionInfo());
-        }
-
-        private void btnBookViewBack_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(BookCollectionPage), null, new EntranceNavigationTransitionInfo());
-        }
-
+        // Displaying comboboxes
         private void creatingCmbBookPage()
         {
             for (int i = 0; i < Book.BookGenres.Count; i++)
@@ -125,10 +127,6 @@ namespace LibraryProject
                 publisherCmb.Items.Add(ci);
             }
         }
-
-       
     }
-
-
 }
 

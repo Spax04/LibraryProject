@@ -11,7 +11,7 @@ namespace Library.Model
     /// </summary>
     public class Book : LibraryItem , IComparable
     {
-        private const string _defaultState = "Israel";
+        private const string _defaultState = "Russian";
         private const string _defaultPublisher = "Pyramid Books";
 
         /// <summary>
@@ -107,7 +107,9 @@ namespace Library.Model
             }
         }
 
-        
+        /// <summary>
+        /// represents ditales about book
+        /// </summary>
         public override string Ditales()
         {
             StringBuilder sb = new StringBuilder();

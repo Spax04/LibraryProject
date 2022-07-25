@@ -19,7 +19,7 @@ namespace Library.Model
             }
             set 
             {
-                if(value < 99 || value > 0) 
+                if(value < 99 && value > 0) 
                 { 
                     _dicount = value;
                 }
@@ -70,8 +70,10 @@ namespace Library.Model
         /// list of  ganers for spicific jornal
         /// </summary>
         public string Ganers { get;  set; }
-       
 
+        /// <summary>
+        /// 
+        /// </summary>
         public double gettingDiscountPrice()
         {
             Price = Price * (Discount / 100);
@@ -99,7 +101,9 @@ namespace Library.Model
                 return $"'{Title}' | {PublishDate:D} | {Ganers} | {Editors} | {Frequency} | {Contributers} | {Price:C}";
             }
         }
-
+        /// <summary>
+        /// represents ditales about jornal
+        /// </summary>
         public override string Ditales()
         {
             StringBuilder sb = new StringBuilder();

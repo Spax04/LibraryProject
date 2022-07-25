@@ -60,7 +60,7 @@ namespace Library.DAL
             ISBN.Countries.Add("French", 2);
             ISBN.Countries.Add("German", 3);
             ISBN.Countries.Add("Japanese", 4);
-            ISBN.Countries.Add("Russian ", 5);
+            ISBN.Countries.Add("Russian", 5);
             ISBN.Countries.Add("Iran", 600);
             ISBN.Countries.Add("Kazakhstan", 601);
             ISBN.Countries.Add("Indonesia", 602);
@@ -278,13 +278,15 @@ namespace Library.DAL
 
 
             // Books
-            Book book1 = new Book("War and Piese", new DateTime(1864,1,1), "Scholastic Books", 123321, "Ukraine");
+            Book book1 = new Book("War and Piese", new DateTime(1864,1,1), "Scholastic Books", 123321, "Russian");
             book1.Genres = "War";
             book1.Authors.Add("L.N. Tolstoy");
+            book1.Synopsis = "Stroyy about war and love";
             LibraryItemsList.Add(book1);
             Book book2 = new Book("Crime and punishment", new DateTime(1887, 4, 9), "DAW Books", 551231, "Eritrea");
             book2.Genres = "Crime";
             book2.Authors.Add("F.M. Dostoevsky");
+            book2.Synopsis = "Story about stident Raskolnikiv that got murder";
             LibraryItemsList.Add(book2);
             //Jornals
             Jornal jornal1 = new Jornal("Hacker",new DateTime(2022,2,2),1.30,12312500);

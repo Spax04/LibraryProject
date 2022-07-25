@@ -46,9 +46,17 @@ namespace Library.Model
             InStock = true;
             return Owner ;
         }
-
+        /// <summary>
+        /// represents if Item in stock
+        /// </summary>
         public bool InStock { get; set; }
+        /// <summary>
+        /// represents the time when item has gone from stock
+        /// </summary>
         public DateTime outOfStock { get; set; }
+        /// <summary>
+        /// represents the time when item has gone from stock
+        /// </summary>
         public DateTime returnUntil { get; set; }
         public DateTime PublishDate { get; set; }
         public Customer Owner { get; set; }

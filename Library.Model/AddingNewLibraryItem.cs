@@ -7,6 +7,9 @@ using Windows.UI.Xaml.Controls;
 
 namespace Library.Model
 {
+    /// <summary>
+    /// The class is helping to create a new libriray item. Class contains two constructors - one for book and second for jornal
+    /// </summary>
     public class AddingNewLibraryItem
     {
         private string _title, _publisher, _serialnumber, _country,_gener,_author,_price , _synopsis,_discount;
@@ -39,6 +42,11 @@ namespace Library.Model
             _discount = discount;
         }
 
+        /// <summary>
+        /// regular converting to Int32. Return -1 if serial number was wrong
+        /// </summary>
+        /// <param name="_serialnumber"> resive word that has to be posable to convert </param>
+        /// <returns></returns>
         public int convertToSerialNumber(string _serialnumber)
         {
             try
@@ -49,6 +57,11 @@ namespace Library.Model
                 return -1;
             }
         }
+        /// <summary>
+        /// regular converting to Double. Return -1 if price was not correct 
+        /// </summary>
+        /// <param name="_serialnumber"> resive word that has to be posable to convert </param>
+        /// <returns></returns>
         public double convertToPrice(string price)
         {
             try
@@ -61,7 +74,11 @@ namespace Library.Model
             }
         }
 
-
+        /// <summary>
+        /// checking if all inputs in Fields are correct.If something is not correct it will return isses string else it returns string empty/>
+        /// </summary>
+        /// <param name="number"> serial number</param>
+        /// <returns></returns>
         public string checkingFieldsBook(string number)
         {
             StringBuilder listIssues = new StringBuilder();
@@ -111,6 +128,11 @@ namespace Library.Model
             return listIssues.ToString();
         }
 
+        /// <summary>
+        /// Returning string content fromm ComboboxItem
+        /// </summary>
+        /// <param name="Choice"> any Combobox</param>
+        /// <returns></returns>
         public static string returnContent(ComboBox Choice)
         {
             string selectedcmb = "";
@@ -122,6 +144,12 @@ namespace Library.Model
             return selectedcmb;
         }
 
+        /// <summary>
+        /// returns index of the ComboboxItem content that similar to input word
+        /// </summary>
+        /// <param name="Choice">any ciombobox</param>
+        /// <param name="word"> word that shold contains in combobox</param>
+        /// <returns></returns>
         public static int returnIndex(ComboBox Choice,string word)
         {
            
@@ -137,6 +165,10 @@ namespace Library.Model
             return 0;
         }
 
+        /// <summary>
+        /// method that returns new book
+        /// </summary>
+        /// <returns></returns>
         public Book addingBookMethod()
         {
             Book b1 = new Book(_title, _datePublisher, _publisher, convertToSerialNumber(_serialnumber), _country);
@@ -146,6 +178,10 @@ namespace Library.Model
             return b1;
         }
 
+        /// <summary>
+        /// method that returns new jornal
+        /// </summary>
+        /// <returns></returns>
         public Jornal addingJornalMethod()
         {
             Jornal j1 = new Jornal(_title,_datePublisher,convertToPrice(_price),convertToSerialNumber(_serialnumber));

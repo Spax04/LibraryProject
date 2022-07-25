@@ -5,10 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Library.Model
-{
+{/// <summary>
+/// class overides from <see cref="Person"/> and represents employee
+/// </summary>
     public class Employee : Person
     {
         private string _login;
+        /// <summary>
+        /// represents login of castomer that automaticly srt password in <see cref="Library.Model.Employee.EmployeeLogins"/>
+        /// </summary>
         public string Login
         {
             get
@@ -31,6 +36,10 @@ namespace Library.Model
         }
         public string Password { get; private set; }
         public bool IsMananger { get; private set; }
+
+       /// <summary>
+       /// Dictionary thet conects Employee object with his Login
+       /// </summary>
         public static Dictionary<string, string> EmployeeLogins = new Dictionary<string, string>();
 
         public Employee(string Fname,string Lname, int phonenumber,string login,string password, bool isMananger) : base(Fname,Lname, phonenumber)
