@@ -112,7 +112,15 @@ namespace Library.Model
         public Employee registrEmployee()
         {
             Employee e1 = new Employee(_fname,_lname,convertingPhoneNumber(_phoneNumber),_login,_password,_isMananger);
-            return e1;
+            
+            if(e1 == null)
+            {
+                throw new Exception("The employee wasnt created");
+            }
+            else
+            {
+                return e1;
+            }
         }
         /// <summary>
         /// method that returns new customer
@@ -120,7 +128,14 @@ namespace Library.Model
         public Customer registrCustomer()
         {
             Customer e1 = new Customer(_fname, _lname, convertingPhoneNumber(_phoneNumber));
-            return e1;
+            if (e1 == null)
+            {
+                throw new Exception("The customer wasnt created");
+            }
+            else
+            {
+                return e1;
+            }
         }
     }
 }

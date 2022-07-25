@@ -75,8 +75,5 @@ namespace Library.DAL
             _context.LibraryItemsList.Sort(comp);
             return Get();
         }
-       
-
-
     }
 }

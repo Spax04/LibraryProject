@@ -141,6 +141,10 @@ namespace Library.Model
             {
                 selectedcmb = comboBoxItem.Content.ToString();
             }
+            else
+            {
+                throw new Exception("There is no item like this");
+            }
             return selectedcmb;
         }
 
@@ -152,7 +156,6 @@ namespace Library.Model
         /// <returns></returns>
         public static int returnIndex(ComboBox Choice,string word)
         {
-           
             ComboBoxItem comboBoxItem; 
             for (int i = 0; i < Choice.Items.Count; i++)
             {
@@ -160,6 +163,10 @@ namespace Library.Model
                 if(comboBoxItem.Content == word)
                 {
                     return i;
+                }
+                else
+                {
+                    throw new Exception("There is no item like this");
                 }
             }
             return 0;

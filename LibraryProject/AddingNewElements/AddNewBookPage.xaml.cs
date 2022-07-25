@@ -115,7 +115,6 @@ namespace LibraryProject
             {
                 ComboBoxItem ci = new ComboBoxItem();
                 ci.Content = item;
-                
                 countrCmb.Items.Add(ci);
             }
 
