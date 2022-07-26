@@ -33,7 +33,7 @@
         <Button x:Name="btnJornalViewBack" Content="Back" VerticalAlignment="Bottom"  FontSize="22" Background="#FFA06BEF" Click="btnJornalViewBack_Click" HorizontalAlignment="Center" BorderBrush="Black"/>
 
         <TextBlock Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Text="Title: " VerticalAlignment="Bottom" FontSize="36"  FontWeight="Bold"/>
-        <TextBox x:Name="titleTxt" Grid.Column="1" Grid.Row="1" Text="" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" TextAlignment="Left" Background="#FFFFF5F5" BorderBrush="Black" BorderThickness="3,5,3,3"/>
+        <TextBox x:Name="titleTxt" Grid.Column="1" Grid.Row="1" Text="" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" TextAlignment="Left" Background="#FFFFF5F5" BorderBrush="Black" BorderThickness="3,5,3,3" FontSize="48"/>
 
         <TextBlock Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Text="Publish date" VerticalAlignment="Bottom" FontSize="36" FontWeight="Bold"/>
         <DatePicker x:Name="calendarPicker"  Grid.Row="3" Grid.Column="1" FontSize="48" Background="White" FontFamily="Yu Gothic UI Semibold" FontWeight="Bold" HorizontalAlignment="Stretch" VerticalAlignment="Top" FontStyle="Normal"/>

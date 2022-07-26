@@ -37,7 +37,7 @@ namespace Library.Model
         /// </summary>
         /// <param name="number"></param>
         /// <returns></returns>
-        public int convertingPhoneNumber(string number)
+        public int ConvertingPhoneNumber(string number)
         {
             int a;
             try
@@ -56,7 +56,7 @@ namespace Library.Model
         /// checking fields of customer page for correct input. return string if input is not correct
         /// </summary>
         /// <returns></returns>
-        public string checkingFieldsCustumer()
+        public string CheckingFieldsCustumer()
         {
             StringBuilder sb = new StringBuilder();
             if (_fname == "")
@@ -67,7 +67,7 @@ namespace Library.Model
             {
                 sb.AppendLine("*No last name has puted");
             }
-            if (convertingPhoneNumber(_phoneNumber) == 0)
+            if (ConvertingPhoneNumber(_phoneNumber) == 0)
             {
                 sb.AppendLine("*Not correct phone number");
             }
@@ -77,7 +77,7 @@ namespace Library.Model
         /// <summary>
         /// checking fields of employee page for correct input. return string if input is not correct
         /// </summary>
-        public string checkingFieldsEmployee()
+        public string CheckingFieldsEmployee()
         {
             StringBuilder sb = new StringBuilder();
             if (_fname == "")
@@ -88,7 +88,7 @@ namespace Library.Model
             {
                 sb.AppendLine("*No last name has puted");
             }
-            if (convertingPhoneNumber(_phoneNumber) == 0)
+            if (ConvertingPhoneNumber(_phoneNumber) == 0)
             {
                 sb.AppendLine("*Not correct phone number");
             }
@@ -109,9 +109,9 @@ namespace Library.Model
         /// method that return new employee
         /// </summary>
         /// <returns></returns>
-        public Employee registrEmployee()
+        public Employee RegistrEmployee()
         {
-            Employee e1 = new Employee(_fname,_lname,convertingPhoneNumber(_phoneNumber),_login,_password,_isMananger);
+            Employee e1 = new Employee(_fname,_lname,ConvertingPhoneNumber(_phoneNumber),_login,_password,_isMananger);
             
             if(e1 == null)
             {
@@ -125,9 +125,9 @@ namespace Library.Model
         /// <summary>
         /// method that returns new customer
         /// </summary>
-        public Customer registrCustomer()
+        public Customer RegistrCustomer()
         {
-            Customer e1 = new Customer(_fname, _lname, convertingPhoneNumber(_phoneNumber));
+            Customer e1 = new Customer(_fname, _lname, ConvertingPhoneNumber(_phoneNumber));
             if (e1 == null)
             {
                 throw new Exception("The customer wasnt created");

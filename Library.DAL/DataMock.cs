@@ -33,22 +33,7 @@ namespace Library.DAL
             Init();
         }
 
-        /*public List<LibraryItem> searhingBookInList(string word)
-        {
-            List<LibraryItem> list = new List<LibraryItem>();
-            for(int i = 0; i < LibraryItemsList.Count; i++)
-            {
-                Book b1 = LibraryItemsList[i] as Book;
-                if(b1 != null)
-                {
-                    if (b1.Discription.Contains(word))
-                    {
-                        list.Add(LibraryItemsList[i]);
-                    }
-                }
-            }
-            return list;
-        }*/
+       
 
         public void Init()
         {
@@ -283,19 +268,29 @@ namespace Library.DAL
             book1.Authors.Add("L.N. Tolstoy");
             book1.Synopsis = "Stroyy about war and love";
             LibraryItemsList.Add(book1);
-            Book book2 = new Book("Crime and punishment", new DateTime(1887, 4, 9), "DAW Books", 551231, "Eritrea");
+            Book book2 = new Book("Crime and punishment", new DateTime(1887, 4, 9), "DAW Books", 551231, "Ukraine");
             book2.Genres = "Crime";
             book2.Authors.Add("F.M. Dostoevsky");
             book2.Synopsis = "Story about stident Raskolnikiv that got murder";
             LibraryItemsList.Add(book2);
+            Book book3 = new Book("1984", new DateTime(1987, 8, 9), "Scholastic Books", 811231, "English");
+            book3.Genres = "Drama";
+            book3.Authors.Add("George Orwell");
+            book3.Synopsis = "A man loses his identity while living under a repressive regime.";
+            LibraryItemsList.Add(book3);
+            Book book4 = new Book("The Black Obelisk", new DateTime(1941, 1, 1), "Popular Library", 81688831, "German");
+            book4.Genres = "Graphic novel";
+            book4.Authors.Add("Erich Maria Remarque");
+            book4.Synopsis = "A self-professed poet, Ludwig soon senses a growing change in his fatherland, a brutality brought upon it by inflation.";
+            LibraryItemsList.Add(book4);
             //Jornals
-            Jornal jornal1 = new Jornal("Hacker",new DateTime(2022,2,2),1.30,12312500);
+            Jornal jornal1 = new Jornal("Hacker",new DateTime(2022,2,2),1.30,6312500);
             jornal1.Editors = "MegaMind";
             jornal1.Contributers = "Stepan Corkin";
             jornal1.Ganers = "Informational";
             jornal1.Frequency = Jornal.JornalFrequency.BiWeekly;
             LibraryItemsList.Add(jornal1);
-            Jornal jornal2 = new Jornal("Universe", new DateTime(2020, 4, 12), 2.30, 122300500);
+            Jornal jornal2 = new Jornal("Universe", new DateTime(2020, 4, 12), 2.30, 129300500);
             jornal2.Editors = "Aladin";
             jornal2.Contributers = "Anton Mehecko";
             jornal2.Ganers = "Science";
@@ -307,6 +302,12 @@ namespace Library.DAL
             jornal3.Ganers = "Men's";
             jornal3.Frequency = Jornal.JornalFrequency.Annualy;
             LibraryItemsList.Add(jornal3);
+            Jornal jornal4 = new Jornal("Time", new DateTime(2021, 3, 3), 4.60, 3337050);
+            jornal3.Editors = "CEO";
+            jornal3.Contributers = " Chris Anderson";
+            jornal3.Ganers = "Analitical";
+            jornal3.Frequency = Jornal.JornalFrequency.Monthly;
+            LibraryItemsList.Add(jornal4);
             //Employee
             Employee em1 = new Employee("Alex", "Gotlib", 00222002, "admin", "password", true);
             Employee m2 = new Employee("Sara", "Simon",0450512, "sara", "sara", false);
@@ -317,8 +318,14 @@ namespace Library.DAL
             //Customer
             Customer c1 = new Customer("Michael","Hadat",000111222);
             Customer c2 = new Customer("David", "Koko", 215451);
+            Customer c3 = new Customer("Natan", "Cahan", 2150000);
+            Customer c4 = new Customer("Andrey", "Roger", 86451);
+            Customer c5 = new Customer("Mana", "Nebesna", 3155451);
             PersonList.Add(c1);
             PersonList.Add(c2);
+            PersonList.Add(c3);
+            PersonList.Add(c4);
+            PersonList.Add(c5);
         }
 
         

@@ -37,13 +37,13 @@ namespace LibraryProject
         public AddNewBookPage()
         {
             this.InitializeComponent();
-            creatingCmbBookPage();
+            CreatingCmbBookPage();
         }
         #region Buttons
         private void btnCheckFields_Click(object sender, RoutedEventArgs e)
         {
-            adding = new AddingNewLibraryItem(titleTxt.Text, calendarPicker.Date.DateTime, AddingNewLibraryItem.returnContent(publisherCmb), serialNumberTxt.Text, AddingNewLibraryItem.returnContent(countrCmb), AddingNewLibraryItem.returnContent(generCmb), authorTxt.Text,synopsisTxt.Text);
-            issuesTxt.Text = adding.checkingFieldsBook( serialNumberTxt.Text);
+            adding = new AddingNewLibraryItem(titleTxt.Text, calendarPicker.Date.DateTime, AddingNewLibraryItem.ReturnContent(publisherCmb), serialNumberTxt.Text, AddingNewLibraryItem.ReturnContent(countrCmb), AddingNewLibraryItem.ReturnContent(generCmb), authorTxt.Text,synopsisTxt.Text);
+            issuesTxt.Text = adding.CheckingFieldsBook( serialNumberTxt.Text);
            if(issuesTxt.Text == "")
                 btnAddNewBook.IsEnabled = true;
             else
@@ -58,12 +58,12 @@ namespace LibraryProject
         {
             if (b1 != null)
             {
-                updateBook();
+                UpdateBook();
                 lb.Update(b1);
             }
             else
             {
-                lb.Add(adding.addingBookMethod());
+                lb.Add(adding.AddingBookMethod());
             }
             Frame.Navigate(typeof(BookCollectionPage), null, new EntranceNavigationTransitionInfo());
         }
@@ -71,14 +71,14 @@ namespace LibraryProject
 
 
         // updeing ditales of the book that was overridet
-        public void updateBook()
+        public void UpdateBook()
         {
             b1.Title = titleTxt.Text;
             b1.PublishDate = calendarPicker.Date.DateTime;
-            b1.ISBN.Publisher = AddingNewLibraryItem.returnContent(publisherCmb);
+            b1.ISBN.Publisher = AddingNewLibraryItem.ReturnContent(publisherCmb);
             b1.ISBN.SerialNumber = Convert.ToInt32(serialNumberTxt.Text);
-            b1.ISBN.Country = AddingNewLibraryItem.returnContent(countrCmb);
-            b1.Genres = AddingNewLibraryItem.returnContent(generCmb);
+            b1.ISBN.Country = AddingNewLibraryItem.ReturnContent(countrCmb);
+            b1.Genres = AddingNewLibraryItem.ReturnContent(generCmb);
             b1.Authors[0] = authorTxt.Text;
             b1.Synopsis = synopsisTxt.Text;
         }
@@ -92,16 +92,16 @@ namespace LibraryProject
                 
                 titleTxt.Text = b1.Title;
                 calendarPicker.Date = b1.PublishDate;
-                publisherCmb.SelectedIndex = AddingNewLibraryItem.returnIndex(publisherCmb,b1.ISBN.Publisher.ToString());
+                publisherCmb.SelectedIndex = AddingNewLibraryItem.ReturnIndex(publisherCmb,b1.ISBN.Publisher.ToString());
                 serialNumberTxt.Text = b1.ISBN.SerialNumber.ToString();
-                countrCmb.SelectedIndex = AddingNewLibraryItem.returnIndex(countrCmb, b1.ISBN.Country.ToString());
-                generCmb.SelectedIndex = AddingNewLibraryItem.returnIndex(generCmb, b1.Genres.ToString());
+                countrCmb.SelectedIndex = AddingNewLibraryItem.ReturnIndex(countrCmb, b1.ISBN.Country.ToString());
+                generCmb.SelectedIndex = AddingNewLibraryItem.ReturnIndex(generCmb, b1.Genres.ToString());
                 authorTxt.Text = b1.Authors[0];
                 synopsisTxt.Text = b1.Synopsis;
             }
         }
         // Displaying comboboxes
-        private void creatingCmbBookPage()
+        private void CreatingCmbBookPage()
         {
             for (int i = 0; i < Book.BookGenres.Count; i++)
             {

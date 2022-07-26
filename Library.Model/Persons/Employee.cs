@@ -23,25 +23,20 @@ namespace Library.Model
 
             set
             {
-                if (!(EmployeeLogins.ContainsKey(value)))
-                {
-                    EmployeeLogins.Add(value, Password);
-                    _login = value;
-                }
-                else
-                {
-                    throw new InvalidOperationException();
-                }
+                _login = value;
             }
         }
+        /// <summary>
+        /// represents password of Employee account
+        /// </summary>
         public string Password { get; private set; }
+
+        /// <summary>
+        /// This parametr givs access to get menenger page or employee page
+        /// </summary>
         public bool IsMananger { get; private set; }
 
-       /// <summary>
-       /// Dictionary thet conects Employee object with his Login
-       /// </summary>
-        public static Dictionary<string, string> EmployeeLogins = new Dictionary<string, string>();
-
+      
         public Employee(string Fname,string Lname, int phonenumber,string login,string password, bool isMananger) : base(Fname,Lname, phonenumber)
         {
             _login = login;

@@ -37,18 +37,16 @@
             </Grid.ColumnDefinitions>
             <Grid Grid.Row="0" Grid.ColumnSpan="5" Background="Aqua"/>
             <TextBlock Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Admin Panel" FontSize="20" FontFamily="Aharoni" FontWeight="Bold" TextDecorations="Underline"/>
-            <Button x:Name="btnJornalCol" Content="Jornal collection"  Grid.Row="1" Grid.Column="0"  Background="#FF1276CF" FontSize="20" Click="btnJornalCol_Click" BorderThickness="3,5,3,3" BorderBrush="Black" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
-            <Button x:Name="btnBookColl" Content="Book collection" VerticalAlignment="Stretch" Background="#FF1276CF" FontSize="20" Click="btnBookColl_Click" BorderBrush="Black" BorderThickness="3,2,3,3"  Grid.Column="0" Grid.Row="2" HorizontalAlignment="Stretch"/>
+            <Button x:Name="btnJornalCol" Content="Jornal collection"  Grid.Row="2" Grid.Column="0"  Background="#FF1276CF" FontSize="20" Click="btnJornalCol_Click" BorderThickness="3,5,3,3" BorderBrush="Black" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+            <Button x:Name="btnBookColl" Content="Book collection" VerticalAlignment="Stretch" Background="#FF1276CF" FontSize="20" Click="btnBookColl_Click" BorderBrush="Black" BorderThickness="3,2,3,3"  Grid.Column="0" Grid.Row="4" HorizontalAlignment="Stretch"/>
 
             <TextBlock Grid.Row="0" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Customers panel" FontSize="30" FontFamily="Aharoni" FontWeight="Bold" TextDecorations="Underline"/>
-            <Button x:Name="btnAddCustomer" Content="Add new customer"  Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#FF1276CF" FontSize="20"  Grid.Column="4" BorderBrush="Black" BorderThickness="3,5,3,3" Click="btnAddCustomer_Click"/>
-            <Button x:Name="btnViewCustomers" Content="View all customers" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#FF1276CF" FontSize="20" Grid.Column="4" BorderThickness="3,5,3,3" BorderBrush="Black" Click="btnViewCustomers_Click"/>
+            <Button x:Name="btnAddCustomer" Content="Add new customer"  Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#FF1276CF" FontSize="20"  Grid.Column="4" BorderBrush="Black" BorderThickness="3,5,3,3" Click="btnAddCustomer_Click"/>
+            <Button x:Name="btnViewCustomers" Content="View all customers" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#FF1276CF" FontSize="20" Grid.Column="4" BorderThickness="3,5,3,3" BorderBrush="Black" Click="btnViewCustomers_Click"/>
 
             <TextBlock Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Employee panel" FontSize="20" FontFamily="Aharoni" FontWeight="Bold" TextDecorations="Underline"/>
-            <Button x:Name="btnNewEmployee" Content="New employee"  Grid.Row="1" Background="#FF1276CF" FontSize="20" BorderThickness="3,3,3,3" BorderBrush="Black" Grid.Column ="2"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="btnNewEmployee_Click"/>
-
-            <Button x:Name="btnHistory" Content="History"  Grid.Row="4" Background="#FF1276CF" FontSize="30" Click="btnHistory_Click" BorderThickness="3,3,3,3" BorderBrush="Black" Grid.Column ="2"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
-            <Button x:Name="btnEmployeeView" Content="View all employee"  Grid.Row="2" Background="#FF1276CF" FontSize="20" BorderThickness="3,3,3,3" BorderBrush="Black" Grid.Column ="2"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="btnEmployeeView_Click"/>
+            <Button x:Name="btnNewEmployee" Content="New employee"  Grid.Row="2" Background="#FF1276CF" FontSize="20" BorderThickness="3,3,3,3" BorderBrush="Black" Grid.Column ="2"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="btnNewEmployee_Click"/>
+            <Button x:Name="btnEmployeeView" Content="View all employee"  Grid.Row="4" Background="#FF1276CF" FontSize="20" BorderThickness="3,3,3,3" BorderBrush="Black" Grid.Column ="2"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="btnEmployeeView_Click"/>
 
         </Grid>
         <Button x:Name="btnLogOut" Grid.Row="0" Content="Log Out"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Click="btnLogOut_Click"/>

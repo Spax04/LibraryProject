@@ -58,7 +58,7 @@ namespace Library.Model
 
        
         
-        public StringBuilder authorsPrint()
+        public StringBuilder AuthorsPrint()
         {
             StringBuilder authors = new StringBuilder();
             for(int i = 0; i < Authors.Count; i++)
@@ -98,11 +98,11 @@ namespace Library.Model
         {
             if(InStock == true)
             {
-                return $"'{Title}' | {PublishDate:yyyy} | {ISBN.ToString()} | {authorsPrint()}| {Genres} | {this.ISBN.Country} | {this.ISBN.Publisher}";
+                return $"'{Title}' | {PublishDate:yyyy} | {ISBN.ToString()} | {AuthorsPrint()}| {Genres} | {this.ISBN.Country} | {this.ISBN.Publisher}";
             }
             else
             {
-                return $" OUT OF STOCK | '{Title}' | {PublishDate:yyyy} | {ISBN.ToString()} | {authorsPrint()}| {Genres} | {this.ISBN.Country} | {this.ISBN.Publisher}";
+                return $" OUT OF STOCK | '{Title}' | {PublishDate:yyyy} | {ISBN.ToString()} | {AuthorsPrint()}| {Genres} | {this.ISBN.Country} | {this.ISBN.Publisher}";
 
             }
         }
@@ -118,7 +118,7 @@ namespace Library.Model
             sb.AppendLine($"Publish year: {PublishDate:yyyy}");
             sb.AppendLine($"Publisher: {this.ISBN.Publisher}");
             sb.AppendLine($"Book Gener: {Genres}");
-            sb.AppendLine($"Author: {authorsPrint()}");
+            sb.AppendLine($"Author: {AuthorsPrint()}");
             sb.AppendLine($"Country: {this.ISBN.Country}");
             sb.AppendLine($"ISBN: {ISBN.ToString()}");
             sb.AppendLine($"Synopsis: \n {Synopsis}");

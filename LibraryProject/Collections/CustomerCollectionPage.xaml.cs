@@ -37,7 +37,7 @@ namespace LibraryProject
             Customer c1 = (Customer)listMenuView.SelectedItem;
             if(c1 != null)
             {
-                custDitalsTxt.Text = c1.bookCustomerDitales();
+                custDitalsTxt.Text = c1.BookCustomerDitales();
             }
         }
 

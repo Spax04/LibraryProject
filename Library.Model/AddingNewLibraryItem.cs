@@ -79,7 +79,7 @@ namespace Library.Model
         /// </summary>
         /// <param name="number"> serial number</param>
         /// <returns></returns>
-        public string checkingFieldsBook(string number)
+        public string CheckingFieldsBook(string number)
         {
             StringBuilder listIssues = new StringBuilder();
             if (_title == "")
@@ -101,7 +101,7 @@ namespace Library.Model
             return listIssues.ToString();
         }
 
-        public string checkingFieldsJornal(string number,string price)
+        public string CheckingFieldsJornal(string number,string price)
         {
             StringBuilder listIssues = new StringBuilder();
             if (_title == "")
@@ -133,17 +133,13 @@ namespace Library.Model
         /// </summary>
         /// <param name="Choice"> any Combobox</param>
         /// <returns></returns>
-        public static string returnContent(ComboBox Choice)
+        public static string ReturnContent(ComboBox Choice)
         {
             string selectedcmb = "";
             var comboBoxItem = Choice.Items[Choice.SelectedIndex] as ComboBoxItem;
             if (comboBoxItem != null)
             {
                 selectedcmb = comboBoxItem.Content.ToString();
-            }
-            else
-            {
-                throw new Exception("There is no item like this");
             }
             return selectedcmb;
         }
@@ -154,7 +150,7 @@ namespace Library.Model
         /// <param name="Choice">any ciombobox</param>
         /// <param name="word"> word that shold contains in combobox</param>
         /// <returns></returns>
-        public static int returnIndex(ComboBox Choice,string word)
+        public static int ReturnIndex(ComboBox Choice,string word)
         {
             ComboBoxItem comboBoxItem; 
             for (int i = 0; i < Choice.Items.Count; i++)
@@ -163,11 +159,7 @@ namespace Library.Model
                 if(comboBoxItem.Content == word)
                 {
                     return i;
-                }
-                else
-                {
-                    throw new Exception("There is no item like this");
-                }
+                } 
             }
             return 0;
         }
@@ -176,7 +168,7 @@ namespace Library.Model
         /// method that returns new book
         /// </summary>
         /// <returns></returns>
-        public Book addingBookMethod()
+        public Book AddingBookMethod()
         {
             Book b1 = new Book(_title, _datePublisher, _publisher, convertToSerialNumber(_serialnumber), _country);
             b1.Genres= _gener;
@@ -189,7 +181,7 @@ namespace Library.Model
         /// method that returns new jornal
         /// </summary>
         /// <returns></returns>
-        public Jornal addingJornalMethod()
+        public Jornal AddingJornalMethod()
         {
             Jornal j1 = new Jornal(_title,_datePublisher,convertToPrice(_price),convertToSerialNumber(_serialnumber));
             j1.Ganers = _gener;

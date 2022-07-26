@@ -65,7 +65,7 @@ namespace LibraryProject
             if(person != null)
             {
                 person.customerItems.Add(b1);
-                b1.outOfStockLI(person);
+                b1.OutOfStockLI(person);
                 lb.Update(b1);
                 pr.Update(person);
                 checkingStatus(b1);
@@ -73,7 +73,7 @@ namespace LibraryProject
         }
         private void btnReturnItem_Click(object sender, RoutedEventArgs e)
         {
-            Customer c1 = b1.backInStockLI();
+            Customer c1 = b1.BackInStockLI();
             c1.customerItems.Remove(b1);
             checkingStatus(b1);
         }
@@ -102,10 +102,12 @@ namespace LibraryProject
 
         private void btnSellItem_Click(object sender, RoutedEventArgs e)
         {
-            b1.sellItem();
+            b1.SellItem();
             lb.Delete(b1.Id);
             checkingStatus(b1);
             btnReturn.IsEnabled = false;
         }
+
+        
     }
 }

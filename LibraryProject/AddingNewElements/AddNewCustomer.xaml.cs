@@ -34,7 +34,7 @@ namespace LibraryProject
         private void btnCheckFields_Click(object sender, RoutedEventArgs e)
         {
             adding = new AddingNewPerson(fNameTxt.Text,lNameTxt.Text,Phone.Text);
-            issuesTxt.Text = adding.checkingFieldsCustumer();
+            issuesTxt.Text = adding.CheckingFieldsCustumer();
             if(issuesTxt.Text == "")
             {
                 btnAddCust.IsEnabled = true;
@@ -47,7 +47,7 @@ namespace LibraryProject
 
         private void AddCust(object sender, RoutedEventArgs e)
         {
-            pr.Add(adding.registrCustomer());
+            pr.Add(adding.RegistrCustomer());
             Frame.Navigate(typeof(MenengerPage));
         }
 

@@ -65,6 +65,7 @@ namespace Library.DAL
         /// </summary>
         public void SetNewLogin(string login,Employee em)
         {
+            if(!(_context.EmployLogins.ContainsKey(login)))
             _context.EmployLogins.Add(login, em);
         }
 

@@ -35,32 +35,32 @@ namespace LibraryProject
         public AddNewJornalPage()
         {
             this.InitializeComponent();
-            creatingCmbBookPage();
+            CreatingCmbBookPage();
         }
 
         private void btnCheckFields_Click(object sender, RoutedEventArgs e)
         {
-            adding = new AddingNewLibraryItem(titleTxt.Text, calendarPicker.Date.DateTime,priceTxt.Text,returnEnumValue(frequencyCmb), AddingNewLibraryItem.returnContent(generCmb),contributerTxt.Text,editorTxt.Text,serialNumberTxt.Text,discountTxt.Text);
+            adding = new AddingNewLibraryItem(titleTxt.Text, calendarPicker.Date.DateTime,priceTxt.Text,ReturnEnumValue(frequencyCmb), AddingNewLibraryItem.ReturnContent(generCmb),contributerTxt.Text,editorTxt.Text,serialNumberTxt.Text,discountTxt.Text);
             
-            issuesTxt.Text = adding.checkingFieldsJornal(serialNumberTxt.Text,priceTxt.Text);
+            issuesTxt.Text = adding.CheckingFieldsJornal(serialNumberTxt.Text,priceTxt.Text);
             if(issuesTxt.Text == "")
                 btnAddNewBook.IsEnabled = true;
             else
                 btnAddNewBook.IsEnabled = false;
         }
-        public void updateJornal()
+        public void UpdateJornal()
         {
             j1.Title = titleTxt.Text;
             j1.PublishDate = calendarPicker.Date.DateTime;
             j1.Price = Convert.ToDouble(priceTxt.Text);
             j1.SerialNumber = Convert.ToInt32(serialNumberTxt.Text);
             j1.Editors = editorTxt.Text;
-            j1.Ganers = AddingNewLibraryItem.returnContent(generCmb);
+            j1.Ganers = AddingNewLibraryItem.ReturnContent(generCmb);
             j1.Contributers = contributerTxt.Text;
-            j1.Frequency = returnEnumValue(frequencyCmb);
+            j1.Frequency = ReturnEnumValue(frequencyCmb);
             j1.Discount = Convert.ToDouble(discountTxt.Text);
         }
-        private void creatingCmbBookPage()
+        private void CreatingCmbBookPage()
         {
             for (int i = 0; i < Jornal.JornalGaners.Count; i++)
             {
@@ -85,13 +85,13 @@ namespace LibraryProject
                 serialNumberTxt.Text = j1.SerialNumber.ToString();
                 priceTxt.Text = j1.Price.ToString();
                 editorTxt.Text = j1.Editors;
-                generCmb.SelectedIndex = AddingNewLibraryItem.returnIndex(generCmb, j1.Ganers.ToString());
+                generCmb.SelectedIndex = AddingNewLibraryItem.ReturnIndex(generCmb, j1.Ganers.ToString());
                 contributerTxt.Text = j1.Contributers;
                 
                 discountTxt.Text = j1.Discount.ToString();
             }
         }
-        public Jornal.JornalFrequency returnEnumValue(ComboBox cb)
+        public Jornal.JornalFrequency ReturnEnumValue(ComboBox cb)
         {
             Jornal.JornalFrequency jv = (Jornal.JornalFrequency)frequencyCmb.SelectedValue; ////!!!!!!!!!!!!!!!!
             return jv;
@@ -107,12 +107,12 @@ namespace LibraryProject
         {
             if(j1 != null)
             {
-                updateJornal();
+                UpdateJornal();
                 lb.Update(j1);
             }
             else
             {
-                lb.Add(adding.addingJornalMethod());
+                lb.Add(adding.AddingJornalMethod());
             }
             Frame.Navigate(typeof(JornalCollectionPage), null, new EntranceNavigationTransitionInfo());
         }

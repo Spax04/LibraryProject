@@ -74,9 +74,9 @@ namespace Library.Model
         /// <summary>
         /// 
         /// </summary>
-        public double gettingDiscountPrice()
+        public double GettingDiscountPrice()
         {
-            Price = Price * (Discount / 100);
+           Price = Price * (Discount / 100);
             return Price;
         }
 
@@ -88,13 +88,14 @@ namespace Library.Model
             _price = price;
             Frequency = jf;
             SerialNumber = serialnumber;
+            
         }
 
         public override string ToString()
         {
             if(Discount > 0)
             {
-                return $"'{Title}' | {PublishDate:D} | {Ganers} | {Editors} | {Frequency} | {Contributers} | {gettingDiscountPrice():C} | {Discount}% ";
+                return $"'{Title}' | {PublishDate:D} | {Ganers} | {Editors} | {Frequency} | {Contributers} | {GettingDiscountPrice():C} | {Discount}% ";
             }
             else
             {
@@ -115,7 +116,7 @@ namespace Library.Model
             sb.AppendLine($"Contributer: {Contributers}");
             if(Discount > 0)
             {
-                sb.AppendLine($"Sele price {gettingDiscountPrice():C}. Discont {Discount}% ");
+                sb.AppendLine($"Sele price {GettingDiscountPrice():C}. Discont {Discount}% ");
                 sb.AppendLine($"Price before sele{Price:C}");
             }
             else

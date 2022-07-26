@@ -21,7 +21,7 @@ namespace Library.Model
         /// <summary>
         /// prints ditales about customer and itmes it contains
         /// </summary>
-        public string bookCustomerDitales()
+        public string BookCustomerDitales()
         {
             StringBuilder sb = new StringBuilder();
 

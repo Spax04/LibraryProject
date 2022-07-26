@@ -43,7 +43,10 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <ListView x:Name="listMenuView" Grid.Column="1"  Background="White"/>
+            <TextBlock HorizontalAlignment="Right" Text="Employee :" VerticalAlignment="Top" FontSize="36" FontWeight="Bold"/>
         </Grid>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Stretch" Text="Employee Details" VerticalAlignment="Center" FontSize="72" TextAlignment="Center" FontFamily="Sitka Banner" FontWeight="Bold"/>
+
         <Button x:Name="btnMenengerBack" Grid.Row="1" Content="Back"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Click="btnMenengerBack_Click"/>
     </Grid>
 </Page>

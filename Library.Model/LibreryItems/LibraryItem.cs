@@ -24,15 +24,14 @@ namespace Library.Model
         /// <summary>
         /// print or publish date of item
         /// </summary>
-
         public abstract string Ditales();
 
-        public void sellItem()
+        public void SellItem()
         {
             InStock = false;
             outOfStock = DateTime.Now;
         }
-        public void outOfStockLI(Customer p1)
+        public void OutOfStockLI(Customer p1)
         {
             outOfStock = DateTime.Now;
             returnUntil = outOfStock.AddDays(14);
@@ -40,7 +39,7 @@ namespace Library.Model
             Owner = p1;
         }
 
-        public Customer backInStockLI()
+        public Customer BackInStockLI()
         {
             outOfStock = new DateTime();
             InStock = true;

@@ -36,8 +36,6 @@
             </Grid.ColumnDefinitions>
             <Button x:Name="btnAddJornal" Content="Add"  VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Click="btnAddJornal_Click" Grid.Column="0" />
             <Button x:Name="btnRemoveJornal" Content="Remove" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Grid.Column="2" Click="btnRemoveJornal_Click"/>
-            <Button x:Name="btnFindBy" Content="Search"  VerticalAlignment="Center" HorizontalAlignment="Stretch"  FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Grid.Column="10"/>
-            <TextBox Grid.Column="8" Grid.ColumnSpan="2" HorizontalAlignment="Stretch"  TextWrapping="Wrap" VerticalAlignment="Center"  FontSize="24" Background="White"/>
             <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Stretch" FontSize="22" Background="#FFA06BEF" BorderBrush="Black" Grid.Column="4" Click="btnUpdate_Click"/>
 
         </Grid>
@@ -53,6 +51,8 @@
             <ComboBoxItem Content="by Gener"/>
         </ComboBox>
         <TextBlock Grid.Column="2" Grid.Row="0" HorizontalAlignment="Left"   Text="Sorting :" VerticalAlignment="Bottom" FontSize="24" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Center" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Text="Jornales :" FontSize="36" FontWeight="Bold"/>
+        <TextBlock Grid.Column="1" VerticalAlignment="Center" FontSize="72" TextAlignment="Center" FontFamily="Sitka Banner" FontWeight="Bold" Text="Jornal Collectoin"/>
 
 
     </Grid>

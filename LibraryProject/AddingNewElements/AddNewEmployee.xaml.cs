@@ -41,7 +41,7 @@ namespace LibraryProject
             {
                 adding = new AddingNewPerson(fNameTxt.Text, lNameTxt.Text, Phone.Text, Login.Text, Password.Text, true);
             }
-            issuesTxt.Text = adding.checkingFieldsEmployee();
+            issuesTxt.Text = adding.CheckingFieldsEmployee();
             if(issuesTxt.Text == "")
             {
                 btnAddEmpl.IsEnabled = true;
@@ -54,7 +54,7 @@ namespace LibraryProject
 
         private void btnAddEmpl_Click(object sender, RoutedEventArgs e)
         {
-            Employee e1 = adding.registrEmployee();
+            Employee e1 = adding.RegistrEmployee();
             pr.Add(e1);
             pr.SetNewLogin(Login.Text, e1);
             Frame.Navigate(typeof(MenengerPage));

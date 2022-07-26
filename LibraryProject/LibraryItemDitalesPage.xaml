@@ -38,17 +38,19 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Button x:Name="btnOutOfStock" Grid.Column="5" Content="Out item"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#FFA06BEF" FontSize="20" FontWeight="Normal" Click="btnOutOfStock_Click" BorderBrush="Black"/>
+                    <Button x:Name="btnOutOfStock" Grid.Column="5" Content="Out item"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#FFA06BEF" FontSize="36" FontWeight="Normal" Click="btnOutOfStock_Click" BorderBrush="Black"/>
                     <Rectangle x:Name="rectStatus" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch"  Stroke="Black" VerticalAlignment="Stretch" Fill="#FF00FF10" />
                     <TextBlock x:Name="statusTxt" Grid.Column="2" HorizontalAlignment="Center"  Text="" VerticalAlignment="Center" FontSize="24"/>
-                    <Button x:Name="btnReturn" Grid.Column="4" Content="Return"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#FFA06BEF" FontSize="20" FontWeight="Normal" Click="btnReturnItem_Click" BorderBrush="Black" />
-                    <Button x:Name="btnSell" Grid.Column="3" Content="Sell"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#FFA06BEF" FontSize="20" FontWeight="Normal" Click="btnSellItem_Click" BorderBrush="Black" />
+                    <Button x:Name="btnReturn" Grid.Column="4" Content="Return"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#FFA06BEF" FontSize="36" FontWeight="Normal" Click="btnReturnItem_Click" BorderBrush="Black" />
+                    <Button x:Name="btnSell" Grid.Column="3" Content="Sell"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#FFA06BEF" FontSize="36" FontWeight="Normal" Click="btnSellItem_Click" BorderBrush="Black" />
 
                 </Grid>
-                <TextBlock x:Name="liInfoTxt" HorizontalAlignment="Stretch" TextAlignment="Left" Text="" VerticalAlignment="Stretch" FontSize="35"/>
+                <TextBlock x:Name="liInfoTxt" HorizontalAlignment="Stretch" TextAlignment="Left" Text="" VerticalAlignment="Stretch" FontSize="22"/>
             </Grid>
             <ListView x:Name="ListCustomers" Background="White" BorderBrush="Black" BorderThickness="2,2,2,2"/>
         </Grid>
         <Button Content="Back"  VerticalAlignment="Center" HorizontalAlignment="Center" Background="#FFA06BEF" BorderBrush="Black" FontSize="18" Click="btnBack_Click"/>
+        <TextBlock Grid.Column="1" VerticalAlignment="Top" FontSize="72" TextAlignment="Center" FontFamily="Sitka Banner" FontWeight="Bold" Text="Library Item Details" Margin="48,45,48,0"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left"   Text="Customers List" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="36"/>
     </Grid>
 </Page>
